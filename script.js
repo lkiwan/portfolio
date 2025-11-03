@@ -134,7 +134,12 @@ contactForm.addEventListener('submit', (e) => {
     // Send email using EmailJS
     emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, EMAILJS_PUBLIC_KEY)
         .then((response) => {
-            console.log('SUCCESS!', response.status, response.text);
+            console.log('✅ EmailJS SUCCESS!', {
+                status: response.status,
+                text: response.text,
+                service: EMAILJS_SERVICE_ID,
+                template: EMAILJS_TEMPLATE_ID
+            });
 
             // Show success message
             alert(`✅ Merci ${name}! Votre message a été envoyé avec succès. Je vous répondrai bientôt!`);
@@ -147,10 +152,25 @@ contactForm.addEventListener('submit', (e) => {
             submitBtn.innerHTML = originalBtnText;
         })
         .catch((error) => {
-            console.error('FAILED...', error);
+            console.error('❌ EmailJS FAILED:', {
+                error: error,
+                message: error.text || error.message,
+                status: error.status,
+                publicKey: EMAILJS_PUBLIC_KEY,
+                serviceId: EMAILJS_SERVICE_ID,
+                templateId: EMAILJS_TEMPLATE_ID
+            });
 
-            // Show error message
-            alert(`❌ Erreur lors de l'envoi. Veuillez réessayer ou m'envoyer un email directement à omar.arhoune@gmail.com`);
+            // Show detailed error message
+            let errorMessage = `❌ Erreur lors de l'envoi.\n\n`;
+            errorMessage += `Détails: ${error.text || error.message || 'Erreur inconnue'}\n\n`;
+            errorMessage += `Vérifiez:\n`;
+            errorMessage += `1. Vos clés EmailJS dans script.js\n`;
+            errorMessage += `2. Votre compte EmailJS sur dashboard.emailjs.com\n`;
+            errorMessage += `3. Console du navigateur (F12) pour plus de détails\n\n`;
+            errorMessage += `Ou envoyez-moi un email directement à omar.arhoune@gmail.com`;
+
+            alert(errorMessage);
 
             // Re-enable button
             submitBtn.disabled = false;
