@@ -97,25 +97,65 @@ animateElements.forEach(el => {
     observer.observe(el);
 });
 
-// Form submission
+// Form submission with EmailJS
 const contactForm = document.querySelector('.contact-form form');
+
+// Initialize EmailJS (vous devez ajouter vos clés après configuration)
+// Allez sur: https://www.emailjs.com/
+// Créez un compte, puis remplacez ces valeurs:
+const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY'; // Votre Public Key EmailJS
+const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID'; // Votre Service ID
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'; // Votre Template ID
 
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
     // Get form data
-    const formData = new FormData(contactForm);
     const name = contactForm.querySelector('input[type="text"]').value;
     const email = contactForm.querySelector('input[type="email"]').value;
     const subject = contactForm.querySelectorAll('input[type="text"]')[1].value;
     const message = contactForm.querySelector('textarea').value;
 
-    // Here you would typically send the data to a server
-    // For now, we'll just show a success message
-    alert(`Thank you for your message, ${name}! I'll get back to you soon.`);
+    // Disable submit button to prevent multiple submissions
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '⏳ Envoi en cours...';
 
-    // Reset form
-    contactForm.reset();
+    // Prepare template parameters
+    const templateParams = {
+        from_name: name,
+        from_email: email,
+        subject: subject,
+        message: message,
+        to_email: 'omar.arhoune@gmail.com' // Votre email
+    };
+
+    // Send email using EmailJS
+    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, EMAILJS_PUBLIC_KEY)
+        .then((response) => {
+            console.log('SUCCESS!', response.status, response.text);
+
+            // Show success message
+            alert(`✅ Merci ${name}! Votre message a été envoyé avec succès. Je vous répondrai bientôt!`);
+
+            // Reset form
+            contactForm.reset();
+
+            // Re-enable button
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+        })
+        .catch((error) => {
+            console.error('FAILED...', error);
+
+            // Show error message
+            alert(`❌ Erreur lors de l'envoi. Veuillez réessayer ou m'envoyer un email directement à omar.arhoune@gmail.com`);
+
+            // Re-enable button
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+        });
 });
 
 // Add typing effect to hero title (optional)
