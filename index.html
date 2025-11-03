@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Omar Arhoune | Finance & Data Science Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">Omar Arhoune</div>
+        <ul class="nav-links">
+          <li><a href="#home" data-translate="nav_home">Home</a></li>
+          <li><a href="#about" data-translate="nav_about">About</a></li>
+          <li><a href="#education" data-translate="nav_education">Education</a></li>
+          <li><a href="#experience" data-translate="nav_experience">Experience</a></li>
+          <li><a href="#skills" data-translate="nav_skills">Skills</a></li>
+          <li><a href="#tech-stack" data-translate="nav_tech">Tech Stack</a></li>
+          <li><a href="#projects" data-translate="nav_projects">Projects</a></li>
+          <li><a href="#languages" data-translate="nav_languages">Languages</a></li>
+          <li><a href="#contact" data-translate="nav_contact">Contact</a></li>
+        </ul>
+        <div class="language-switcher">
+          <button class="lang-btn active" data-lang="fr">FR</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="ar">AR</button>
+        </div>
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span data-translate="hero_greeting">Hello, I'm</span> <span class="highlight">Omar Arhoune</span>
+        </h1>
+        <p class="hero-subtitle" data-translate="hero_subtitle">
+          Master's Student in Finance & Data Science | Analyst | Problem Solver
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary" data-translate="btn_view_work">View My Work</a>
+          <a href="#contact" class="btn btn-secondary" data-translate="btn_contact">Get In Touch</a>
+          <a href="cv/Omar_Arhoune_CV.pdf" download class="btn btn-cv" data-translate="btn_download_cv">
+            <span class="cv-icon">📄</span> Download CV
+          </a>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-image">
+            <div class="image-placeholder">
+              <svg width="200" height="200" viewBox="0 0 200 200">
+                <circle cx="100" cy="100" r="90" fill="#c59d5f" />
+                <text
+                  x="100"
+                  y="115"
+                  font-size="80"
+                  fill="#1a1512"
+                  text-anchor="middle"
+                  font-weight="bold"
+                >
+                  OA
+                </text>
+              </svg>
+            </div>
+          </div>
+          <div class="about-text">
+            <p>
+              I'm a Master's student in Finance and Data Science at Faculté des Sciences Juridiques, Economiques et Sociales Mohammedia, passionate about leveraging data analytics and machine learning to solve complex financial problems. With hands-on experience in fraud detection, financial analysis platforms, and intelligent data tools, I transform data into actionable insights.
+            </p>
+            <p>
+              My journey combines quantitative finance with full-stack development, allowing me to build end-to-end solutions from ML models to production-ready applications. I thrive on uncovering patterns in data and creating tools that drive informed decision-making in the financial sector.
+            </p>
+            <div class="about-stats">
+              <div class="stat">
+                <h3>Master's</h3>
+                <p>Finance & Data Science</p>
+              </div>
+              <div class="stat">
+                <h3>4+</h3>
+                <p>Live Projects</p>
+              </div>
+              <div class="stat">
+                <h3 data-translate="stat3_title">3 Mois</h3>
+                <p data-translate="stat3_desc">Stage Détection de Fraude</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+        <div class="timeline">
+          <!-- Master's Degree -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-period">2024 - Present</div>
+              <h3>Master's in Data Science and Finance</h3>
+              <div class="timeline-institution">
+                <span class="institution-icon">🎓</span>
+                <span>FSJESM, Morocco</span>
+              </div>
+              <p>Focused on predictive modeling, machine learning, and financial analytics.</p>
+            </div>
+          </div>
+
+          <!-- Bachelor's Degree -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-period">2020 - 2024</div>
+              <h3>Bachelor's in Economics and Management</h3>
+              <div class="timeline-institution">
+                <span class="institution-icon">🎓</span>
+                <span>FSJES Fes, Morocco</span>
+              </div>
+              <p>Built strong foundations in statistics, business strategy, and data-driven decision-making.</p>
+            </div>
+          </div>
+
+          <!-- Baccalauréat -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-period">2019 - 2020</div>
+              <h3>Baccalauréat in Physics</h3>
+              <div class="timeline-institution">
+                <span class="institution-icon">🏫</span>
+                <span>Lycée IBN Rochd, Morocco</span>
+              </div>
+              <p>Strong foundation in mathematics, physics, and scientific methodology.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="experience">
+      <div class="container">
+        <h2 class="section-title">Work Experience</h2>
+        <div class="experience-grid">
+          <!-- Deloitte Simulation -->
+          <div class="experience-card">
+            <div class="experience-header">
+              <div class="company-logo">
+                <img src="images/Deloitte logo.jpg" alt="Deloitte Logo">
+              </div>
+              <div class="experience-title-block">
+                <h3>Data Analytics Job Simulation</h3>
+                <div class="company-name"><strong>Deloitte Australia</strong></div>
+              </div>
+            </div>
+            <div class="experience-period">2025</div>
+            <p class="experience-description">
+              Performed forensic analysis, visualized insights in Tableau, and supported classification reporting.
+            </p>
+            <div class="experience-skills">
+              <span class="exp-skill">Forensic Analysis</span>
+              <span class="exp-skill">Tableau</span>
+              <span class="exp-skill">Data Visualization</span>
+              <span class="exp-skill">Reporting</span>
+            </div>
+          </div>
+
+          <!-- Fraud Detection Internship -->
+          <div class="experience-card">
+            <div class="experience-header">
+              <div class="company-logo">
+                <img src="images/peaqock_financials_logo.jpg" alt="PEAQOCK Logo">
+              </div>
+              <div class="experience-title-block">
+                <h3>Data Science Intern - Fraud Detection</h3>
+                <div class="company-name"><strong>PEAQOCK</strong></div>
+              </div>
+            </div>
+            <div class="experience-period">July - October 2025</div>
+            <p class="experience-description">
+              Built ML ensemble model for real-time fraud detection. Generated 581K transactions, created 103 features, achieved 92% precision using XGBoost and LightGBM.
+            </p>
+            <div class="experience-skills">
+              <span class="exp-skill">Python</span>
+              <span class="exp-skill">XGBoost</span>
+              <span class="exp-skill">SMOTE</span>
+              <span class="exp-skill">Feature Engineering</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <h2 class="section-title">Skills & Technologies</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon">🐍</div>
+            <h3>Python & Data Science</h3>
+            <p>
+              Python, Pandas, NumPy, Scikit-learn, XGBoost, LightGBM, Feature Engineering, Data Cleaning
+            </p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">💻</div>
+            <h3>Full-Stack Development</h3>
+            <p>
+              React, TypeScript, JavaScript, FastAPI, HTML5, CSS3, Tailwind CSS, RESTful APIs
+            </p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🗄️</div>
+            <h3>Database & SQL</h3>
+            <p>SQL, MySQL, PostgreSQL, MongoDB, SQLite, Database Design, Query Optimization</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">📊</div>
+            <h3>Data Visualization & BI</h3>
+            <p>
+              Power BI, Tableau, Matplotlib, Seaborn, Plotly, Dashboard Design, Interactive Charts
+            </p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">💰</div>
+            <h3>Financial Analysis</h3>
+            <p>
+              Financial Modeling, Risk Assessment, Time Series Analysis, Fraud Detection, Eviews
+            </p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🤖</div>
+            <h3>AI & Machine Learning</h3>
+            <p>Claude API, Gemini AI, Ensemble Methods, SMOTE, Model Validation, Production ML</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="tech-stack" class="tech-stack">
+      <div class="container">
+        <h2 class="section-title">Tech Stack</h2>
+        <p class="tech-stack-subtitle">Technologies and tools I use to build data science solutions</p>
+        <div class="tech-categories">
+          <!-- Languages -->
+          <div class="tech-category">
+            <div class="tech-category-header">
+              <span class="tech-icon">💻</span>
+              <h3>Languages</h3>
+            </div>
+            <div class="tech-items">
+              <span class="tech-item">Python</span>
+              <span class="tech-item">R</span>
+              <span class="tech-item">SQL</span>
+              <span class="tech-item">HTML</span>
+              <span class="tech-item">CSS</span>
+              <span class="tech-item">JavaScript</span>
+              <span class="tech-item">LaTeX</span>
+            </div>
+          </div>
+
+          <!-- Libraries & Frameworks -->
+          <div class="tech-category">
+            <div class="tech-category-header">
+              <span class="tech-icon">📚</span>
+              <h3>Libraries & Frameworks</h3>
+            </div>
+            <div class="tech-items">
+              <span class="tech-item">Pandas</span>
+              <span class="tech-item">NumPy</span>
+              <span class="tech-item">Scikit-learn</span>
+              <span class="tech-item">PyTorch</span>
+              <span class="tech-item">Spark</span>
+              <span class="tech-item">Langchain</span>
+              <span class="tech-item">Streamlit</span>
+              <span class="tech-item">Playwright</span>
+              <span class="tech-item">BeautifulSoup</span>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="tech-category">
+            <div class="tech-category-header">
+              <span class="tech-icon">🗄️</span>
+              <h3>Databases</h3>
+            </div>
+            <div class="tech-items">
+              <span class="tech-item">MySQL</span>
+              <span class="tech-item">PostgreSQL</span>
+              <span class="tech-item">BigQuery</span>
+            </div>
+          </div>
+
+          <!-- Visualization -->
+          <div class="tech-category">
+            <div class="tech-category-header">
+              <span class="tech-icon">📊</span>
+              <h3>Visualization</h3>
+            </div>
+            <div class="tech-items">
+              <span class="tech-item">Tableau</span>
+              <span class="tech-item">Power BI</span>
+              <span class="tech-item">Matplotlib</span>
+              <span class="tech-item">Seaborn</span>
+              <span class="tech-item">Plotly</span>
+            </div>
+          </div>
+
+          <!-- Tools & Dev -->
+          <div class="tech-category">
+            <div class="tech-category-header">
+              <span class="tech-icon">🛠️</span>
+              <h3>Tools & Dev</h3>
+            </div>
+            <div class="tech-items">
+              <span class="tech-item">Jupyter</span>
+              <span class="tech-item">Git</span>
+              <span class="tech-item">Anaconda</span>
+              <span class="tech-item">Prefect</span>
+              <span class="tech-item">Docker</span>
+              <span class="tech-item">MLflow</span>
+              <span class="tech-item">Databricks</span>
+              <span class="tech-item">VS Code</span>
+              <span class="tech-item">GitHub Actions</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="images/fraud-detection.jpg" alt="Fraud Detection for Instant Payments">
+            </div>
+            <div class="project-content">
+              <h3>Fraud Detection for Instant Payments</h3>
+              <p>
+                Built an ML ensemble model for real-time fraud detection achieving 92% precision. Generated 581K realistic transactions, created 103 intelligent features, and solved class imbalance with SMOTE. Validated with independent tests proving the model learns patterns, not memorizes.
+              </p>
+              <div class="project-tags">
+                <span>Python</span>
+                <span>XGBoost</span>
+                <span>LightGBM</span>
+                <span>SMOTE</span>
+                <span>Feature Engineering</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">3-Month Internship</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <img src="images/data-analyzer.jpg" alt="DATA ANALYZER - Smart Data Platform">
+            </div>
+            <div class="project-content">
+              <h3>DATA ANALYZER - Smart Data Platform</h3>
+              <p>
+                Full-stack platform for intelligent data manipulation. Upload datasets (CSV, Excel, JSON, Parquet), clean with 8+ strategies, query in plain English, and execute custom Python transformations. AI assistant generates code automatically for complex data workflows.
+              </p>
+              <div class="project-tags">
+                <span>React</span>
+                <span>TypeScript</span>
+                <span>FastAPI</span>
+                <span>Pandas</span>
+                <span>Claude AI</span>
+              </div>
+              <div class="project-links">
+                <a href="https://lnkd.in/e7WC6Q-6" target="_blank" class="project-link">Live Demo</a>
+                <a href="https://lnkd.in/emEBje5E" target="_blank" class="project-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <img src="images/finanalyse.jpg" alt="FinAnalyse - AI Financial Analysis">
+            </div>
+            <div class="project-content">
+              <h3>FinAnalyse - AI Financial Analysis</h3>
+              <p>
+                AI-powered financial analysis platform with Google Gemini integration. Get key metrics and intelligent summaries of company performance. Features conversational AI assistant to explain financial terms (PER, ROE), real-time market data (Top Gainers/Losers), and financial news feed.
+              </p>
+              <div class="project-tags">
+                <span>Python</span>
+                <span>FastAPI</span>
+                <span>JavaScript</span>
+                <span>Gemini AI</span>
+                <span>Tailwind</span>
+              </div>
+              <div class="project-links">
+                <a href="https://finanalyses.pages.dev/" target="_blank" class="project-link">Live Demo</a>
+                <a href="https://lnkd.in/dyiJU_ut" target="_blank" class="project-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <img src="images/MaFinance Pro.jpg" alt="MaFinance Pro - Morocco Stock Market Dashboard">
+            </div>
+            <div class="project-content">
+              <h3>MaFinance Pro - Morocco Stock Market Dashboard</h3>
+              <p>
+                Real-time stock market dashboard tracking 77+ stocks from Casablanca Stock Exchange. Features automated web scraping with 60-second auto-refresh, advanced search with autocomplete, multi-sector filtering, personalized watchlists, price alerts, and interactive Chart.js visualizations. Secure authentication and responsive design.
+              </p>
+              <div class="project-tags">
+                <span>Python</span>
+                <span>Flask</span>
+                <span>PostgreSQL</span>
+                <span>Chart.js</span>
+                <span>Web Scraping</span>
+              </div>
+              <div class="project-links">
+                <a href="https://lnkd.in/ebjN_idT" target="_blank" class="project-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section id="languages" class="languages-section">
+      <div class="container">
+        <h2 class="section-title">Languages</h2>
+        <div class="languages-grid">
+          <div class="language-card">
+            <div class="language-code">FR</div>
+            <h3>French</h3>
+            <p>Native</p>
+          </div>
+          <div class="language-card">
+            <div class="language-code">EN</div>
+            <h3>English</h3>
+            <p>Professional</p>
+          </div>
+          <div class="language-card">
+            <div class="language-code">AR</div>
+            <h3>Arabic</h3>
+            <p>Native</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>Let's Connect</h3>
+            <p>
+              I'm open to internships, research collaborations, and
+              opportunities in finance and data science. Let's discuss how we
+              can work together.
+            </p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <span class="contact-icon">📧</span>
+                <div>
+                  <h4>Email</h4>
+                  <p>omar.arhoune@gmail.com</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon">📱</span>
+                <div>
+                  <h4>Phone</h4>
+                  <p>+212 0684010218</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon">📍</span>
+                <div>
+                  <h4>Location</h4>
+                  <p>Casablanca & Rabat, Morocco</p>
+                </div>
+              </div>
+            </div>
+            <div class="social-links">
+              <a
+                href="https://www.linkedin.com/in/omar-arhoune-916b0522b/"
+                target="_blank"
+                class="social-link"
+                >LinkedIn</a
+              >
+              <a href="https://github.com/lkiwan" target="_blank" class="social-link">GitHub</a>
+              <a href="mailto:omar.arhoune@gmail.com" class="social-link">Email</a>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form>
+              <div class="form-group">
+                <input type="text" placeholder="Your Name" required />
+              </div>
+              <div class="form-group">
+                <input type="email" placeholder="Your Email" required />
+              </div>
+              <div class="form-group">
+                <input type="text" placeholder="Subject" />
+              </div>
+              <div class="form-group">
+                <textarea
+                  rows="5"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 Omar Arhoune. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
