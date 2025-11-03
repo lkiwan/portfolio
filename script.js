@@ -103,9 +103,9 @@ const contactForm = document.querySelector('.contact-form form');
 // Initialize EmailJS (vous devez ajouter vos clés après configuration)
 // Allez sur: https://www.emailjs.com/
 // Créez un compte, puis remplacez ces valeurs:
-const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY'; // Votre Public Key EmailJS
-const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID'; // Votre Service ID
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'; // Votre Template ID
+const EMAILJS_PUBLIC_KEY = 'jxzcFIrllrRzHbYsO'; // Votre Public Key EmailJS
+const EMAILJS_SERVICE_ID = 'service_qxgsc1e'; // Votre Service ID
+const EMAILJS_TEMPLATE_ID = 'aYjd7uKADa-__TmfcRZrD'; // Votre Template ID
 
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
