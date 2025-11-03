@@ -37,8 +37,11 @@ node_modules/
 
 # Personal files - IMPORTANT
 cv/photo.jpg
-cv/*.pdf
-*.pdf
+# cv/*.pdf  # Commented to allow Omar_Arhoune_CV.pdf to be public
+# *.pdf     # Commented to allow CV PDF
+
+# Allow specific CV to be public
+!cv/Omar_Arhoune_CV.pdf
 
 # Backup files
 *.backup
