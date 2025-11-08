@@ -520,16 +520,16 @@ section {
 
 .languages-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 50px;
-    max-width: 800px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
 .language-card {
     background: var(--bg-card);
-    padding: 35px;
-    border-radius: 15px;
+    padding: 25px 20px;
+    border-radius: 12px;
     border: 1px solid var(--border-color);
     text-align: center;
     transition: all 0.3s ease;
@@ -542,25 +542,26 @@ section {
 }
 
 .language-code {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 800;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     color: var(--primary-color);
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     text-shadow: 0 0 20px rgba(197, 157, 95, 0.6);
     font-family: 'Courier New', monospace;
 }
 
 .language-card h3 {
     color: var(--text-cream);
-    font-size: 1.3rem;
-    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+    margin: 0 0 8px 0;
 }
 
 .language-card p {
     color: var(--primary-color);
     font-weight: 600;
     margin: 0;
+    font-size: 0.9rem;
 }
 
 /* Education Section */
@@ -1432,21 +1433,27 @@ body[dir="rtl"] .social-links {
 
 @media (max-width: 768px) {
     .languages-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
         gap: 15px;
-        max-width: 350px;
+        max-width: 500px;
     }
 
     .language-card {
-        padding: 25px;
+        padding: 18px 15px;
     }
 
     .language-code {
-        font-size: 2rem;
+        font-size: 1.6rem;
+        margin-bottom: 10px;
     }
 
     .language-card h3 {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        margin-bottom: 6px;
+    }
+
+    .language-card p {
+        font-size: 0.85rem;
     }
 
     .timeline::before {
@@ -1621,19 +1628,32 @@ body[dir="rtl"] .social-links {
     }
 
     .languages-grid {
+        grid-template-columns: repeat(3, 1fr);
         max-width: 100%;
-        padding: 0 15px;
+        gap: 10px;
+        padding: 0 10px;
     }
 
     .language-card {
-        padding: 20px;
+        padding: 15px 10px;
         margin: 0 auto;
         width: 100%;
+        border-radius: 10px;
     }
 
     .language-code {
-        font-size: 1.8rem;
-        letter-spacing: 2px;
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+        margin-bottom: 6px;
+    }
+
+    .language-card h3 {
+        font-size: 0.85rem;
+        margin-bottom: 4px;
+    }
+
+    .language-card p {
+        font-size: 0.7rem;
     }
 
     .hero-title {
