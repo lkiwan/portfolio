@@ -526,6 +526,7 @@ const translations = {
         stat_experience: "Mois",
         stat_projects: "Projets",
         stat_certifications: "Certifications",
+        stat4_title: "Certifications",
 
         // Education
         education_title: "Formation",
@@ -630,6 +631,7 @@ const translations = {
         stat_experience: "Months",
         stat_projects: "Projects",
         stat_certifications: "Certifications",
+        stat4_title: "Certifications",
 
         // Education
         education_title: "Education",
@@ -734,6 +736,7 @@ const translations = {
         stat_experience: "أشهر",
         stat_projects: "مشاريع",
         stat_certifications: "شهادات",
+        stat4_title: "شهادات",
 
         // Education
         education_title: "التعليم",
@@ -956,4 +959,386 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+});
+
+// ============================================
+// STATISTICS MODAL SYSTEM
+// ============================================
+
+// Stat details data
+const statDetails = {
+    masters: {
+        icon: '🎓',
+        title: {
+            fr: "Master en Finance & Data Science",
+            en: "Master's in Finance & Data Science",
+            ar: "ماجستير في المالية وعلوم البيانات"
+        },
+        subtitle: {
+            fr: "FSJESM, Maroc | 2024 - Présent",
+            en: "FSJESM, Morocco | 2024 - Present",
+            ar: "FSJESM، المغرب | 2024 - الحالي"
+        },
+        details: [
+            {
+                title: {
+                    fr: "Focus académique",
+                    en: "Academic Focus",
+                    ar: "التركيز الأكاديمي"
+                },
+                content: {
+                    fr: "Programme combinant finance quantitative, machine learning et analyse de données avancée",
+                    en: "Program combining quantitative finance, machine learning, and advanced data analysis",
+                    ar: "برنامج يجمع بين التمويل الكمي والتعلم الآلي وتحليل البيانات المتقدمة"
+                }
+            },
+            {
+                title: {
+                    fr: "Compétences développées",
+                    en: "Skills Developed",
+                    ar: "المهارات المطورة"
+                },
+                list: {
+                    fr: [
+                        "Modélisation prédictive et séries temporelles",
+                        "Gestion de risque financier",
+                        "Machine Learning pour la finance",
+                        "Analyse de données massives",
+                        "Programmation Python avancée"
+                    ],
+                    en: [
+                        "Predictive modeling and time series",
+                        "Financial risk management",
+                        "Machine Learning for finance",
+                        "Big data analysis",
+                        "Advanced Python programming"
+                    ],
+                    ar: [
+                        "النمذجة التنبؤية والسلاسل الزمنية",
+                        "إدارة المخاطر المالية",
+                        "التعلم الآلي للتمويل",
+                        "تحليل البيانات الضخمة",
+                        "برمجة بايثون المتقدمة"
+                    ]
+                }
+            },
+            {
+                title: {
+                    fr: "Objectifs",
+                    en: "Goals",
+                    ar: "الأهداف"
+                },
+                content: {
+                    fr: "Devenir expert en analyse quantitative et applications IA dans le secteur financier",
+                    en: "Become an expert in quantitative analysis and AI applications in the financial sector",
+                    ar: "أن أصبح خبيراً في التحليل الكمي وتطبيقات الذكاء الاصطناعي في القطاع المالي"
+                }
+            }
+        ]
+    },
+    projects: {
+        icon: '💼',
+        title: {
+            fr: "4+ Projets en Production",
+            en: "4+ Live Projects",
+            ar: "4+ مشاريع نشطة"
+        },
+        subtitle: {
+            fr: "Projets full-stack en finance et data science",
+            en: "Full-stack projects in finance and data science",
+            ar: "مشاريع كاملة في التمويل وعلوم البيانات"
+        },
+        details: [
+            {
+                title: {
+                    fr: "DATA ANALYZER",
+                    en: "DATA ANALYZER",
+                    ar: "محلل البيانات"
+                },
+                content: {
+                    fr: "Plateforme intelligente de manipulation de données avec IA intégrée pour l'analyse et la transformation",
+                    en: "Smart data manipulation platform with integrated AI for analysis and transformation",
+                    ar: "منصة ذكية للتعامل مع البيانات مع الذكاء الاصطناعي المدمج للتحليل والتحويل"
+                }
+            },
+            {
+                title: {
+                    fr: "FinAnalyse",
+                    en: "FinAnalyse",
+                    ar: "التحليل المالي"
+                },
+                content: {
+                    fr: "Plateforme d'analyse financière alimentée par Gemini AI avec métriques en temps réel",
+                    en: "AI-powered financial analysis platform with Gemini AI and real-time metrics",
+                    ar: "منصة تحليل مالي تعمل بالذكاء الاصطناعي مع مقاييس في الوقت الفعلي"
+                }
+            },
+            {
+                title: {
+                    fr: "MaFinance Pro",
+                    en: "MaFinance Pro",
+                    ar: "ماي فاينانس برو"
+                },
+                content: {
+                    fr: "Dashboard temps réel pour la Bourse de Casablanca avec 77+ actions et alertes personnalisées",
+                    en: "Real-time dashboard for Casablanca Stock Exchange with 77+ stocks and custom alerts",
+                    ar: "لوحة معلومات في الوقت الفعلي لبورصة الدار البيضاء مع أكثر من 77 سهماً وتنبيهات مخصصة"
+                }
+            },
+            {
+                title: {
+                    fr: "Détection de Fraude",
+                    en: "Fraud Detection",
+                    ar: "كشف الاحتيال"
+                },
+                content: {
+                    fr: "Système ML pour paiements instantanés avec 92% de précision (Stage PEAQOCK)",
+                    en: "ML system for instant payments with 92% precision (PEAQOCK Internship)",
+                    ar: "نظام تعلم آلي للمدفوعات الفورية بدقة 92% (تدريب بياكوك)"
+                }
+            }
+        ]
+    },
+    internship: {
+        icon: '🚀',
+        title: {
+            fr: "Stage Détection de Fraude - 3 Mois",
+            en: "Fraud Detection Internship - 3 Months",
+            ar: "تدريب كشف الاحتيال - 3 أشهر"
+        },
+        subtitle: {
+            fr: "PEAQOCK | Juillet - Octobre 2025",
+            en: "PEAQOCK | July - October 2025",
+            ar: "بياكوك | يوليو - أكتوبر 2025"
+        },
+        details: [
+            {
+                title: {
+                    fr: "Mission",
+                    en: "Mission",
+                    ar: "المهمة"
+                },
+                content: {
+                    fr: "Développement d'un système ML ensemble pour la détection de fraude en temps réel sur les paiements instantanés",
+                    en: "Development of an ensemble ML system for real-time fraud detection on instant payments",
+                    ar: "تطوير نظام تعلم آلي متكامل للكشف عن الاحتيال في الوقت الفعلي على المدفوعات الفورية"
+                }
+            },
+            {
+                title: {
+                    fr: "Réalisations clés",
+                    en: "Key Achievements",
+                    ar: "الإنجازات الرئيسية"
+                },
+                list: {
+                    fr: [
+                        "Génération de 581K transactions réalistes pour l'entraînement",
+                        "Création de 103 features intelligentes",
+                        "Atteint 92% de précision avec XGBoost et LightGBM",
+                        "Résolution du déséquilibre des classes avec SMOTE",
+                        "Validation avec tests indépendants"
+                    ],
+                    en: [
+                        "Generated 581K realistic transactions for training",
+                        "Created 103 intelligent features",
+                        "Achieved 92% precision with XGBoost and LightGBM",
+                        "Solved class imbalance with SMOTE",
+                        "Validated with independent tests"
+                    ],
+                    ar: [
+                        "توليد 581 ألف معاملة واقعية للتدريب",
+                        "إنشاء 103 ميزة ذكية",
+                        "تحقيق دقة 92% مع XGBoost و LightGBM",
+                        "حل عدم التوازن في الفئات باستخدام SMOTE",
+                        "التحقق من الاختبارات المستقلة"
+                    ]
+                }
+            },
+            {
+                title: {
+                    fr: "Technologies utilisées",
+                    en: "Technologies Used",
+                    ar: "التقنيات المستخدمة"
+                },
+                content: {
+                    fr: "Python, XGBoost, LightGBM, SMOTE, Pandas, Scikit-learn, Feature Engineering",
+                    en: "Python, XGBoost, LightGBM, SMOTE, Pandas, Scikit-learn, Feature Engineering",
+                    ar: "Python, XGBoost, LightGBM, SMOTE, Pandas, Scikit-learn, Feature Engineering"
+                }
+            }
+        ]
+    },
+    certifications: {
+        icon: '🏆',
+        title: {
+            fr: "6 Certifications Professionnelles",
+            en: "6 Professional Certifications",
+            ar: "6 شهادات احترافية"
+        },
+        subtitle: {
+            fr: "DataCamp | 16 heures totales",
+            en: "DataCamp | 16 total hours",
+            ar: "DataCamp | 16 ساعة إجمالية"
+        },
+        details: [
+            {
+                title: {
+                    fr: "Certifications obtenues",
+                    en: "Certifications Earned",
+                    ar: "الشهادات المكتسبة"
+                },
+                list: {
+                    fr: [
+                        "Introduction à SQL (2h)",
+                        "Comprendre le Machine Learning (2h)",
+                        "Comprendre la Visualisation de Données (2h)",
+                        "Python Intermédiaire (4h)",
+                        "Comprendre l'Intelligence Artificielle (2h)",
+                        "Comprendre l'Ingénierie des Données (2h)"
+                    ],
+                    en: [
+                        "Introduction to SQL (2h)",
+                        "Understanding Machine Learning (2h)",
+                        "Understanding Data Visualization (2h)",
+                        "Intermediate Python (4h)",
+                        "Understanding Artificial Intelligence (2h)",
+                        "Understanding Data Engineering (2h)"
+                    ],
+                    ar: [
+                        "مقدمة في SQL (ساعتان)",
+                        "فهم التعلم الآلي (ساعتان)",
+                        "فهم تصور البيانات (ساعتان)",
+                        "بايثون المتوسط (4 ساعات)",
+                        "فهم الذكاء الاصطناعي (ساعتان)",
+                        "فهم هندسة البيانات (ساعتان)"
+                    ]
+                }
+            },
+            {
+                title: {
+                    fr: "Compétences développées",
+                    en: "Skills Developed",
+                    ar: "المهارات المطورة"
+                },
+                content: {
+                    fr: "Maîtrise des fondamentaux en data science, ML, IA, visualisation et ingénierie des données",
+                    en: "Mastery of fundamentals in data science, ML, AI, visualization and data engineering",
+                    ar: "إتقان الأساسيات في علوم البيانات والتعلم الآلي والذكاء الاصطناعي والتصور وهندسة البيانات"
+                }
+            },
+            {
+                title: {
+                    fr: "Taux de complétion",
+                    en: "Completion Rate",
+                    ar: "معدل الإنجاز"
+                },
+                content: {
+                    fr: "100% - Tous les cours complétés avec succès",
+                    en: "100% - All courses completed successfully",
+                    ar: "100% - جميع الدورات مكتملة بنجاح"
+                }
+            }
+        ]
+    }
+};
+
+// Get modal elements
+const statModal = document.getElementById('stat-modal');
+const statModalBody = statModal ? statModal.querySelector('.stat-modal-body') : null;
+const statModalClose = statModal ? statModal.querySelector('.stat-modal-close') : null;
+const statModalOverlay = statModal ? statModal.querySelector('.stat-modal-overlay') : null;
+
+// Function to get current language
+function getCurrentLanguage() {
+    return currentLang || 'fr';
+}
+
+// Function to render modal content
+function renderStatModalContent(statType) {
+    const lang = getCurrentLanguage();
+    const data = statDetails[statType];
+
+    if (!data) return '';
+
+    let html = `
+        <div class="stat-modal-header">
+            <div class="stat-modal-icon">${data.icon}</div>
+            <h2 class="stat-modal-title">${data.title[lang]}</h2>
+            <p class="stat-modal-subtitle">${data.subtitle[lang]}</p>
+        </div>
+        <div class="stat-modal-details">
+    `;
+
+    data.details.forEach(detail => {
+        html += `
+            <div class="stat-detail-item">
+                <h4>${detail.title[lang]}</h4>
+        `;
+
+        if (detail.content) {
+            html += `<p>${detail.content[lang]}</p>`;
+        }
+
+        if (detail.list) {
+            html += '<ul>';
+            detail.list[lang].forEach(item => {
+                html += `<li>${item}</li>`;
+            });
+            html += '</ul>';
+        }
+
+        html += '</div>';
+    });
+
+    html += '</div>';
+
+    return html;
+}
+
+// Function to open stat modal
+function openStatModal(statType) {
+    if (!statModal || !statModalBody) return;
+
+    const content = renderStatModalContent(statType);
+    statModalBody.innerHTML = content;
+
+    statModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+// Function to close stat modal
+function closeStatModal() {
+    if (!statModal) return;
+
+    statModal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+// Event listeners for stat cards
+document.addEventListener('DOMContentLoaded', () => {
+    const statCards = document.querySelectorAll('.stat-card');
+
+    statCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const statType = card.getAttribute('data-stat');
+            openStatModal(statType);
+        });
+    });
+
+    // Close modal on close button click
+    if (statModalClose) {
+        statModalClose.addEventListener('click', closeStatModal);
+    }
+
+    // Close modal on overlay click
+    if (statModalOverlay) {
+        statModalOverlay.addEventListener('click', closeStatModal);
+    }
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && statModal && statModal.classList.contains('active')) {
+            closeStatModal();
+        }
+    });
 });

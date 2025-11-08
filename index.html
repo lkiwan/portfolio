@@ -159,17 +159,40 @@
               decision-making in the financial sector.
             </p>
             <div class="about-stats">
-              <div class="stat">
+              <div class="stat stat-card" data-stat="masters">
+                <div class="stat-icon">🎓</div>
                 <h3>Master's</h3>
                 <p>Finance & Data Science</p>
+                <div class="stat-indicator">Click for details →</div>
               </div>
-              <div class="stat">
+              <div class="stat stat-card" data-stat="projects">
+                <div class="stat-icon">💼</div>
                 <h3>4+</h3>
                 <p>Live Projects</p>
+                <div class="stat-indicator">Click for details →</div>
               </div>
-              <div class="stat">
+              <div class="stat stat-card" data-stat="internship">
+                <div class="stat-icon">🚀</div>
                 <h3 data-translate="stat3_title">3 Mois</h3>
                 <p data-translate="stat3_desc">Stage Détection de Fraude</p>
+                <div class="stat-indicator">Click for details →</div>
+              </div>
+              <div class="stat stat-card" data-stat="certifications">
+                <div class="stat-icon">🏆</div>
+                <h3>6</h3>
+                <p data-translate="stat4_title">Certifications</p>
+                <div class="stat-indicator">Click for details →</div>
+              </div>
+            </div>
+
+            <!-- Stats Detail Modal -->
+            <div class="stat-modal" id="stat-modal">
+              <div class="stat-modal-overlay"></div>
+              <div class="stat-modal-content">
+                <button class="stat-modal-close">&times;</button>
+                <div class="stat-modal-body">
+                  <!-- Content will be dynamically inserted -->
+                </div>
               </div>
             </div>
           </div>
