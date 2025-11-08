@@ -894,26 +894,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const langOptions = document.querySelectorAll('.lang-option');
     const currentLangSpan = document.querySelector('.current-lang');
 
-    console.log('Dropdown elements:', {
-        dropdownBtn,
-        dropdownMenu,
-        langOptions: langOptions.length,
-        currentLangSpan
-    });
+    console.log('=== DROPDOWN DEBUG ===');
+    console.log('Button found:', dropdownBtn);
+    console.log('Menu found:', dropdownMenu);
+    console.log('Options found:', langOptions.length);
+    console.log('Current lang span:', currentLangSpan);
 
     if (dropdownBtn && dropdownMenu) {
+        console.log('Setting up dropdown listeners...');
+
         // Toggle dropdown on button click
-        dropdownBtn.addEventListener('click', (e) => {
+        dropdownBtn.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
-            const isActive = dropdownMenu.classList.toggle('active');
+
+            console.log('Button clicked!');
+            console.log('Menu classes before:', dropdownMenu.className);
+
             dropdownBtn.classList.toggle('active');
-            console.log('Dropdown toggled, active:', isActive);
+            dropdownMenu.classList.toggle('active');
+
+            console.log('Menu classes after:', dropdownMenu.className);
+            console.log('Menu is active:', dropdownMenu.classList.contains('active'));
         });
 
         // Close dropdown when clicking outside
-        document.addEventListener('click', (e) => {
+        document.addEventListener('click', function(e) {
             if (!dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                console.log('Closing dropdown (clicked outside)');
                 dropdownBtn.classList.remove('active');
                 dropdownMenu.classList.remove('active');
             }

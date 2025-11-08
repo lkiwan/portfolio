@@ -145,6 +145,7 @@ section {
     border-bottom: 1px solid var(--border-color);
     z-index: 1000;
     transition: all 0.3s ease;
+    overflow: visible;
 }
 
 .navbar .container {
@@ -230,6 +231,13 @@ section {
     position: relative;
 }
 
+@media (max-width: 768px) {
+    .lang-dropdown-mobile {
+        display: block;
+        position: relative;
+    }
+}
+
 .lang-dropdown-btn {
     display: flex;
     align-items: center;
@@ -277,19 +285,26 @@ section {
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     min-width: 160px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: none;
     z-index: 10000;
     overflow: hidden;
     backdrop-filter: blur(10px);
 }
 
 .lang-dropdown-menu.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+    display: block;
+    animation: dropdownSlide 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes dropdownSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .lang-option {
