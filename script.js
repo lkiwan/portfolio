@@ -266,6 +266,84 @@ window.addEventListener('load', () => {
     }, 100);
 });
 
+// ============================================
+// CERTIFICATES LIGHTBOX
+// ============================================
+
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('cert-modal');
+    const modalImg = document.getElementById('cert-modal-img');
+    const captionText = document.getElementById('cert-caption');
+    const closeBtn = document.querySelector('.cert-modal-close');
+    const certItems = document.querySelectorAll('.cert-item');
+
+    // Open modal when clicking on certificate or view button
+    certItems.forEach(item => {
+        const container = item.querySelector('.cert-image-container');
+        const thumbnail = item.querySelector('.cert-thumbnail');
+        const title = item.querySelector('.cert-info h3').textContent;
+        const provider = item.querySelector('.cert-provider').textContent;
+
+        // Click on image container or view button
+        const openModal = () => {
+            modal.style.display = 'block';
+            modalImg.src = thumbnail.src;
+            captionText.innerHTML = `<strong>${title}</strong><br>${provider}`;
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        };
+
+        container.addEventListener('click', openModal);
+    });
+
+    // Close modal
+    const closeModal = () => {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Restore scrolling
+    };
+
+    closeBtn.addEventListener('click', closeModal);
+
+    // Close when clicking outside the image
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Close with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.style.display === 'block') {
+            closeModal();
+        }
+    });
+
+    // Animate certificates on scroll
+    const certObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('animate-in');
+                }, index * 100); // Stagger animation
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    certItems.forEach(item => {
+        certObserver.observe(item);
+    });
+
+    // Animate certificate stats
+    const certStats = document.querySelectorAll('.cert-stat-item');
+    certStats.forEach((stat, index) => {
+        stat.classList.add('fade-in-element');
+        stat.style.animationDelay = `${index * 0.15}s`;
+        scrollAnimationObserver.observe(stat);
+    });
+});
+
 // Animated Counter for Stats
 const animateCounter = (element, target, duration = 2000, suffix = '') => {
     let current = 0;
