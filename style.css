@@ -252,20 +252,23 @@ section {
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
-    padding: 10px;
+    padding: 15px;
     position: relative;
     z-index: 1001;
     background: transparent;
     border: none;
-    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(197, 157, 95, 0.2);
+    touch-action: manipulation;
+    user-select: none;
 }
 
 .menu-toggle span {
-    width: 25px;
+    width: 28px;
     height: 3px;
     background: var(--text-light);
     transition: all 0.3s ease;
     display: block;
+    pointer-events: none;
 }
 
 /* Hero Section */

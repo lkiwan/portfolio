@@ -1,35 +1,41 @@
-// Mobile Menu Toggle - Wrapped in DOMContentLoaded for safety
-document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    const navItems = document.querySelectorAll('.nav-links a');
+// Mobile Menu Toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+const navItems = document.querySelectorAll('.nav-links a');
 
-    if (menuToggle && navLinks) {
-        menuToggle.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            menuToggle.classList.toggle('active');
-            navLinks.classList.toggle('active');
-            console.log('Menu toggle clicked, active:', navLinks.classList.contains('active'));
-        });
+if (menuToggle && navLinks) {
+    console.log('Menu toggle found:', menuToggle);
+    console.log('Nav links found:', navLinks);
 
-        // Close mobile menu when clicking on a nav link
-        navItems.forEach(item => {
-            item.addEventListener('click', () => {
-                menuToggle.classList.remove('active');
-                navLinks.classList.remove('active');
-            });
-        });
+    menuToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('Menu toggle clicked!');
+        menuToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        console.log('Menu active:', navLinks.classList.contains('active'));
+    });
 
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
-                menuToggle.classList.remove('active');
-                navLinks.classList.remove('active');
-            }
+    // Close mobile menu when clicking on a nav link
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            navLinks.classList.remove('active');
         });
-    }
-});
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+            menuToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
+} else {
+    console.error('Menu toggle or nav links not found!');
+    console.log('menuToggle:', menuToggle);
+    console.log('navLinks:', navLinks);
+}
 
 // Navbar scroll effect
 const navbar = document.querySelector('.navbar');
