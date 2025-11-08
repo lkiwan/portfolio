@@ -1487,37 +1487,61 @@ body[dir="rtl"] .social-links {
         width: 100%;
         display: flex;
         justify-content: center;
-        padding: 15px 0;
-        margin-top: 10px;
-        border-top: 1px solid var(--border-color);
+        padding: 20px 0;
+        margin-top: 20px;
+        border-top: 2px solid var(--border-color);
     }
 
     .language-switcher {
         justify-content: center;
+        gap: 10px;
+    }
+
+    .lang-btn {
+        padding: 10px 18px;
+        font-size: 1rem;
     }
 
     .nav-links {
         position: fixed;
-        top: 120px;
+        top: 70px;
         left: -100%;
         width: 100%;
-        height: calc(100vh - 120px);
-        background: var(--bg-dark);
+        height: calc(100vh - 70px);
+        background: rgba(26, 21, 18, 0.98);
+        backdrop-filter: blur(10px);
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        padding-top: 50px;
+        padding-top: 30px;
+        gap: 0;
         transition: left 0.3s ease;
         box-shadow: var(--shadow);
         border-right: 1px solid var(--border-color);
+        overflow-y: auto;
+        z-index: 999;
     }
 
     .nav-links.active {
         left: 0;
     }
 
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 15px 20px;
+        font-size: 1.1rem;
+        width: 100%;
+    }
+
     .menu-toggle {
         display: flex;
+        z-index: 1001;
     }
 
     .menu-toggle.active span:nth-child(1) {
