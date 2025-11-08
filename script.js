@@ -545,6 +545,7 @@ const translations = {
 
         // Certifications
         certifications_title: "Certifications",
+        certifications_subtitle: "Apprentissage continu et développement des compétences via des certifications reconnues",
         cert_sql_title: "Introduction à SQL",
         cert_sql_provider: "DataCamp",
         cert_ml_title: "Comprendre le Machine Learning",
@@ -648,6 +649,7 @@ const translations = {
 
         // Certifications
         certifications_title: "Certifications",
+        certifications_subtitle: "Continuous learning and skill development through recognized industry certifications",
         cert_sql_title: "Introduction to SQL",
         cert_sql_provider: "DataCamp",
         cert_ml_title: "Understanding Machine Learning",
@@ -751,6 +753,7 @@ const translations = {
 
         // Certifications
         certifications_title: "الشهادات",
+        certifications_subtitle: "التعلم المستمر وتطوير المهارات من خلال الشهادات المعترف بها",
         cert_sql_title: "مقدمة في SQL",
         cert_sql_provider: "DataCamp",
         cert_ml_title: "فهم التعلم الآلي",
@@ -832,11 +835,26 @@ function changeLanguage(lang) {
         }
     });
 
-    // Update active button
+    // Update active button (desktop)
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.remove('active');
         if (btn.getAttribute('data-lang') === lang) {
             btn.classList.add('active');
+        }
+    });
+
+    // Update mobile dropdown
+    const currentLangSpan = document.querySelector('.current-lang');
+    const langOptions = document.querySelectorAll('.lang-option');
+
+    if (currentLangSpan) {
+        currentLangSpan.textContent = lang.toUpperCase();
+    }
+
+    langOptions.forEach(option => {
+        option.classList.remove('active');
+        if (option.getAttribute('data-lang') === lang) {
+            option.classList.add('active');
         }
     });
 
@@ -862,11 +880,56 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('preferredLanguage') || 'fr';
     changeLanguage(savedLang);
 
-    // Add click event listeners to language buttons
+    // Add click event listeners to language buttons (desktop)
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             const lang = btn.getAttribute('data-lang');
             changeLanguage(lang);
         });
     });
+
+    // Mobile Language Dropdown
+    const dropdownBtn = document.querySelector('.lang-dropdown-btn');
+    const dropdownMenu = document.querySelector('.lang-dropdown-menu');
+    const langOptions = document.querySelectorAll('.lang-option');
+    const currentLangSpan = document.querySelector('.current-lang');
+
+    if (dropdownBtn && dropdownMenu) {
+        // Toggle dropdown on button click
+        dropdownBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdownBtn.classList.toggle('active');
+            dropdownMenu.classList.toggle('active');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                dropdownBtn.classList.remove('active');
+                dropdownMenu.classList.remove('active');
+            }
+        });
+
+        // Handle language selection
+        langOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                const lang = option.getAttribute('data-lang');
+                const langCode = option.querySelector('.lang-code').textContent;
+
+                // Update active state
+                langOptions.forEach(opt => opt.classList.remove('active'));
+                option.classList.add('active');
+
+                // Update current language display
+                currentLangSpan.textContent = langCode;
+
+                // Change language
+                changeLanguage(lang);
+
+                // Close dropdown
+                dropdownBtn.classList.remove('active');
+                dropdownMenu.classList.remove('active');
+            });
+        });
+    }
 });

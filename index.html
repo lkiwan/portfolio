@@ -11,6 +11,31 @@
     <nav class="navbar">
       <div class="container">
         <div class="logo">Omar Arhoune</div>
+
+        <!-- Mobile Language Dropdown (compact, next to logo) -->
+        <div class="lang-dropdown-mobile">
+          <button class="lang-dropdown-btn" aria-label="Select language">
+            <span class="current-lang">FR</span>
+            <svg class="dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
+              <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <div class="lang-dropdown-menu">
+            <button class="lang-option active" data-lang="fr">
+              <span class="lang-code">FR</span>
+              <span class="lang-name">Français</span>
+            </button>
+            <button class="lang-option" data-lang="en">
+              <span class="lang-code">EN</span>
+              <span class="lang-name">English</span>
+            </button>
+            <button class="lang-option" data-lang="ar">
+              <span class="lang-code">AR</span>
+              <span class="lang-name">العربية</span>
+            </button>
+          </div>
+        </div>
+
         <ul class="nav-links">
           <li><a href="#home" data-translate="nav_home">Home</a></li>
           <li><a href="#about" data-translate="nav_about">About</a></li>
@@ -428,7 +453,7 @@
     <section id="certifications" class="certifications">
       <div class="container">
         <h2 class="section-title" data-translate="certifications_title">Professional Certifications</h2>
-        <p class="certifications-subtitle">
+        <p class="certifications-subtitle" data-translate="certifications_subtitle">
           Continuous learning and skill development through recognized industry certifications
         </p>
 
