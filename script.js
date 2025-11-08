@@ -470,3 +470,382 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollAnimationObserver.observe(aboutImage);
     }
 });
+
+// ============================================
+// MULTILINGUAL SYSTEM (FR/EN/AR)
+// ============================================
+
+const translations = {
+    fr: {
+        // Navigation
+        nav_home: "Accueil",
+        nav_about: "À propos",
+        nav_education: "Formation",
+        nav_experience: "Expérience",
+        nav_skills: "Compétences",
+        nav_tech: "Stack Technique",
+        nav_certifications: "Certifications",
+        nav_projects: "Projets",
+        nav_languages: "Langues",
+        nav_contact: "Contact",
+
+        // Hero Section
+        hero_greeting: "Bonjour, je suis",
+        hero_subtitle: "Étudiant en Master Finance & Data Science | Analyste | Résolveur de Problèmes",
+        btn_view_work: "Voir mes travaux",
+        btn_contact: "Me contacter",
+        btn_download_cv: "Télécharger CV",
+
+        // About Section
+        about_title: "À propos de moi",
+        about_text_1: "Je suis étudiant en Master spécialisé en Finance et Data Science, passionné par l'analyse de données et la résolution de problèmes complexes.",
+        about_text_2: "Avec une solide expérience en analyse financière et en science des données, je combine compétences techniques et pensée stratégique pour fournir des insights exploitables.",
+
+        // Stats
+        stat_experience: "Mois",
+        stat_projects: "Projets",
+        stat_certifications: "Certifications",
+
+        // Education
+        education_title: "Formation",
+
+        // Experience
+        experience_title: "Expérience Professionnelle",
+
+        // Skills
+        skills_title: "Compétences",
+
+        // Tech Stack
+        tech_title: "Stack Technique",
+        tech_category_languages: "Langages de Programmation",
+        tech_category_data: "Data Science & ML",
+        tech_category_databases: "Bases de Données",
+        tech_category_tools: "Outils & Technologies",
+
+        // Certifications
+        certifications_title: "Certifications",
+        cert_sql_title: "Introduction à SQL",
+        cert_sql_provider: "DataCamp",
+        cert_ml_title: "Comprendre le Machine Learning",
+        cert_ml_provider: "DataCamp",
+        cert_dataviz_title: "Comprendre la Visualisation de Données",
+        cert_dataviz_provider: "DataCamp",
+        cert_python_title: "Introduction à Python",
+        cert_python_provider: "DataCamp",
+        cert_ai_title: "Comprendre l'Intelligence Artificielle",
+        cert_ai_provider: "DataCamp",
+        cert_dataeng_title: "Comprendre l'Ingénierie des Données",
+        cert_dataeng_provider: "DataCamp",
+        view_cert_btn: "Voir le Certificat",
+        cert_stats_total: "Certifications",
+        cert_stats_hours: "Heures Totales",
+        cert_stats_completion: "Taux de Complétion",
+
+        // Projects
+        projects_title: "Projets",
+
+        // Languages
+        languages_title: "Langues",
+        lang_arabic: "Arabe",
+        lang_french: "Français",
+        lang_english: "Anglais",
+        lang_level_native: "Natif",
+        lang_level_fluent: "Courant",
+        lang_level_professional: "Professionnel",
+
+        // Contact
+        contact_title: "Contactez-moi",
+        contact_subtitle: "Travaillons ensemble",
+        contact_connect_title: "Restons en Contact",
+        contact_connect_desc: "N'hésitez pas à me contacter pour toute opportunité ou collaboration",
+        contact_email_label: "Email",
+        contact_phone_label: "Téléphone",
+        contact_location_label: "Localisation",
+        contact_location_value: "Casablanca & Rabat, Maroc",
+        contact_name: "Nom",
+        contact_email: "Email",
+        contact_subject: "Sujet",
+        contact_message: "Message",
+        contact_send: "Envoyer le message",
+        contact_form_name: "Votre nom",
+        contact_form_email: "Votre email",
+        contact_form_subject: "Sujet",
+        contact_form_message: "Votre message",
+        contact_form_submit: "Envoyer le message",
+        contact_success: "Merci! Votre message a été envoyé avec succès. Je vous répondrai bientôt!",
+        contact_error: "Erreur lors de l'envoi.",
+
+        // Language levels
+        lang_native: "Natif"
+    },
+
+    en: {
+        // Navigation
+        nav_home: "Home",
+        nav_about: "About",
+        nav_education: "Education",
+        nav_experience: "Experience",
+        nav_skills: "Skills",
+        nav_tech: "Tech Stack",
+        nav_certifications: "Certifications",
+        nav_projects: "Projects",
+        nav_languages: "Languages",
+        nav_contact: "Contact",
+
+        // Hero Section
+        hero_greeting: "Hello, I'm",
+        hero_subtitle: "Master's Student in Finance & Data Science | Analyst | Problem Solver",
+        btn_view_work: "View My Work",
+        btn_contact: "Get In Touch",
+        btn_download_cv: "Download CV",
+
+        // About Section
+        about_title: "About Me",
+        about_text_1: "I'm a Master's student specializing in Finance and Data Science, passionate about data analysis and solving complex problems.",
+        about_text_2: "With a strong background in financial analysis and data science, I combine technical skills with strategic thinking to deliver actionable insights.",
+
+        // Stats
+        stat_experience: "Months",
+        stat_projects: "Projects",
+        stat_certifications: "Certifications",
+
+        // Education
+        education_title: "Education",
+
+        // Experience
+        experience_title: "Professional Experience",
+
+        // Skills
+        skills_title: "Skills",
+
+        // Tech Stack
+        tech_title: "Tech Stack",
+        tech_category_languages: "Programming Languages",
+        tech_category_data: "Data Science & ML",
+        tech_category_databases: "Databases",
+        tech_category_tools: "Tools & Technologies",
+
+        // Certifications
+        certifications_title: "Certifications",
+        cert_sql_title: "Introduction to SQL",
+        cert_sql_provider: "DataCamp",
+        cert_ml_title: "Understanding Machine Learning",
+        cert_ml_provider: "DataCamp",
+        cert_dataviz_title: "Understanding Data Visualization",
+        cert_dataviz_provider: "DataCamp",
+        cert_python_title: "Introduction to Python",
+        cert_python_provider: "DataCamp",
+        cert_ai_title: "Understanding Artificial Intelligence",
+        cert_ai_provider: "DataCamp",
+        cert_dataeng_title: "Understanding Data Engineering",
+        cert_dataeng_provider: "DataCamp",
+        view_cert_btn: "View Certificate",
+        cert_stats_total: "Certifications",
+        cert_stats_hours: "Total Hours",
+        cert_stats_completion: "Completion Rate",
+
+        // Projects
+        projects_title: "Projects",
+
+        // Languages
+        languages_title: "Languages",
+        lang_arabic: "Arabic",
+        lang_french: "French",
+        lang_english: "English",
+        lang_level_native: "Native",
+        lang_level_fluent: "Fluent",
+        lang_level_professional: "Professional",
+
+        // Contact
+        contact_title: "Get In Touch",
+        contact_subtitle: "Let's Work Together",
+        contact_connect_title: "Let's Connect",
+        contact_connect_desc: "Feel free to reach out for opportunities or collaborations",
+        contact_email_label: "Email",
+        contact_phone_label: "Phone",
+        contact_location_label: "Location",
+        contact_location_value: "Casablanca & Rabat, Morocco",
+        contact_name: "Name",
+        contact_email: "Email",
+        contact_subject: "Subject",
+        contact_message: "Message",
+        contact_send: "Send Message",
+        contact_form_name: "Your Name",
+        contact_form_email: "Your Email",
+        contact_form_subject: "Subject",
+        contact_form_message: "Your Message",
+        contact_form_submit: "Send Message",
+        contact_success: "Thank you! Your message has been sent successfully. I'll get back to you soon!",
+        contact_error: "Error sending message.",
+
+        // Language levels
+        lang_native: "Native"
+    },
+
+    ar: {
+        // Navigation
+        nav_home: "الرئيسية",
+        nav_about: "نبذة عني",
+        nav_education: "التعليم",
+        nav_experience: "الخبرة",
+        nav_skills: "المهارات",
+        nav_tech: "التقنيات",
+        nav_certifications: "الشهادات",
+        nav_projects: "المشاريع",
+        nav_languages: "اللغات",
+        nav_contact: "تواصل معي",
+
+        // Hero Section
+        hero_greeting: "مرحباً، أنا",
+        hero_subtitle: "طالب ماجستير في المالية وعلوم البيانات | محلل | حلال المشاكل",
+        btn_view_work: "عرض أعمالي",
+        btn_contact: "تواصل معي",
+        btn_download_cv: "تحميل السيرة الذاتية",
+
+        // About Section
+        about_title: "نبذة عني",
+        about_text_1: "أنا طالب ماجستير متخصص في المالية وعلوم البيانات، شغوف بتحليل البيانات وحل المشاكل المعقدة.",
+        about_text_2: "مع خلفية قوية في التحليل المالي وعلوم البيانات، أجمع بين المهارات التقنية والتفكير الاستراتيجي لتقديم رؤى قابلة للتنفيذ.",
+
+        // Stats
+        stat_experience: "أشهر",
+        stat_projects: "مشاريع",
+        stat_certifications: "شهادات",
+
+        // Education
+        education_title: "التعليم",
+
+        // Experience
+        experience_title: "الخبرة المهنية",
+
+        // Skills
+        skills_title: "المهارات",
+
+        // Tech Stack
+        tech_title: "التقنيات المستخدمة",
+        tech_category_languages: "لغات البرمجة",
+        tech_category_data: "علوم البيانات والتعلم الآلي",
+        tech_category_databases: "قواعد البيانات",
+        tech_category_tools: "الأدوات والتقنيات",
+
+        // Certifications
+        certifications_title: "الشهادات",
+        cert_sql_title: "مقدمة في SQL",
+        cert_sql_provider: "DataCamp",
+        cert_ml_title: "فهم التعلم الآلي",
+        cert_ml_provider: "DataCamp",
+        cert_dataviz_title: "فهم تصور البيانات",
+        cert_dataviz_provider: "DataCamp",
+        cert_python_title: "مقدمة في بايثون",
+        cert_python_provider: "DataCamp",
+        cert_ai_title: "فهم الذكاء الاصطناعي",
+        cert_ai_provider: "DataCamp",
+        cert_dataeng_title: "فهم هندسة البيانات",
+        cert_dataeng_provider: "DataCamp",
+        view_cert_btn: "عرض الشهادة",
+        cert_stats_total: "شهادات",
+        cert_stats_hours: "إجمالي الساعات",
+        cert_stats_completion: "معدل الإنجاز",
+
+        // Projects
+        projects_title: "المشاريع",
+
+        // Languages
+        languages_title: "اللغات",
+        lang_arabic: "العربية",
+        lang_french: "الفرنسية",
+        lang_english: "الإنجليزية",
+        lang_level_native: "لغة أم",
+        lang_level_fluent: "طلاقة",
+        lang_level_professional: "محترف",
+
+        // Contact
+        contact_title: "تواصل معي",
+        contact_subtitle: "لنعمل معاً",
+        contact_connect_title: "لنبقَ على تواصل",
+        contact_connect_desc: "لا تتردد في التواصل معي لأي فرصة أو تعاون",
+        contact_email_label: "البريد الإلكتروني",
+        contact_phone_label: "الهاتف",
+        contact_location_label: "الموقع",
+        contact_location_value: "الدار البيضاء والرباط، المغرب",
+        contact_name: "الاسم",
+        contact_email: "البريد الإلكتروني",
+        contact_subject: "الموضوع",
+        contact_message: "الرسالة",
+        contact_send: "إرسال الرسالة",
+        contact_form_name: "اسمك",
+        contact_form_email: "بريدك الإلكتروني",
+        contact_form_subject: "الموضوع",
+        contact_form_message: "رسالتك",
+        contact_form_submit: "إرسال الرسالة",
+        contact_success: "شكراً! تم إرسال رسالتك بنجاح. سأرد عليك قريباً!",
+        contact_error: "خطأ في الإرسال.",
+
+        // Language levels
+        lang_native: "لغة أم"
+    }
+};
+
+// Current language (default: French)
+let currentLang = 'fr';
+
+// Function to change language
+function changeLanguage(lang) {
+    if (!translations[lang]) return;
+
+    currentLang = lang;
+
+    // Update all elements with data-translate attribute
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang][key]) {
+            element.textContent = translations[lang][key];
+        }
+    });
+
+    // Update placeholders
+    document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-translate-placeholder');
+        if (translations[lang][key]) {
+            element.placeholder = translations[lang][key];
+        }
+    });
+
+    // Update active button
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-lang') === lang) {
+            btn.classList.add('active');
+        }
+    });
+
+    // Handle RTL for Arabic
+    if (lang === 'ar') {
+        document.documentElement.setAttribute('dir', 'rtl');
+        document.body.classList.add('rtl');
+    } else {
+        document.documentElement.setAttribute('dir', 'ltr');
+        document.body.classList.remove('rtl');
+    }
+
+    // Update HTML lang attribute
+    document.documentElement.setAttribute('lang', lang);
+
+    // Save language preference
+    localStorage.setItem('preferredLanguage', lang);
+}
+
+// Initialize language system
+document.addEventListener('DOMContentLoaded', () => {
+    // Check for saved language preference
+    const savedLang = localStorage.getItem('preferredLanguage') || 'fr';
+    changeLanguage(savedLang);
+
+    // Add click event listeners to language buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const lang = btn.getAttribute('data-lang');
+            changeLanguage(lang);
+        });
+    });
+});
