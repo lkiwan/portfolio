@@ -207,7 +207,15 @@ section {
 /* Language Switcher */
 .nav-lang-switcher {
     list-style: none;
+}
+
+.nav-lang-switcher-desktop {
     justify-self: end;
+    display: flex;
+}
+
+.nav-lang-switcher-mobile {
+    display: none;
 }
 
 .language-switcher {
@@ -244,6 +252,12 @@ section {
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 1001;
+    background: transparent;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .menu-toggle span {
@@ -251,6 +265,7 @@ section {
     height: 3px;
     background: var(--text-light);
     transition: all 0.3s ease;
+    display: block;
 }
 
 /* Hero Section */
@@ -1496,11 +1511,28 @@ body[dir="rtl"] .social-links {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        align-items: center;
     }
 
-    .nav-lang-switcher {
-        width: 100%;
+    .logo {
+        order: 1;
+    }
+
+    .menu-toggle {
+        order: 2;
+    }
+
+    .nav-links {
+        order: 3;
+    }
+
+    .nav-lang-switcher-desktop {
+        display: none;
+    }
+
+    .nav-lang-switcher-mobile {
         display: flex;
+        width: 100%;
         justify-content: center;
         padding: 20px 0;
         margin-top: 20px;

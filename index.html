@@ -34,7 +34,7 @@
             <a href="#languages" data-translate="nav_languages">Languages</a>
           </li>
           <li><a href="#contact" data-translate="nav_contact">Contact</a></li>
-          <li class="nav-lang-switcher">
+          <li class="nav-lang-switcher nav-lang-switcher-mobile">
             <div class="language-switcher">
               <button class="lang-btn active" data-lang="fr">FR</button>
               <button class="lang-btn" data-lang="en">EN</button>
@@ -42,11 +42,18 @@
             </div>
           </li>
         </ul>
-        <div class="menu-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
+        <div class="nav-lang-switcher nav-lang-switcher-desktop">
+          <div class="language-switcher">
+            <button class="lang-btn active" data-lang="fr">FR</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="ar">AR</button>
+          </div>
         </div>
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </nav>
 
