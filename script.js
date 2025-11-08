@@ -894,12 +894,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const langOptions = document.querySelectorAll('.lang-option');
     const currentLangSpan = document.querySelector('.current-lang');
 
+    console.log('Dropdown elements:', {
+        dropdownBtn,
+        dropdownMenu,
+        langOptions: langOptions.length,
+        currentLangSpan
+    });
+
     if (dropdownBtn && dropdownMenu) {
         // Toggle dropdown on button click
         dropdownBtn.addEventListener('click', (e) => {
+            e.preventDefault();
             e.stopPropagation();
+            const isActive = dropdownMenu.classList.toggle('active');
             dropdownBtn.classList.toggle('active');
-            dropdownMenu.classList.toggle('active');
+            console.log('Dropdown toggled, active:', isActive);
         });
 
         // Close dropdown when clicking outside
@@ -912,16 +921,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Handle language selection
         langOptions.forEach(option => {
-            option.addEventListener('click', () => {
+            option.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+
                 const lang = option.getAttribute('data-lang');
                 const langCode = option.querySelector('.lang-code').textContent;
+
+                console.log('Language option clicked:', lang, langCode);
 
                 // Update active state
                 langOptions.forEach(opt => opt.classList.remove('active'));
                 option.classList.add('active');
 
                 // Update current language display
-                currentLangSpan.textContent = langCode;
+                if (currentLangSpan) {
+                    currentLangSpan.textContent = langCode;
+                }
 
                 // Change language
                 changeLanguage(lang);
