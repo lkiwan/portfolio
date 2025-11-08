@@ -148,8 +148,8 @@ section {
 }
 
 .navbar .container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
     padding: 20px;
     gap: 20px;
@@ -164,6 +164,7 @@ section {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    justify-self: start;
 }
 
 .nav-links {
@@ -171,6 +172,7 @@ section {
     list-style: none;
     gap: 20px;
     flex-wrap: nowrap;
+    justify-self: center;
 }
 
 .nav-links a {
@@ -205,6 +207,7 @@ section {
 /* Language Switcher */
 .nav-lang-switcher {
     list-style: none;
+    justify-self: end;
 }
 
 .language-switcher {
@@ -1490,7 +1493,9 @@ body[dir="rtl"] .social-links {
     }
 
     .navbar .container {
+        display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     .nav-lang-switcher {
