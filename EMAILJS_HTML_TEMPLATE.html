@@ -1,0 +1,224 @@
+<!--
+EmailJS HTML Email Template
+Copiez tout ce code et collez-le dans votre template EmailJS
+Dashboard: https://dashboard.emailjs.com/admin/templates
+-->
+
+<div
+  style="
+    font-family: system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 20px;
+  "
+>
+  <!-- Main Container -->
+  <div
+    style="
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    "
+  >
+    <!-- Header -->
+    <div
+      style="
+        background: linear-gradient(135deg, #c59d5f 0%, #8b6f47 100%);
+        padding: 30px 20px;
+        text-align: center;
+      "
+    >
+      <h1 style="color: #ffffff; margin: 0; font-size: 24px; font-weight: 600">
+        📧 Nouveau Message - Portfolio
+      </h1>
+      <p style="color: #f0e6d2; margin: 10px 0 0 0; font-size: 14px">
+        Vous avez reçu un nouveau message depuis votre portfolio
+      </p>
+    </div>
+
+    <!-- Content -->
+    <div style="padding: 30px 20px">
+      <!-- Introduction -->
+      <p style="font-size: 16px; color: #2c3e50; margin: 0 0 25px 0">
+        Un visiteur vous a envoyé un message. Répondez dès que possible pour
+        maintenir un contact professionnel.
+      </p>
+
+      <!-- Message Details Card -->
+      <div
+        style="
+          background-color: #f8f9fa;
+          border-left: 4px solid #c59d5f;
+          border-radius: 5px;
+          padding: 20px;
+          margin: 20px 0;
+        "
+      >
+        <!-- Sender Info -->
+        <table role="presentation" style="width: 100%; margin-bottom: 20px">
+          <tbody>
+            <tr>
+              <td style="vertical-align: top; width: 60px">
+                <div
+                  style="
+                    width: 50px;
+                    height: 50px;
+                    background: linear-gradient(
+                      135deg,
+                      #c59d5f 0%,
+                      #8b6f47 100%
+                    );
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 24px;
+                  "
+                >
+                  👤
+                </div>
+              </td>
+              <td style="vertical-align: top; padding-left: 15px">
+                <div
+                  style="
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: #2c3e50;
+                    margin-bottom: 5px;
+                  "
+                >
+                  {{from_name}}
+                </div>
+                <div style="font-size: 14px; color: #7f8c8d">
+                  <a
+                    href="mailto:{{from_email}}"
+                    style="color: #c59d5f; text-decoration: none"
+                  >
+                    {{from_email}}
+                  </a>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Divider -->
+        <div style="border-top: 1px dashed #d4a373; margin: 20px 0"></div>
+
+        <!-- Message Content -->
+        <div style="margin-top: 20px">
+          <!-- Subject -->
+          <div style="margin-bottom: 20px">
+            <div
+              style="
+                display: inline-block;
+                background-color: #c59d5f;
+                color: #ffffff;
+                padding: 4px 10px;
+                border-radius: 4px;
+                font-size: 12px;
+                font-weight: 600;
+                margin-bottom: 8px;
+              "
+            >
+              📝 SUJET
+            </div>
+            <div style="font-size: 16px; font-weight: 600; color: #2c3e50">
+              {{subject}}
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div>
+            <div
+              style="
+                display: inline-block;
+                background-color: #c59d5f;
+                color: #ffffff;
+                padding: 4px 10px;
+                border-radius: 4px;
+                font-size: 12px;
+                font-weight: 600;
+                margin-bottom: 8px;
+              "
+            >
+              💬 MESSAGE
+            </div>
+            <div
+              style="
+                background-color: #ffffff;
+                padding: 15px;
+                border-radius: 5px;
+                border: 1px solid #e0e0e0;
+                font-size: 15px;
+                line-height: 1.6;
+                color: #34495e;
+                white-space: pre-wrap;
+              "
+            >
+              {{message}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Button -->
+      <div style="text-align: center; margin: 30px 0">
+        <a
+          href="mailto:{{from_email}}?subject=Re: {{subject}}"
+          style="
+            display: inline-block;
+            background: linear-gradient(135deg, #c59d5f 0%, #8b6f47 100%);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 16px;
+            box-shadow: 0 4px 6px rgba(197, 157, 95, 0.3);
+          "
+        >
+          ✉️ Répondre au Message
+        </a>
+      </div>
+
+      <!-- Info Box -->
+      <div
+        style="
+          background-color: #fff3cd;
+          border-left: 4px solid #ffc107;
+          padding: 15px;
+          border-radius: 5px;
+          margin-top: 25px;
+        "
+      >
+        <p style="margin: 0; font-size: 13px; color: #856404">
+          <strong>💡 Conseil:</strong> Répondez dans les 24-48 heures pour
+          montrer votre professionnalisme et votre intérêt.
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div style="background-color: #2c3e50; padding: 20px; text-align: center">
+      <p style="margin: 0 0 10px 0; font-size: 13px; color: #95a5a6">
+        Message envoyé depuis votre portfolio
+      </p>
+      <p style="margin: 0; font-size: 12px; color: #7f8c8d">
+        <a
+          href="https://omar-arhoune-portfolio.vercel.app"
+          style="color: #c59d5f; text-decoration: none"
+        >
+          omar-arhoune-portfolio.vercel.app
+        </a>
+      </p>
+      <p style="margin: 10px 0 0 0; font-size: 11px; color: #7f8c8d">
+        © 2024 Omar Arhoune - Portfolio Contact System
+      </p>
+    </div>
+  </div>
+</div>
