@@ -1848,78 +1848,84 @@ section {
 }
 
 /* ============================================
-   STACK TECHNIQUE SECTION
+   STACK TECHNIQUE SECTION - INFINITE SCROLL
    ============================================ */
 
 .tech-stack {
     padding: 120px 0;
     background: var(--bg-primary);
     position: relative;
-}
-
-.stack-wrapper {
-    margin-top: 60px;
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-}
-
-.tech-category {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.tech-category-label {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--primary);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.tech-badges-scroll {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    overflow-x: auto;
-    padding: 4px 0;
-    scrollbar-width: thin;
-    scrollbar-color: var(--primary) transparent;
-}
-
-.tech-badges-scroll::-webkit-scrollbar {
-    height: 6px;
-}
-
-.tech-badges-scroll::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
-}
-
-.tech-badges-scroll::-webkit-scrollbar-thumb {
-    background: var(--primary);
-    border-radius: 10px;
-}
-
-.tech-badge {
-    display: inline-flex;
-    align-items: center;
-    padding: 12px 24px;
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 50px;
-    color: var(--text-primary);
-    font-size: 0.95rem;
-    font-weight: 500;
-    white-space: nowrap;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: default;
-    position: relative;
     overflow: hidden;
 }
 
-.tech-badge::before {
+.stack-marquee-wrapper {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.marquee-row {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee-content {
+    display: flex;
+    gap: 20px;
+    width: fit-content;
+}
+
+/* Scroll Left Animation */
+.marquee-left {
+    animation: scrollLeft 40s linear infinite;
+}
+
+/* Scroll Right Animation */
+.marquee-right {
+    animation: scrollRight 40s linear infinite;
+}
+
+/* Pause on hover */
+.marquee-row:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scrollRight {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.tech-badge-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 28px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+}
+
+.tech-badge-logo::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1929,21 +1935,32 @@ section {
     background: var(--gradient-primary);
     opacity: 0;
     transition: opacity 0.3s ease;
+    z-index: 0;
 }
 
-.tech-badge:hover {
+.tech-badge-logo:hover {
     border-color: var(--primary);
     transform: translateY(-4px) scale(1.05);
-    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
 }
 
-.tech-badge:hover::before {
-    opacity: 0.1;
+.tech-badge-logo:hover::before {
+    opacity: 0.12;
 }
 
-/* Badge text stays on top */
-.tech-badge::after {
-    content: attr(data-tech);
+.tech-icon {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.tech-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
     position: relative;
     z-index: 1;
 }
@@ -2340,15 +2357,24 @@ section {
         grid-template-columns: 1fr;
     }
 
-    .tech-badges-scroll {
-        overflow-x: auto;
-        flex-wrap: nowrap;
-        padding-bottom: 12px;
+    .stack-marquee-wrapper {
+        gap: 24px;
     }
 
-    .tech-badge {
-        font-size: 0.85rem;
-        padding: 10px 20px;
+    .marquee-content {
+        gap: 16px;
+    }
+
+    .tech-badge-logo {
+        padding: 12px 24px;
+    }
+
+    .tech-icon {
+        font-size: 1.3rem;
+    }
+
+    .tech-name {
+        font-size: 0.9rem;
     }
 
     .certifications-grid {
@@ -2380,11 +2406,20 @@ section {
         grid-template-columns: 1fr;
     }
 
-    .tech-category-label {
-        font-size: 0.95rem;
+    .tech-badge-logo {
+        padding: 10px 20px;
+        gap: 10px;
     }
 
-    .stack-wrapper {
-        gap: 32px;
+    .tech-icon {
+        font-size: 1.2rem;
+    }
+
+    .tech-name {
+        font-size: 0.85rem;
+    }
+
+    .stack-marquee-wrapper {
+        gap: 20px;
     }
 }
