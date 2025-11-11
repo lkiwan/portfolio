@@ -2066,6 +2066,19 @@ section {
     object-fit: contain;
 }
 
+.cert-logo-img {
+    width: 80px !important;
+    height: 80px !important;
+    object-fit: contain;
+    filter: brightness(1.1) drop-shadow(0 4px 12px rgba(102, 126, 234, 0.3));
+    transition: all 0.3s ease;
+}
+
+.cert-card:hover .cert-logo-img {
+    filter: brightness(1.3) drop-shadow(0 6px 20px rgba(102, 126, 234, 0.5));
+    transform: scale(1.1);
+}
+
 .cert-placeholder {
     width: 100%;
     height: 100%;
@@ -2340,17 +2353,17 @@ section {
     }
 
     .formation-timeline::before {
-        left: 20px;
+        display: none;
     }
 
     .formation-item {
         flex-direction: column !important;
         align-items: flex-start;
-        padding-left: 60px;
+        padding-left: 0;
     }
 
     .formation-year {
-        position: absolute;
+        position: relative;
         left: 0;
         min-width: auto;
     }
