@@ -12,7 +12,8 @@
       "Bash(git push:*)",
       "Bash(git rm:*)",
       "Bash(python3:*)",
-      "Bash(pip install:*)"
+      "Bash(pip install:*)",
+      "WebFetch(domain:portfolio-kharmiz-ouiame.vercel.app)"
     ],
     "deny": [],
     "ask": []
