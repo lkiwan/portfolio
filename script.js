@@ -388,6 +388,16 @@ window.addEventListener('load', () => {
     if (heroRight) {
         heroRight.style.animation = 'fadeIn 1s ease 0.3s backwards';
     }
+
+    // Initialize AOS (Animate On Scroll)
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    }
 });
 
 // ============================================
