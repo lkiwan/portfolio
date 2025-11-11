@@ -1948,13 +1948,19 @@ section {
     opacity: 0.12;
 }
 
-.tech-icon {
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.tech-logo-img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
     position: relative;
     z-index: 1;
+    filter: brightness(0.9);
+    transition: all 0.3s ease;
+}
+
+.tech-badge-logo:hover .tech-logo-img {
+    filter: brightness(1.1) drop-shadow(0 0 8px currentColor);
+    transform: scale(1.1);
 }
 
 .tech-name {
@@ -2369,8 +2375,9 @@ section {
         padding: 12px 24px;
     }
 
-    .tech-icon {
-        font-size: 1.3rem;
+    .tech-logo-img {
+        width: 24px;
+        height: 24px;
     }
 
     .tech-name {
@@ -2411,8 +2418,9 @@ section {
         gap: 10px;
     }
 
-    .tech-icon {
-        font-size: 1.2rem;
+    .tech-logo-img {
+        width: 20px;
+        height: 20px;
     }
 
     .tech-name {
