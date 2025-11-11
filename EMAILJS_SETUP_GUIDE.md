@@ -19,6 +19,7 @@ EmailJS est maintenant intégré dans votre portfolio! Suivez ce guide pour le c
 2. **Cliquez sur** "Sign Up" ou "Get Started Free"
 
 3. **Créez votre compte:**
+
    - Utilisez votre email: **omar.arhoune@gmail.com**
    - Créez un mot de passe
    - Confirmez votre email
@@ -36,10 +37,12 @@ Une fois connecté sur EmailJS:
 2. **Cliquez sur** "Add New Service"
 
 3. **Choisissez Gmail:**
+
    - Cliquez sur **"Gmail"**
    - Cliquez sur **"Connect Account"**
 
 4. **Connectez votre Gmail:**
+
    - Choisissez votre compte: **omar.arhoune@gmail.com**
    - Autorisez EmailJS à envoyer des emails
    - Cliquez sur **"Allow"**
@@ -60,11 +63,13 @@ Une fois connecté sur EmailJS:
 3. **Configurez le template:**
 
    **Subject (Sujet):**
+
    ```
    📧 Nouveau message de {{from_name}} - Portfolio
    ```
 
    **Content (Corps de l'email):**
+
    ```
    Vous avez reçu un nouveau message depuis votre portfolio!
 
@@ -87,6 +92,7 @@ Une fois connecté sur EmailJS:
    ```
 
 4. **Configuration du Template:**
+
    - Template Name: `Portfolio Contact`
    - To Email: `{{to_email}}`
    - From Name: `Portfolio Omar Arhoune`
@@ -109,6 +115,7 @@ Une fois connecté sur EmailJS:
 ### Étape 5: Ajouter les clés dans votre code
 
 Maintenant que vous avez vos 3 clés:
+
 - ✅ **PUBLIC_KEY** (Account → Public Key)
 - ✅ **SERVICE_ID** (Email Services)
 - ✅ **TEMPLATE_ID** (Email Templates)
@@ -116,17 +123,19 @@ Maintenant que vous avez vos 3 clés:
 **Ouvrez le fichier:** `portfolio/script.js`
 
 **Trouvez les lignes 106-108:**
+
 ```javascript
-const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY'; // Votre Public Key EmailJS
-const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID'; // Votre Service ID
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'; // Votre Template ID
+const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY"; // Votre Public Key EmailJS
+const EMAILJS_SERVICE_ID = "service_qxg1e"; // Votre Service ID
+const EMAILJS_TEMPLATE_ID = "aYjd7uKA__TmfcRZrD"; // Votre Template ID
 ```
 
 **Remplacez par vos vraies valeurs:**
+
 ```javascript
-const EMAILJS_PUBLIC_KEY = 'aBcDeFgHiJkLmNoPqR'; // Votre vraie Public Key
-const EMAILJS_SERVICE_ID = 'service_abc123'; // Votre vrai Service ID
-const EMAILJS_TEMPLATE_ID = 'template_xyz789'; // Votre vrai Template ID
+const EMAILJS_PUBLIC_KEY = "aBcDeFgHiJkLmNoPqR"; // Votre vraie Public Key
+const EMAILJS_SERVICE_ID = "service_abc123"; // Votre vrai Service ID
+const EMAILJS_TEMPLATE_ID = "template_xyz789"; // Votre vrai Template ID
 ```
 
 **Sauvegardez le fichier!**
@@ -153,15 +162,18 @@ git push origin main
 ## 🧪 Tester votre formulaire
 
 ### Étape 1: Attendre le déploiement
+
 - Allez sur https://vercel.com/dashboard
 - Attendez que le status soit **🟢 Ready**
 
 ### Étape 2: Tester le formulaire
+
 1. Allez sur votre portfolio: `https://omar-arhoune-portfolio.vercel.app`
 
 2. Scrollez jusqu'à la section "Contact"
 
 3. Remplissez le formulaire:
+
    - **Nom:** Test Contact
    - **Email:** test@example.com
    - **Sujet:** Test du formulaire
@@ -174,11 +186,13 @@ git push origin main
    - Puis message: "✅ Merci Test Contact! Votre message a été envoyé..."
 
 ### Étape 3: Vérifier votre email
+
 1. Ouvrez Gmail: https://gmail.com
 
 2. Vérifiez votre boîte de réception: **omar.arhoune@gmail.com**
 
 3. Vous devriez recevoir un email avec:
+
    ```
    Subject: 📧 Nouveau message de Test Contact - Portfolio
    From: Portfolio Omar Arhoune
@@ -203,6 +217,7 @@ git push origin main
    - Status (Sent/Failed)
 
 ### Quota:
+
 - **Plan gratuit:** 200 emails/mois
 - **Vérifiez votre quota:** Dashboard → Usage
 
@@ -213,11 +228,15 @@ git push origin main
 ### Changer le message de succès:
 
 Dans `script.js`, ligne 140:
+
 ```javascript
-alert(`✅ Merci ${name}! Votre message a été envoyé avec succès. Je vous répondrai bientôt!`);
+alert(
+  `✅ Merci ${name}! Votre message a été envoyé avec succès. Je vous répondrai bientôt!`
+);
 ```
 
 Changez en ce que vous voulez:
+
 ```javascript
 alert(`🎉 Message envoyé! Je vous contacterai sous 24-48h.`);
 ```
@@ -227,37 +246,49 @@ alert(`🎉 Message envoyé! Je vous contacterai sous 24-48h.`);
 Au lieu de `alert()`, créez une notification plus jolie:
 
 **Ajoutez ce CSS dans `style.css`:**
+
 ```css
 .notification {
-    position: fixed;
-    top: 100px;
-    right: 20px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: var(--text-cream);
-    padding: 20px 30px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    z-index: 9999;
-    animation: slideIn 0.3s ease;
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: var(--text-cream);
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  animation: slideIn 0.3s ease;
 }
 
 @keyframes slideIn {
-    from { transform: translateX(400px); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 ```
 
 **Remplacez dans `script.js` ligne 140:**
+
 ```javascript
 // Créer notification
-const notification = document.createElement('div');
-notification.className = 'notification';
+const notification = document.createElement("div");
+notification.className = "notification";
 notification.innerHTML = `✅ Merci ${name}! Message envoyé avec succès!`;
 document.body.appendChild(notification);
 
 // Supprimer après 5 secondes
 setTimeout(() => {
-    notification.remove();
+  notification.remove();
 }, 5000);
 ```
 
@@ -269,6 +300,7 @@ setTimeout(() => {
 
 **Solution:**
 Vérifiez que le script EmailJS est bien chargé dans `index.html`:
+
 ```html
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 ```
@@ -276,6 +308,7 @@ Vérifiez que le script EmailJS est bien chargé dans `index.html`:
 ### Problème 2: Email non reçu
 
 **Solutions:**
+
 1. Vérifiez vos spams/courrier indésirable
 2. Vérifiez que le Service Gmail est bien connecté dans EmailJS
 3. Vérifiez le Dashboard EmailJS → History pour voir les erreurs
@@ -283,6 +316,7 @@ Vérifiez que le script EmailJS est bien chargé dans `index.html`:
 ### Problème 3: "Failed to send"
 
 **Solutions:**
+
 1. Vérifiez que les 3 clés sont correctes (PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID)
 2. Vérifiez votre quota EmailJS (200 emails/mois)
 3. Vérifiez la console du navigateur (F12) pour voir l'erreur exacte
@@ -291,6 +325,7 @@ Vérifiez que le script EmailJS est bien chargé dans `index.html`:
 
 **Solution:**
 Vérifiez que les variables dans votre template correspondent:
+
 - `{{from_name}}` ← doit correspondre à `from_name` dans le code
 - `{{from_email}}` ← doit correspondre à `from_email` dans le code
 - `{{subject}}` ← doit correspondre à `subject` dans le code
@@ -303,6 +338,7 @@ Vérifiez que les variables dans votre template correspondent:
 ### Est-ce sécurisé?
 
 ✅ **OUI!**
+
 - Les clés EmailJS sont des **clés publiques** (safe côté frontend)
 - Elles permettent SEULEMENT d'envoyer des emails
 - Personne ne peut utiliser vos clés pour autre chose
@@ -311,6 +347,7 @@ Vérifiez que les variables dans votre template correspondent:
 ### Protection contre le spam:
 
 EmailJS a une protection anti-spam intégrée:
+
 - Limite de 200 emails/mois (gratuit)
 - Rate limiting automatique
 - Captcha optionnel (si besoin)
