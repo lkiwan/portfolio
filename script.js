@@ -54,7 +54,7 @@ if (typeof particlesJS !== 'undefined') {
             events: {
                 onhover: {
                     enable: true,
-                    mode: 'repulse'
+                    mode: ['grab', 'bubble']
                 },
                 onclick: {
                     enable: true,
@@ -63,8 +63,20 @@ if (typeof particlesJS !== 'undefined') {
                 resize: true
             },
             modes: {
+                grab: {
+                    distance: 200,
+                    line_linked: {
+                        opacity: 1
+                    }
+                },
+                bubble: {
+                    distance: 250,
+                    size: 6,
+                    duration: 2,
+                    opacity: 0.8
+                },
                 repulse: {
-                    distance: 100,
+                    distance: 150,
                     duration: 0.4
                 },
                 push: {
@@ -173,41 +185,7 @@ langBtns.forEach(btn => {
     });
 });
 
-// Mobile Language Dropdown
-const langDropdownBtn = document.querySelector('.lang-dropdown-btn');
-const langDropdownMenu = document.querySelector('.lang-dropdown-menu');
-const langOptions = document.querySelectorAll('.lang-option');
-
-if (langDropdownBtn && langDropdownMenu) {
-    langDropdownBtn.addEventListener('click', function(e) {
-        e.stopPropagation();
-        langDropdownBtn.classList.toggle('active');
-        langDropdownMenu.classList.toggle('active');
-    });
-
-    langOptions.forEach(option => {
-        option.addEventListener('click', function() {
-            const lang = this.dataset.lang;
-            const langCode = this.querySelector('.lang-code').textContent;
-
-            langOptions.forEach(opt => opt.classList.remove('active'));
-            this.classList.add('active');
-
-            document.querySelector('.current-lang').textContent = langCode;
-            langDropdownBtn.classList.remove('active');
-            langDropdownMenu.classList.remove('active');
-
-            // Add your language switching logic here
-        });
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!langDropdownMenu.contains(e.target) && !langDropdownBtn.contains(e.target)) {
-            langDropdownBtn.classList.remove('active');
-            langDropdownMenu.classList.remove('active');
-        }
-    });
-}
+// Mobile Language Dropdown - Moved to DOMContentLoaded section below for proper initialization
 
 // ============================================
 // NAVBAR SCROLL EFFECT
@@ -397,6 +375,524 @@ window.addEventListener('load', () => {
             once: true,
             offset: 100
         });
+    }
+});
+
+// ============================================
+// CERTIFICATE MODAL
+// ============================================
+
+const certModal = document.getElementById('cert-modal');
+const certModalImage = document.getElementById('cert-modal-image');
+const certModalClose = document.querySelector('.cert-modal-close');
+const certPreviews = document.querySelectorAll('.cert-image-preview');
+const canvas = document.getElementById('cert-animation-canvas');
+const ctx = canvas ? canvas.getContext('2d') : null;
+
+let animationId;
+let particles = [];
+
+// Particle class for AI/Data animation
+class Particle {
+    constructor(canvas) {
+        this.canvas = canvas;
+        this.reset();
+        this.y = Math.random() * canvas.height;
+        this.opacity = Math.random() * 0.5 + 0.2;
+    }
+
+    reset() {
+        this.x = Math.random() * this.canvas.width;
+        this.y = -10;
+        this.speed = Math.random() * 2 + 1;
+        this.size = Math.random() * 3 + 1;
+        this.type = Math.random() > 0.5 ? 'binary' : 'circle';
+        this.char = Math.random() > 0.5 ? '1' : '0';
+        this.opacity = Math.random() * 0.5 + 0.2;
+    }
+
+    update() {
+        this.y += this.speed;
+        if (this.y > this.canvas.height) {
+            this.reset();
+        }
+    }
+
+    draw(ctx) {
+        ctx.globalAlpha = this.opacity;
+        if (this.type === 'binary') {
+            ctx.fillStyle = '#667eea';
+            ctx.font = `${this.size * 8}px monospace`;
+            ctx.fillText(this.char, this.x, this.y);
+        } else {
+            ctx.fillStyle = '#764ba2';
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+        }
+        ctx.globalAlpha = 1;
+    }
+}
+
+// Neural network connections
+class Connection {
+    constructor(canvas) {
+        this.canvas = canvas;
+        this.x1 = Math.random() * canvas.width;
+        this.y1 = Math.random() * canvas.height;
+        this.x2 = Math.random() * canvas.width;
+        this.y2 = Math.random() * canvas.height;
+        this.opacity = Math.random() * 0.3;
+        this.speedX = (Math.random() - 0.5) * 0.5;
+        this.speedY = (Math.random() - 0.5) * 0.5;
+    }
+
+    update() {
+        this.x1 += this.speedX;
+        this.y1 += this.speedY;
+        this.x2 -= this.speedX;
+        this.y2 -= this.speedY;
+
+        if (this.x1 < 0 || this.x1 > this.canvas.width) this.speedX *= -1;
+        if (this.y1 < 0 || this.y1 > this.canvas.height) this.speedY *= -1;
+    }
+
+    draw(ctx) {
+        ctx.globalAlpha = this.opacity;
+        ctx.strokeStyle = '#667eea';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(this.x1, this.y1);
+        ctx.lineTo(this.x2, this.y2);
+        ctx.stroke();
+        ctx.globalAlpha = 1;
+    }
+}
+
+function initAnimation() {
+    if (!canvas || !ctx) return;
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    particles = [];
+    for (let i = 0; i < 50; i++) {
+        particles.push(new Particle(canvas));
+    }
+
+    for (let i = 0; i < 20; i++) {
+        particles.push(new Connection(canvas));
+    }
+}
+
+function animate() {
+    if (!ctx || !canvas) return;
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    particles.forEach(particle => {
+        particle.update();
+        particle.draw(ctx);
+    });
+
+    animationId = requestAnimationFrame(animate);
+}
+
+// Open certificate modal
+certPreviews.forEach(preview => {
+    preview.addEventListener('click', function(e) {
+        e.preventDefault();
+        const certCard = this.closest('.cert-card');
+        const certImage = certCard.getAttribute('data-cert-image');
+
+        if (certImage) {
+            certModalImage.src = certImage;
+            certModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+
+            // Initialize and start animation
+            initAnimation();
+            animate();
+        }
+    });
+});
+
+// Close modal
+function closeModal() {
+    certModal.classList.remove('active');
+    document.body.style.overflow = '';
+    if (animationId) {
+        cancelAnimationFrame(animationId);
+    }
+}
+
+certModalClose.addEventListener('click', closeModal);
+
+certModal.addEventListener('click', function(e) {
+    if (e.target === certModal || e.target.classList.contains('cert-modal-background')) {
+        closeModal();
+    }
+});
+
+// Close on ESC key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && certModal.classList.contains('active')) {
+        closeModal();
+    }
+});
+
+// Resize canvas on window resize
+window.addEventListener('resize', function() {
+    if (certModal.classList.contains('active') && canvas) {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+});
+
+// ============================================
+// TECH STACK MARQUEE DRAG FUNCTIONALITY
+// ============================================
+
+const marqueeRows = document.querySelectorAll('.marquee-row');
+
+marqueeRows.forEach(row => {
+    const marqueeContent = row.querySelector('.marquee-content');
+    let isDragging = false;
+    let startX;
+    let scrollLeft;
+    let animationClass = marqueeContent.classList.contains('marquee-left') ? 'marquee-left' : 'marquee-right';
+
+    // Make row scrollable but hide scrollbar
+    row.style.overflowX = 'auto';
+    row.style.scrollbarWidth = 'none';
+    row.style.msOverflowStyle = 'none';
+    row.style.cursor = 'grab';
+
+    row.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        row.style.cursor = 'grabbing';
+        startX = e.pageX - row.offsetLeft;
+        scrollLeft = row.scrollLeft;
+
+        // Pause animation
+        marqueeContent.style.animationPlayState = 'paused';
+        e.preventDefault();
+    });
+
+    document.addEventListener('mouseup', () => {
+        if (isDragging) {
+            isDragging = false;
+            row.style.cursor = 'grab';
+            // Resume animation
+            setTimeout(() => {
+                marqueeContent.style.animationPlayState = 'running';
+            }, 100);
+        }
+    });
+
+    row.addEventListener('mouseleave', () => {
+        if (isDragging) {
+            isDragging = false;
+            row.style.cursor = 'grab';
+            setTimeout(() => {
+                marqueeContent.style.animationPlayState = 'running';
+            }, 100);
+        }
+    });
+
+    row.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        const x = e.pageX - row.offsetLeft;
+        const walk = (x - startX) * 2;
+        row.scrollLeft = scrollLeft - walk;
+    });
+
+    // Touch support for mobile
+    row.addEventListener('touchstart', (e) => {
+        isDragging = true;
+        startX = e.touches[0].pageX - row.offsetLeft;
+        scrollLeft = row.scrollLeft;
+        marqueeContent.style.animationPlayState = 'paused';
+    });
+
+    document.addEventListener('touchend', () => {
+        if (isDragging) {
+            isDragging = false;
+            setTimeout(() => {
+                marqueeContent.style.animationPlayState = 'running';
+            }, 100);
+        }
+    });
+
+    row.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        const x = e.touches[0].pageX - row.offsetLeft;
+        const walk = (x - startX) * 2;
+        row.scrollLeft = scrollLeft - walk;
+    });
+});
+
+// ============================================
+// INTERACTIVE MOUSE FOLLOWER (HERO SECTION)
+// ============================================
+
+const hero = document.querySelector('.hero');
+if (hero) {
+    // Create cursor glow element
+    const cursorGlow = document.createElement('div');
+    cursorGlow.className = 'cursor-glow';
+    hero.appendChild(cursorGlow);
+
+    // Track mouse movement in hero section
+    hero.addEventListener('mousemove', (e) => {
+        const rect = hero.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        cursorGlow.style.left = x + 'px';
+        cursorGlow.style.top = y + 'px';
+        cursorGlow.style.opacity = '1';
+    });
+
+    hero.addEventListener('mouseleave', () => {
+        cursorGlow.style.opacity = '0';
+    });
+
+    hero.addEventListener('mouseenter', () => {
+        cursorGlow.style.opacity = '1';
+    });
+}
+
+// ============================================
+// MULTILINGUAL TRANSLATION SYSTEM
+// ============================================
+
+const translations = {
+    fr: {
+        // Navigation
+        'nav.about': 'À propos',
+        'nav.formation': 'Formation',
+        'nav.experience': 'Expérience',
+        'nav.skills': 'Skills',
+        'nav.certifications': 'Certifications',
+        'nav.projects': 'Projets',
+        'nav.contact': 'Contact',
+
+        // Hero Section
+        'hero.greeting': 'Salut, je suis',
+        'hero.name': 'Omar Arhoune',
+        'hero.description': 'Étudiant en Master spécialisé en Finance & Data Science. Je transforme des données complexes en insights actionnables en utilisant ML, Python et des analyses modernes.',
+        'hero.viewProjects': 'Voir les Projets',
+        'hero.letsTalk': 'Discutons',
+        'hero.downloadCV': 'Télécharger CV',
+        'hero.badge': 'Disponible pour des opportunités',
+
+        // Section Titles
+        'section.about': 'À propos',
+        'section.formation': 'Formation',
+        'section.experience': 'Expérience Professionnelle',
+        'section.skills': 'Skills & Technologies',
+        'section.certifications': 'Certifications',
+        'section.projects': 'Projets Sélectionnés',
+        'section.contact': 'Contact'
+    },
+    en: {
+        // Navigation
+        'nav.about': 'About',
+        'nav.formation': 'Education',
+        'nav.experience': 'Experience',
+        'nav.skills': 'Skills',
+        'nav.certifications': 'Certifications',
+        'nav.projects': 'Projects',
+        'nav.contact': 'Contact',
+
+        // Hero Section
+        'hero.greeting': 'Hi, I\'m',
+        'hero.name': 'Omar Arhoune',
+        'hero.description': 'Master\'s student specializing in Finance & Data Science. I transform complex data into actionable insights using ML, Python, and modern analytics.',
+        'hero.viewProjects': 'View Projects',
+        'hero.letsTalk': 'Let\'s Talk',
+        'hero.downloadCV': 'Download CV',
+        'hero.badge': 'Available for opportunities',
+
+        // Section Titles
+        'section.about': 'About Me',
+        'section.formation': 'Education',
+        'section.experience': 'Professional Experience',
+        'section.skills': 'Skills & Technologies',
+        'section.certifications': 'Certifications',
+        'section.projects': 'Featured Projects',
+        'section.contact': 'Contact'
+    },
+    ar: {
+        // Navigation
+        'nav.about': 'نبذة عني',
+        'nav.formation': 'التكوين',
+        'nav.experience': 'الخبرة',
+        'nav.skills': 'المهارات',
+        'nav.certifications': 'الشهادات',
+        'nav.projects': 'المشاريع',
+        'nav.contact': 'تواصل',
+
+        // Hero Section
+        'hero.greeting': 'مرحباً، أنا',
+        'hero.name': 'عمر أرحون',
+        'hero.description': 'طالب ماجستير متخصص في المالية وعلوم البيانات. أحول البيانات المعقدة إلى رؤى قابلة للتنفيذ باستخدام التعلم الآلي وبايثون والتحليلات الحديثة.',
+        'hero.viewProjects': 'عرض المشاريع',
+        'hero.letsTalk': 'لنتحدث',
+        'hero.downloadCV': 'تحميل السيرة الذاتية',
+        'hero.badge': 'متاح للفرص',
+
+        // Section Titles
+        'section.about': 'نبذة عني',
+        'section.formation': 'التكوين',
+        'section.experience': 'الخبرة المهنية',
+        'section.skills': 'المهارات والتقنيات',
+        'section.certifications': 'الشهادات',
+        'section.projects': 'مشاريع مختارة',
+        'section.contact': 'تواصل'
+    }
+};
+
+// Verify translations object loaded
+console.log('Translations loaded:', Object.keys(translations));
+
+// Current language (default: French)
+let currentLang = 'fr';
+
+// Translation function
+function translatePage(lang) {
+    console.log('Translating to:', lang);
+    currentLang = lang;
+
+    // Store language preference
+    localStorage.setItem('preferredLanguage', lang);
+
+    // Update all elements with data-i18n attribute
+    const elementsToTranslate = document.querySelectorAll('[data-i18n]');
+    console.log('Found elements to translate:', elementsToTranslate.length);
+
+    elementsToTranslate.forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+            element.textContent = translations[lang][key];
+            console.log('Translated:', key, '→', translations[lang][key]);
+        } else {
+            console.warn('Missing translation for:', key, 'in', lang);
+        }
+    });
+
+    // Update HTML direction for Arabic
+    document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+    document.documentElement.setAttribute('lang', lang);
+
+    // Update active language button (desktop)
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+
+    // Update mobile dropdown current language display
+    const currentLangElement = document.querySelector('.current-lang');
+    if (currentLangElement) {
+        currentLangElement.textContent = lang.toUpperCase();
+        console.log('Updated current lang to:', lang.toUpperCase());
+    }
+
+    // Update active option in mobile dropdown
+    document.querySelectorAll('.lang-option').forEach(option => {
+        const isActive = option.getAttribute('data-lang') === lang;
+        option.classList.toggle('active', isActive);
+        console.log('Option', option.getAttribute('data-lang'), 'active:', isActive);
+    });
+
+    console.log('Translation completed for:', lang);
+}
+
+// Make translatePage globally accessible
+window.translatePage = translatePage;
+console.log('translatePage function available globally');
+
+// Initialize language switcher
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM loaded - initializing translations');
+
+    // Check for saved language preference
+    const savedLang = localStorage.getItem('preferredLanguage') || 'fr';
+    console.log('Saved language preference:', savedLang);
+    translatePage(savedLang);
+
+    // Desktop language switcher
+    const desktopBtns = document.querySelectorAll('.lang-btn');
+    console.log('Desktop language buttons found:', desktopBtns.length);
+    desktopBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const lang = btn.getAttribute('data-lang');
+            console.log('Desktop button clicked for:', lang);
+            translatePage(lang);
+        });
+    });
+
+    // Mobile language dropdown
+    const langDropdownBtn = document.querySelector('.lang-dropdown-btn');
+    const langDropdownMenu = document.querySelector('.lang-dropdown-menu');
+
+    if (langDropdownBtn && langDropdownMenu) {
+        console.log('Language dropdown found and initialized');
+
+        langDropdownBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Language dropdown clicked');
+
+            const isCurrentlyActive = langDropdownMenu.classList.contains('active');
+
+            if (isCurrentlyActive) {
+                langDropdownMenu.classList.remove('active');
+                langDropdownBtn.classList.remove('active');
+                console.log('Dropdown closed');
+            } else {
+                langDropdownMenu.classList.add('active');
+                langDropdownBtn.classList.add('active');
+                console.log('Dropdown opened');
+            }
+        });
+
+        // Close dropdown when clicking outside
+        setTimeout(() => {
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.lang-dropdown-mobile')) {
+                    langDropdownMenu.classList.remove('active');
+                    langDropdownBtn.classList.remove('active');
+                    console.log('Dropdown closed by outside click');
+                }
+            });
+        }, 100);
+
+        // Mobile language options
+        const mobileOptions = document.querySelectorAll('.lang-option');
+        console.log('Mobile language options found:', mobileOptions.length);
+
+        mobileOptions.forEach(option => {
+            option.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const lang = option.getAttribute('data-lang');
+                console.log('Mobile option clicked for:', lang);
+
+                // Translate the page
+                translatePage(lang);
+
+                // Close the dropdown
+                setTimeout(() => {
+                    langDropdownMenu.classList.remove('active');
+                    langDropdownBtn.classList.remove('active');
+                    console.log('Dropdown closed after language selection');
+                }, 150);
+            });
+        });
+    } else {
+        console.error('Language dropdown elements not found');
     }
 });
 

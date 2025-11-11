@@ -14,11 +14,11 @@
     <!-- Navigation -->
     <nav class="navbar">
       <div class="container">
-        <div class="logo">
+        <a href="#home" class="logo">
           <span class="logo-bracket">&lt;</span>
           <span class="logo-text">Omar</span>
           <span class="logo-bracket">/&gt;</span>
-        </div>
+        </a>
 
         <!-- Mobile Language Dropdown -->
         <div class="lang-dropdown-mobile">
@@ -45,15 +45,13 @@
         </div>
 
         <ul class="nav-links">
-          <li><a href="#home">Accueil</a></li>
-          <li><a href="#about">À propos</a></li>
-          <li><a href="#formation">Formation</a></li>
-          <li><a href="#experience">Expérience</a></li>
-          <li><a href="#skills">Compétences</a></li>
-          <li><a href="#stack">Stack Technique</a></li>
-          <li><a href="#certifications">Certifications</a></li>
-          <li><a href="#projects">Projets</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about" data-i18n="nav.about">À propos</a></li>
+          <li><a href="#formation" data-i18n="nav.formation">Formation</a></li>
+          <li><a href="#experience" data-i18n="nav.experience">Expérience</a></li>
+          <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+          <li><a href="#certifications" data-i18n="nav.certifications">Certifications</a></li>
+          <li><a href="#projects" data-i18n="nav.projects">Projets</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
 
         <div class="nav-lang-switcher nav-lang-switcher-desktop">
@@ -78,27 +76,33 @@
         <div class="hero-left">
           <div class="hero-badge">
             <span class="badge-dot"></span>
-            Available for opportunities
+            <span data-i18n="hero.badge">Available for opportunities</span>
           </div>
           <h1 class="hero-title">
-            Hi, I'm <span class="gradient-text">Omar Arhoune</span>
+            <span data-i18n="hero.greeting">Hi, I'm</span> <span class="gradient-text" data-i18n="hero.name">Omar Arhoune</span>
           </h1>
           <div class="hero-typing">
             <span class="typing-text"></span>
             <span class="cursor">|</span>
           </div>
-          <p class="hero-description">
+          <p class="hero-description" data-i18n="hero.description">
             Master's student specializing in Finance & Data Science.
             I transform complex data into actionable insights using ML, Python, and modern analytics.
           </p>
           <div class="hero-buttons">
             <a href="#projects" class="btn btn-primary">
-              <span>View Projects</span>
+              <span data-i18n="hero.viewProjects">View Projects</span>
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
               </svg>
             </a>
-            <a href="#contact" class="btn btn-secondary">Let's Talk</a>
+            <a href="#contact" class="btn btn-secondary" data-i18n="hero.letsTalk">Let's Talk</a>
+            <a href="cv/Omar_Arhoune_CV.pdf" download class="btn btn-outline">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span data-i18n="hero.downloadCV">Download CV</span>
+            </a>
           </div>
           <div class="hero-social">
             <a href="https://www.linkedin.com/in/omar-arhoune-916b0522b/" target="_blank" class="social-icon">
@@ -140,7 +144,10 @@
             </div>
             <div class="floating-card card-4">
               <div class="card-icon">
-                <img src="https://cdn.simpleicons.org/stripe/008CDD" alt="Finance" style="width: 32px; height: 32px;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="color: #10B981;">
+                  <line x1="12" y1="1" x2="12" y2="23" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </div>
               <div class="card-label">Finance</div>
             </div>
@@ -172,140 +179,130 @@
     <section id="about" class="about-bento">
       <div class="container">
         <h2 class="section-title">
-          <span class="title-number">01.</span> About Me
+          <span class="title-number">01.</span> <span data-i18n="section.about">About Me</span>
         </h2>
-        <div class="bento-grid">
-          <!-- Large Bio Card -->
-          <div class="bento-card bento-large">
-            <div class="card-header">
-              <h3>Who I Am</h3>
-              <span class="card-badge">About</span>
+        <div class="about-grid-new">
+          <!-- Row 1: Bio Card (left) + Stats (right stacked) -->
+          <div class="about-main-content">
+            <!-- Large Bio Card -->
+            <div class="bento-card bento-bio-featured">
+              <div class="card-header">
+                <h3>Who I Am</h3>
+                <span class="card-badge">About</span>
+              </div>
+              <p class="bio-text">
+                I'm a Master's student in <strong>Finance and Data Science</strong> at Faculté des Sciences Juridiques, Economiques et Sociales Mohammedia, passionate about leveraging data analytics and machine learning to solve complex financial problems. With hands-on experience in fraud detection, financial analysis platforms, and intelligent data tools, I transform data into actionable insights.
+              </p>
+              <p class="bio-text">
+                My journey combines quantitative finance with full-stack development, allowing me to build end-to-end solutions from ML models to production-ready applications. I thrive on uncovering patterns in data and creating tools that drive informed decision-making in the financial sector.
+              </p>
+              <div class="bio-highlights">
+                <div class="highlight-item">
+                  <span class="highlight-icon">🎯</span>
+                  <span>Problem Solver</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-icon">💡</span>
+                  <span>Innovative Thinker</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-icon">🚀</span>
+                  <span>Fast Learner</span>
+                </div>
+              </div>
             </div>
-            <p class="bio-text">
-              I'm a Master's student in <strong>Finance and Data Science</strong> at FSJESM, Morocco.
-              My passion lies in leveraging machine learning and data analytics to solve complex
-              financial problems. With hands-on experience in fraud detection, financial platforms,
-              and intelligent data tools, I transform raw data into actionable insights that drive decision-making.
-            </p>
-            <div class="bio-highlights">
-              <div class="highlight-item">
-                <span class="highlight-icon">🎯</span>
-                <span>Problem Solver</span>
-              </div>
-              <div class="highlight-item">
-                <span class="highlight-icon">💡</span>
-                <span>Innovative Thinker</span>
-              </div>
-              <div class="highlight-item">
-                <span class="highlight-icon">🚀</span>
-                <span>Fast Learner</span>
-              </div>
-            </div>
-          </div>
 
-          <!-- Stats Cards -->
-          <div class="bento-card bento-stat">
-            <div class="stat-number">3</div>
-            <div class="stat-label">Months Internship</div>
-            <div class="stat-desc">Fraud Detection at PEAQOCK</div>
-          </div>
-
-          <div class="bento-card bento-stat">
-            <div class="stat-number">92%</div>
-            <div class="stat-label">Precision Rate</div>
-            <div class="stat-desc">ML Model Performance</div>
-          </div>
-
-          <!-- Skills Progress -->
-          <div class="bento-card bento-skills">
-            <h4>Core Skills</h4>
-            <div class="skill-progress">
-              <div class="skill-item">
-                <div class="skill-header">
-                  <span>Python & ML</span>
-                  <span>95%</span>
-                </div>
-                <div class="progress-bar">
-                  <div class="progress-fill" style="width: 95%"></div>
-                </div>
+            <!-- Stats Column -->
+            <div class="about-stats-column">
+              <div class="bento-card bento-stat">
+                <div class="stat-number">3</div>
+                <div class="stat-label">Months Internship</div>
+                <div class="stat-desc">Fraud Detection at PEAQOCK</div>
               </div>
-              <div class="skill-item">
-                <div class="skill-header">
-                  <span>Data Analysis</span>
-                  <span>90%</span>
-                </div>
-                <div class="progress-bar">
-                  <div class="progress-fill" style="width: 90%"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-header">
-                  <span>Financial Modeling</span>
-                  <span>85%</span>
-                </div>
-                <div class="progress-bar">
-                  <div class="progress-fill" style="width: 85%"></div>
-                </div>
+
+              <div class="bento-card bento-stat">
+                <div class="stat-number">92%</div>
+                <div class="stat-label">Precision Rate</div>
+                <div class="stat-desc">ML Model Performance</div>
               </div>
             </div>
           </div>
 
-          <!-- Education Timeline -->
-          <div class="bento-card bento-timeline">
-            <h4>Education Journey</h4>
-            <div class="timeline-compact">
-              <div class="timeline-item-compact">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content-compact">
-                  <div class="timeline-year">2024 - Now</div>
-                  <div class="timeline-title">Master's in Data Science & Finance</div>
-                  <div class="timeline-location">FSJESM, Morocco</div>
-                </div>
+          <!-- Row 2: Skills + Education -->
+          <div class="about-secondary-row">
+            <!-- Core Skills -->
+            <div class="bento-card bento-skills-new">
+              <h4>Core Skills</h4>
+              <div class="core-skills-tags">
+                <span class="core-skill-tag">Python & ML</span>
+                <span class="core-skill-tag">Data Analysis</span>
+                <span class="core-skill-tag">Financial Modeling</span>
+                <span class="core-skill-tag">Deep Learning</span>
+                <span class="core-skill-tag">Data Visualization</span>
+                <span class="core-skill-tag">Statistical Analysis</span>
               </div>
-              <div class="timeline-item-compact">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content-compact">
-                  <div class="timeline-year">2020 - 2024</div>
-                  <div class="timeline-title">Bachelor's in Economics</div>
-                  <div class="timeline-location">FSJES Fes, Morocco</div>
+            </div>
+
+            <!-- Education Timeline -->
+            <div class="bento-card bento-timeline-new">
+              <h4>Education Journey</h4>
+              <div class="timeline-compact">
+                <div class="timeline-item-compact">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content-compact">
+                    <div class="timeline-year">2024 - Now</div>
+                    <div class="timeline-title">Master's in Data Science & Finance</div>
+                    <div class="timeline-location">FSJESM, Morocco</div>
+                  </div>
+                </div>
+                <div class="timeline-item-compact">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content-compact">
+                    <div class="timeline-year">2020 - 2024</div>
+                    <div class="timeline-title">Bachelor's in Economics</div>
+                    <div class="timeline-location">FSJES Fes, Morocco</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Certifications -->
-          <div class="bento-card bento-certs">
-            <div class="cert-number">6</div>
-            <div class="cert-label">Professional Certifications</div>
-            <div class="cert-logos">
-              <span class="cert-badge">DataCamp</span>
-              <span class="cert-badge">Deloitte</span>
+          <!-- Row 3: Certifications + Languages -->
+          <div class="about-bottom-row">
+            <!-- Certifications -->
+            <div class="bento-card bento-certs">
+              <div class="cert-number">7</div>
+              <div class="cert-label">Professional Certifications</div>
+              <div class="cert-logos">
+                <span class="cert-badge">DataCamp</span>
+                <span class="cert-badge">Deloitte</span>
+              </div>
             </div>
-          </div>
 
-          <!-- Languages -->
-          <div class="bento-card bento-languages">
-            <h4>Languages</h4>
-            <div class="language-list">
-              <div class="language-item">
-                <span class="lang-flag">🇫🇷</span>
-                <div class="lang-details">
-                  <span class="lang-name">French</span>
-                  <span class="lang-level">Native</span>
+            <!-- Languages -->
+            <div class="bento-card bento-languages">
+              <h4>Languages</h4>
+              <div class="language-list">
+                <div class="language-item">
+                  <span class="lang-flag">🇫🇷</span>
+                  <div class="lang-details">
+                    <span class="lang-name">French</span>
+                    <span class="lang-level">Native</span>
+                  </div>
                 </div>
-              </div>
-              <div class="language-item">
-                <span class="lang-flag">🇬🇧</span>
-                <div class="lang-details">
-                  <span class="lang-name">English</span>
-                  <span class="lang-level">Professional</span>
+                <div class="language-item">
+                  <span class="lang-flag">🇺🇸</span>
+                  <div class="lang-details">
+                    <span class="lang-name">English</span>
+                    <span class="lang-level">Professional</span>
+                  </div>
                 </div>
-              </div>
-              <div class="language-item">
-                <span class="lang-flag">🇲🇦</span>
-                <div class="lang-details">
-                  <span class="lang-name">Arabic</span>
-                  <span class="lang-level">Native</span>
+                <div class="language-item">
+                  <span class="lang-flag">🇲🇦</span>
+                  <div class="lang-details">
+                    <span class="lang-name">Arabic</span>
+                    <span class="lang-level">Native</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -318,84 +315,107 @@
     <section id="formation" class="formation">
       <div class="container">
         <h2 class="section-title">
-          <span class="title-number">02.</span> Formation
+          <span class="title-number">02.</span> <span data-i18n="section.formation">Formation</span>
         </h2>
-        <div class="formation-timeline">
-          <div class="formation-item" data-aos="fade-right">
-            <div class="formation-year">2024 - Present</div>
-            <div class="formation-card">
-              <div class="formation-icon">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M22 10v6M2 10l10-5 10 5-10 5z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M6 12v5c3 3 9 3 12 0v-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              <div class="formation-content">
-                <h3>Master en Data Science & Finance</h3>
-                <p class="formation-school">Faculté des Sciences Juridiques, Économiques et Sociales - Mohammedia</p>
-                <p class="formation-description">
-                  Spécialisation en machine learning, analyse de données financières, et modélisation prédictive.
-                  Focus sur l'application de l'IA dans la finance et la détection de fraudes.
-                </p>
-                <div class="formation-highlights">
-                  <span class="highlight-tag">Machine Learning</span>
-                  <span class="highlight-tag">Financial Modeling</span>
-                  <span class="highlight-tag">Data Analytics</span>
-                  <span class="highlight-tag">Python</span>
+        <div class="formation-timeline-enhanced">
+          <div class="timeline-line"></div>
+
+          <div class="formation-item-enhanced" data-aos="fade-up">
+            <div class="formation-dot">
+              <div class="dot-inner"></div>
+            </div>
+            <div class="formation-card-enhanced">
+              <div class="formation-badge current">En cours</div>
+              <div class="formation-header">
+                <div class="formation-icon-enhanced">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
                 </div>
+                <div class="formation-title-group">
+                  <h3>Master en Data Science & Finance</h3>
+                  <p class="formation-year-inline">2024 - Present</p>
+                </div>
+              </div>
+              <p class="formation-school">Faculté des Sciences Juridiques, Économiques et Sociales - Mohammedia</p>
+              <p class="formation-description">
+                Spécialisation en machine learning, analyse de données financières, et modélisation prédictive.
+                Focus sur l'application de l'IA dans la finance et la détection de fraudes.
+              </p>
+              <div class="formation-highlights">
+                <span class="highlight-tag">Machine Learning</span>
+                <span class="highlight-tag">Financial Modeling</span>
+                <span class="highlight-tag">Data Analytics</span>
+                <span class="highlight-tag">Python</span>
+                <span class="highlight-tag">R</span>
+                <span class="highlight-tag">SQL</span>
+                <a href="#skills" class="highlight-tag-link">+ Plus de compétences →</a>
               </div>
             </div>
           </div>
 
-          <div class="formation-item" data-aos="fade-left">
-            <div class="formation-year">2020 - 2024</div>
-            <div class="formation-card">
-              <div class="formation-icon">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M12 14l9-5-9-5-9 5 9 5z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              <div class="formation-content">
-                <h3>Licence en Sciences Économiques</h3>
-                <p class="formation-school">Faculté des Sciences Juridiques, Économiques et Sociales - Fès</p>
-                <p class="formation-description">
-                  Formation complète en économie, statistiques, et méthodes quantitatives.
-                  Développement de solides bases en analyse financière et économétrie.
-                </p>
-                <div class="formation-highlights">
-                  <span class="highlight-tag">Économétrie</span>
-                  <span class="highlight-tag">Statistiques</span>
-                  <span class="highlight-tag">Analyse Financière</span>
-                  <span class="highlight-tag">Économie</span>
+          <div class="formation-item-enhanced" data-aos="fade-up" data-aos-delay="100">
+            <div class="formation-dot">
+              <div class="dot-inner"></div>
+            </div>
+            <div class="formation-card-enhanced">
+              <div class="formation-badge completed">Complété</div>
+              <div class="formation-header">
+                <div class="formation-icon-enhanced">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M12 14l9-5-9-5-9 5 9 5z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
                 </div>
+                <div class="formation-title-group">
+                  <h3>Licence en Sciences Économiques</h3>
+                  <p class="formation-year-inline">2020 - 2024</p>
+                </div>
+              </div>
+              <p class="formation-school">Faculté des Sciences Juridiques, Économiques et Sociales - Fès</p>
+              <p class="formation-description">
+                Formation complète en économie, statistiques, et méthodes quantitatives.
+                Développement de solides bases en analyse financière et économétrie.
+              </p>
+              <div class="formation-highlights">
+                <span class="highlight-tag">Économétrie</span>
+                <span class="highlight-tag">Statistiques</span>
+                <span class="highlight-tag">Analyse Financière</span>
+                <span class="highlight-tag">Économie</span>
               </div>
             </div>
           </div>
 
-          <div class="formation-item" data-aos="fade-right">
-            <div class="formation-year">2019 - 2020</div>
-            <div class="formation-card">
-              <div class="formation-icon">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke-width="2"/>
-                  <line x1="16" y1="2" x2="16" y2="6" stroke-width="2" stroke-linecap="round"/>
-                  <line x1="8" y1="2" x2="8" y2="6" stroke-width="2" stroke-linecap="round"/>
-                  <line x1="3" y1="10" x2="21" y2="10" stroke-width="2"/>
-                </svg>
-              </div>
-              <div class="formation-content">
-                <h3>Baccalauréat Sciences Économiques</h3>
-                <p class="formation-school">Lycée, Morocco</p>
-                <p class="formation-description">
-                  Formation générale en sciences économiques avec mention. Première immersion dans le monde
-                  de l'économie et des mathématiques appliquées.
-                </p>
-                <div class="formation-highlights">
-                  <span class="highlight-tag">Économie</span>
-                  <span class="highlight-tag">Mathématiques</span>
-                  <span class="highlight-tag">Gestion</span>
+          <div class="formation-item-enhanced" data-aos="fade-up" data-aos-delay="200">
+            <div class="formation-dot">
+              <div class="dot-inner"></div>
+            </div>
+            <div class="formation-card-enhanced">
+              <div class="formation-badge completed">Complété</div>
+              <div class="formation-header">
+                <div class="formation-icon-enhanced">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke-width="2"/>
+                    <line x1="16" y1="2" x2="16" y2="6" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="8" y1="2" x2="8" y2="6" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="3" y1="10" x2="21" y2="10" stroke-width="2"/>
+                  </svg>
                 </div>
+                <div class="formation-title-group">
+                  <h3>Baccalauréat Sciences Économiques</h3>
+                  <p class="formation-year-inline">2019 - 2020</p>
+                </div>
+              </div>
+              <p class="formation-school">Lycée, Morocco</p>
+              <p class="formation-description">
+                Formation générale en sciences économiques avec mention. Première immersion dans le monde
+                de l'économie et des mathématiques appliquées.
+              </p>
+              <div class="formation-highlights">
+                <span class="highlight-tag">Mathématiques</span>
+                <span class="highlight-tag">Physique</span>
+                <span class="highlight-tag">Chimique</span>
               </div>
             </div>
           </div>
@@ -407,63 +427,83 @@
     <section id="experience" class="experience">
       <div class="container">
         <h2 class="section-title">
-          <span class="title-number">03.</span> Expérience Professionnelle
+          <span class="title-number">03.</span> <span data-i18n="section.experience">Expérience Professionnelle</span>
         </h2>
-        <div class="experience-timeline">
-          <div class="experience-item">
-            <div class="experience-line"></div>
-            <div class="experience-content">
-              <div class="experience-badge">2025</div>
-              <div class="experience-card">
-                <div class="exp-header">
-                  <div class="exp-company">
-                    <img src="images/Deloitte logo.jpg" alt="Deloitte" class="exp-logo">
-                    <div>
-                      <h3>Data Analytics Job Simulation</h3>
-                      <p class="exp-company-name">Deloitte Australia</p>
-                    </div>
-                  </div>
-                  <span class="exp-type">Simulation</span>
-                </div>
-                <p class="exp-description">
-                  Performed forensic analysis, visualized insights in Tableau, and supported classification reporting.
-                </p>
-                <div class="exp-skills">
-                  <span>Forensic Analysis</span>
-                  <span>Tableau</span>
-                  <span>Data Visualization</span>
-                  <span>Reporting</span>
-                </div>
+
+        <!-- Featured Experience -->
+        <div class="featured-experience" data-aos="fade-up">
+          <div class="featured-exp-header">
+            <div class="exp-logo-large">
+              <img src="images/peaqock_financials_logo.jpg" alt="PEAQOCK">
+            </div>
+            <div class="exp-title-section">
+              <div class="exp-meta">
+                <span class="exp-badge-featured">Internship</span>
+                <span class="exp-date-featured">Jul - Oct 2025</span>
               </div>
+              <h3>Data Science Intern - Fraud Detection</h3>
+              <p class="exp-company-featured">PEAQOCK</p>
             </div>
           </div>
 
-          <div class="experience-item">
-            <div class="experience-line"></div>
-            <div class="experience-content">
-              <div class="experience-badge">Jul - Oct 2025</div>
-              <div class="experience-card">
-                <div class="exp-header">
-                  <div class="exp-company">
-                    <img src="images/peaqock_financials_logo.jpg" alt="PEAQOCK" class="exp-logo">
-                    <div>
-                      <h3>Data Science Intern - Fraud Detection</h3>
-                      <p class="exp-company-name">PEAQOCK</p>
-                    </div>
-                  </div>
-                  <span class="exp-type">Internship</span>
+          <div class="featured-exp-content">
+            <p class="exp-description-featured">
+              Built an <strong>enterprise-grade ML ensemble model</strong> for real-time fraud detection achieving exceptional accuracy.
+              Generated 581K realistic synthetic transactions, engineered 103 intelligent features, and achieved 92% precision
+              using XGBoost and LightGBM. Solved class imbalance with SMOTE and validated the model with independent tests,
+              proving it learns patterns rather than memorizes data.
+            </p>
+
+            <div class="exp-achievements">
+              <div class="achievement-item">
+                <div class="achievement-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
                 </div>
-                <p class="exp-description">
-                  Built ML ensemble model for real-time fraud detection. Generated 581K transactions,
-                  created 103 features, achieved 92% precision using XGBoost and LightGBM.
-                </p>
-                <div class="exp-skills">
-                  <span>Python</span>
-                  <span>XGBoost</span>
-                  <span>LightGBM</span>
-                  <span>SMOTE</span>
-                  <span>Feature Engineering</span>
+                <div class="achievement-content">
+                  <div class="achievement-number">581K</div>
+                  <div class="achievement-label">Transactions Generated</div>
                 </div>
+              </div>
+
+              <div class="achievement-item">
+                <div class="achievement-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M12 20V10M18 20V4M6 20v-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="achievement-content">
+                  <div class="achievement-number">103</div>
+                  <div class="achievement-label">Engineered Features</div>
+                </div>
+              </div>
+
+              <div class="achievement-item">
+                <div class="achievement-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <polyline points="22 4 12 14.01 9 11.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="achievement-content">
+                  <div class="achievement-number">92%</div>
+                  <div class="achievement-label">Precision Rate</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="exp-tech-stack">
+              <h4>Technologies Used</h4>
+              <div class="exp-skills-featured">
+                <span>Python</span>
+                <span>XGBoost</span>
+                <span>LightGBM</span>
+                <span>SMOTE</span>
+                <span>Pandas</span>
+                <span>NumPy</span>
+                <span>Scikit-learn</span>
+                <span>Feature Engineering</span>
               </div>
             </div>
           </div>
@@ -475,14 +515,14 @@
     <section id="skills" class="skills-section">
       <div class="container">
         <h2 class="section-title">
-          <span class="title-number">04.</span> Compétences
+          <span class="title-number">04.</span> <span data-i18n="section.skills">Skills & Technologies</span>
         </h2>
-        <div class="skills-grid">
+        <div class="skills-dashboard">
           <!-- Data Science & ML -->
-          <div class="skill-category" data-aos="zoom-in">
-            <div class="category-header">
-              <div class="category-icon">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <div class="skill-dashboard-card" data-aos="fade-up">
+            <div class="dashboard-card-header">
+              <div class="dashboard-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                   <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke-width="2"/>
                   <polyline points="3.27 6.96 12 12.01 20.73 6.96" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   <line x1="12" y1="22.08" x2="12" y2="12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -490,150 +530,83 @@
               </div>
               <h3>Data Science & ML</h3>
             </div>
-            <div class="skill-items">
-              <div class="skill-pill">
-                <span class="skill-name">Machine Learning</span>
-                <span class="skill-level">95%</span>
-              </div>
-              <div class="skill-pill">
-                <span class="skill-name">Deep Learning</span>
-                <span class="skill-level">85%</span>
-              </div>
-              <div class="skill-pill">
-                <span class="skill-name">NLP</span>
-                <span class="skill-level">80%</span>
-              </div>
-              <div class="skill-pill">
-                <span class="skill-name">Computer Vision</span>
-                <span class="skill-level">75%</span>
-              </div>
-              <div class="skill-pill">
-                <span class="skill-name">Feature Engineering</span>
-                <span class="skill-level">92%</span>
-              </div>
+            <div class="dashboard-skills-grid">
+              <span class="dashboard-skill-tag">Machine Learning</span>
+              <span class="dashboard-skill-tag">Deep Learning</span>
+              <span class="dashboard-skill-tag">NLP</span>
+              <span class="dashboard-skill-tag">Computer Vision</span>
+              <span class="dashboard-skill-tag">Feature Engineering</span>
             </div>
           </div>
 
           <!-- Data Analysis -->
-          <div class="skill-category" data-aos="zoom-in" data-aos-delay="100">
-            <div class="category-header">
-              <div class="category-icon">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <div class="skill-dashboard-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="dashboard-card-header">
+              <div class="dashboard-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                   <line x1="18" y1="20" x2="18" y2="10" stroke-width="2" stroke-linecap="round"/>
                   <line x1="12" y1="20" x2="12" y2="4" stroke-width="2" stroke-linecap="round"/>
                   <line x1="6" y1="20" x2="6" y2="14" stroke-width="2" stroke-linecap="round"/>
                 </svg>
               </div>
-              <h3>Analyse de Données</h3>
+              <h3>Data Analysis</h3>
             </div>
-            <div class="skill-items">
-              <div class="skill-pill">
-                <span class="skill-name">Data Visualization</span>
-                <span class="skill-level">90%</span>
-              </div>
-              <div class="skill-pill">
-                <span class="skill-name">Statistical Analysis</span>
-                <span class="skill-level">88%</span>
-              </div>
-              <div class="skill-pill">
-                <span class="skill-name">A/B Testing</span>
-                <span class="skill-level">85%</span>
-              </div>
-              <div class="skill-pill">
-                <span class="skill-name">Data Mining</span>
-                <span class="skill-level">90%</span>
-              </div>
-              <div class="skill-pill">
-                <span class="skill-name">Exploratory Analysis</span>
-                <span class="skill-level">92%</span>
-              </div>
+            <div class="dashboard-skills-grid">
+              <span class="dashboard-skill-tag">Data Visualization</span>
+              <span class="dashboard-skill-tag">Statistical Analysis</span>
+              <span class="dashboard-skill-tag">A/B Testing</span>
+              <span class="dashboard-skill-tag">Data Mining</span>
+              <span class="dashboard-skill-tag">Exploratory Analysis</span>
             </div>
           </div>
 
           <!-- Finance -->
-          <div class="skill-category" data-aos="zoom-in" data-aos-delay="200">
-            <div class="category-header">
-              <div class="category-icon">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <div class="skill-dashboard-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="dashboard-card-header">
+              <div class="dashboard-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                   <line x1="12" y1="1" x2="12" y2="23" stroke-width="2" stroke-linecap="round"/>
                   <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </div>
               <h3>Finance</h3>
             </div>
-            <div class="skill-items">
-              <div class="skill-pill">
-                <span class="skill-name">Financial Modeling</span>
-                <span class="skill-level">85%</span>
-              </div>
-              <div class="skill-pill">
-                <span class="skill-name">Risk Analysis</span>
-                <span class="skill-level">82%</span>
-              </div>
-              <div class="skill-pill">
-                <span class="skill-name">Fraud Detection</span>
-                <span class="skill-level">92%</span>
-              </div>
-              <div class="skill-pill">
-                <span class="skill-name">Portfolio Analysis</span>
-                <span class="skill-level">80%</span>
-              </div>
-              <div class="skill-pill">
-                <span class="skill-name">Econometrics</span>
-                <span class="skill-level">87%</span>
-              </div>
+            <div class="dashboard-skills-grid">
+              <span class="dashboard-skill-tag">Financial Modeling</span>
+              <span class="dashboard-skill-tag">Risk Analysis</span>
+              <span class="dashboard-skill-tag">Fraud Detection</span>
+              <span class="dashboard-skill-tag">Portfolio Analysis</span>
+              <span class="dashboard-skill-tag">Econometrics</span>
             </div>
           </div>
 
-          <!-- Soft Skills -->
-          <div class="skill-category" data-aos="zoom-in" data-aos-delay="300">
-            <div class="category-header">
-              <div class="category-icon">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <circle cx="9" cy="7" r="4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Development & Tools -->
+          <div class="skill-dashboard-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="dashboard-card-header">
+              <div class="dashboard-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <polyline points="16 18 22 12 16 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <polyline points="8 6 2 12 8 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </div>
-              <h3>Soft Skills</h3>
+              <h3>Development</h3>
             </div>
-            <div class="skill-items">
-              <div class="skill-pill">
-                <span class="skill-name">Problem Solving</span>
-                <span class="skill-level">95%</span>
-              </div>
-              <div class="skill-pill">
-                <span class="skill-name">Communication</span>
-                <span class="skill-level">88%</span>
-              </div>
-              <div class="skill-pill">
-                <span class="skill-name">Team Collaboration</span>
-                <span class="skill-level">90%</span>
-              </div>
-              <div class="skill-pill">
-                <span class="skill-name">Critical Thinking</span>
-                <span class="skill-level">92%</span>
-              </div>
-              <div class="skill-pill">
-                <span class="skill-name">Fast Learning</span>
-                <span class="skill-level">95%</span>
-              </div>
+            <div class="dashboard-skills-grid">
+              <span class="dashboard-skill-tag">Full-Stack Development</span>
+              <span class="dashboard-skill-tag">API Design</span>
+              <span class="dashboard-skill-tag">Database Management</span>
+              <span class="dashboard-skill-tag">Version Control</span>
+              <span class="dashboard-skill-tag">Docker</span>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Stack Technique Section -->
-    <section id="stack" class="tech-stack">
-      <div class="container">
-        <h2 class="section-title">
-          <span class="title-number">05.</span> Stack Technique
-        </h2>
-
-        <div class="stack-marquee-wrapper">
-          <!-- First Row - Scrolling Left -->
-          <div class="marquee-row">
+        <!-- Tech Stack Marquee -->
+        <div class="tech-stack-section">
+          <h3 class="tech-stack-title">Tech Stack</h3>
+          <div class="stack-marquee-wrapper">
+            <!-- First Row - Scrolling Left -->
+            <div class="marquee-row">
             <div class="marquee-content marquee-left">
               <div class="tech-badge-logo">
                 <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" class="tech-logo-img">
@@ -660,19 +633,19 @@
                 <span class="tech-name">NumPy</span>
               </div>
               <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/xgboost/337AB7" alt="XGBoost" class="tech-logo-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/XGBoost_logo.png" alt="XGBoost" class="tech-logo-img">
                 <span class="tech-name">XGBoost</span>
               </div>
               <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/lightgbm/02B2AF" alt="LightGBM" class="tech-logo-img">
+                <img src="https://lightgbm.readthedocs.io/en/latest/_static/LightGBM_logo_black_text.svg" alt="LightGBM" class="tech-logo-img" style="filter: brightness(1.5) invert(1);">
                 <span class="tech-name">LightGBM</span>
               </div>
               <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/matplotlib/11557C" alt="Matplotlib" class="tech-logo-img">
+                <img src="https://matplotlib.org/stable/_static/logo2.svg" alt="Matplotlib" class="tech-logo-img">
                 <span class="tech-name">Matplotlib</span>
               </div>
               <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/seaborn/444876" alt="Seaborn" class="tech-logo-img">
+                <img src="https://seaborn.pydata.org/_static/logo-wide-lightbg.svg" alt="Seaborn" class="tech-logo-img">
                 <span class="tech-name">Seaborn</span>
               </div>
               <div class="tech-badge-logo">
@@ -710,19 +683,19 @@
                 <span class="tech-name">NumPy</span>
               </div>
               <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/xgboost/337AB7" alt="XGBoost" class="tech-logo-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/XGBoost_logo.png" alt="XGBoost" class="tech-logo-img">
                 <span class="tech-name">XGBoost</span>
               </div>
               <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/lightgbm/02B2AF" alt="LightGBM" class="tech-logo-img">
+                <img src="https://lightgbm.readthedocs.io/en/latest/_static/LightGBM_logo_black_text.svg" alt="LightGBM" class="tech-logo-img" style="filter: brightness(1.5) invert(1);">
                 <span class="tech-name">LightGBM</span>
               </div>
               <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/matplotlib/11557C" alt="Matplotlib" class="tech-logo-img">
+                <img src="https://matplotlib.org/stable/_static/logo2.svg" alt="Matplotlib" class="tech-logo-img">
                 <span class="tech-name">Matplotlib</span>
               </div>
               <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/seaborn/444876" alt="Seaborn" class="tech-logo-img">
+                <img src="https://seaborn.pydata.org/_static/logo-wide-lightbg.svg" alt="Seaborn" class="tech-logo-img">
                 <span class="tech-name">Seaborn</span>
               </div>
               <div class="tech-badge-logo">
@@ -748,7 +721,7 @@
                 <span class="tech-name">FastAPI</span>
               </div>
               <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/flask/000000" alt="Flask" class="tech-logo-img">
+                <img src="https://cdn.simpleicons.org/flask/FFFFFF" alt="Flask" class="tech-logo-img">
                 <span class="tech-name">Flask</span>
               </div>
               <div class="tech-badge-logo">
@@ -780,7 +753,7 @@
                 <span class="tech-name">Jupyter</span>
               </div>
               <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/visualstudiocode/007ACC" alt="VS Code" class="tech-logo-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="VS Code" class="tech-logo-img">
                 <span class="tech-name">VS Code</span>
               </div>
 
@@ -794,7 +767,7 @@
                 <span class="tech-name">FastAPI</span>
               </div>
               <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/flask/000000" alt="Flask" class="tech-logo-img">
+                <img src="https://cdn.simpleicons.org/flask/FFFFFF" alt="Flask" class="tech-logo-img">
                 <span class="tech-name">Flask</span>
               </div>
               <div class="tech-badge-logo">
@@ -826,11 +799,12 @@
                 <span class="tech-name">Jupyter</span>
               </div>
               <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/visualstudiocode/007ACC" alt="VS Code" class="tech-logo-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="VS Code" class="tech-logo-img">
                 <span class="tech-name">VS Code</span>
               </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </section>
@@ -839,20 +813,23 @@
     <section id="certifications" class="certifications">
       <div class="container">
         <h2 class="section-title">
-          <span class="title-number">06.</span> Certifications
+          <span class="title-number">05.</span> <span data-i18n="section.certifications">Certifications</span>
         </h2>
         <div class="certifications-grid">
-          <div class="cert-card" data-aos="fade-up">
+          <div class="cert-card" data-aos="fade-up" data-cert-image="certif/ai_certificate.jpg">
             <div class="cert-ribbon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
               </svg>
             </div>
-            <div class="cert-logo">
-              <img src="https://cdn.simpleicons.org/datacamp/03EF62" alt="DataCamp" class="cert-logo-img">
+            <div class="cert-image-preview">
+              <img src="certif/ai_certificate.jpg" alt="Data Scientist Professional Certificate" class="cert-preview-img">
+              <div class="cert-overlay">
+                <span>Click to view</span>
+              </div>
             </div>
             <div class="cert-content">
-              <h3>Data Scientist Professional</h3>
+              <h3>Understanding Artificial Intelligence</h3>
               <p class="cert-issuer">DataCamp</p>
               <p class="cert-description">
                 Certification professionnelle couvrant Python, SQL, analyse de données, machine learning, et visualisation.
@@ -865,22 +842,24 @@
               </div>
             </div>
             <div class="cert-footer">
-              <span class="cert-date">2024</span>
-              <a href="#" class="cert-verify">Vérifier →</a>
+              <span class="cert-date">Nov 2025</span>
             </div>
           </div>
 
-          <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="cert-card" data-aos="fade-up" data-aos-delay="100" data-cert-image="certif/1754934167360_page-0001.jpg">
             <div class="cert-ribbon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
               </svg>
             </div>
-            <div class="cert-logo">
-              <img src="images/Deloitte logo.jpg" alt="Deloitte">
+            <div class="cert-image-preview">
+              <img src="certif/1754934167360_page-0001.jpg" alt="Data Analytics Simulation Certificate" class="cert-preview-img">
+              <div class="cert-overlay">
+                <span>Click to view</span>
+              </div>
             </div>
             <div class="cert-content">
-              <h3>Data Analytics Simulation</h3>
+              <h3>Data Analytics Job Simulation</h3>
               <p class="cert-issuer">Deloitte Australia</p>
               <p class="cert-description">
                 Simulation de projet réel incluant analyse forensique, visualisation Tableau, et reporting client.
@@ -892,22 +871,24 @@
               </div>
             </div>
             <div class="cert-footer">
-              <span class="cert-date">2025</span>
-              <a href="#" class="cert-verify">Vérifier →</a>
+              <span class="cert-date">Aug 2025</span>
             </div>
           </div>
 
-          <div class="cert-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="cert-card" data-aos="fade-up" data-aos-delay="200" data-cert-image="certif/machine_learning_certificate.jpg">
             <div class="cert-ribbon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
               </svg>
             </div>
-            <div class="cert-logo">
-              <img src="https://cdn.simpleicons.org/datacamp/03EF62" alt="Machine Learning" class="cert-logo-img">
+            <div class="cert-image-preview">
+              <img src="certif/machine_learning_certificate.jpg" alt="Machine Learning Specialization Certificate" class="cert-preview-img">
+              <div class="cert-overlay">
+                <span>Click to view</span>
+              </div>
             </div>
             <div class="cert-content">
-              <h3>Machine Learning Specialization</h3>
+              <h3>Understanding Machine Learning</h3>
               <p class="cert-issuer">DataCamp</p>
               <p class="cert-description">
                 Spécialisation approfondie en machine learning: supervised, unsupervised, ensemble methods, et deep learning.
@@ -919,22 +900,24 @@
               </div>
             </div>
             <div class="cert-footer">
-              <span class="cert-date">2024</span>
-              <a href="#" class="cert-verify">Vérifier →</a>
+              <span class="cert-date">Nov 2025</span>
             </div>
           </div>
 
-          <div class="cert-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="cert-card" data-aos="fade-up" data-aos-delay="300" data-cert-image="certif/python_certificate.jpg">
             <div class="cert-ribbon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
               </svg>
             </div>
-            <div class="cert-logo">
-              <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" class="cert-logo-img">
+            <div class="cert-image-preview">
+              <img src="certif/python_certificate.jpg" alt="Python Programming Certificate" class="cert-preview-img">
+              <div class="cert-overlay">
+                <span>Click to view</span>
+              </div>
             </div>
             <div class="cert-content">
-              <h3>Python Programming</h3>
+              <h3>Intermediate Python</h3>
               <p class="cert-issuer">DataCamp</p>
               <p class="cert-description">
                 Maîtrise complète de Python pour data science: pandas, numpy, data manipulation, et programmation orientée objet.
@@ -947,22 +930,24 @@
               </div>
             </div>
             <div class="cert-footer">
-              <span class="cert-date">2023</span>
-              <a href="#" class="cert-verify">Vérifier →</a>
+              <span class="cert-date">Nov 2025</span>
             </div>
           </div>
 
-          <div class="cert-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="cert-card" data-aos="fade-up" data-aos-delay="400" data-cert-image="certif/sql_certificate.jpg">
             <div class="cert-ribbon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
               </svg>
             </div>
-            <div class="cert-logo">
-              <img src="https://cdn.simpleicons.org/mysql/4479A1" alt="SQL" class="cert-logo-img">
+            <div class="cert-image-preview">
+              <img src="certif/sql_certificate.jpg" alt="SQL for Data Science Certificate" class="cert-preview-img">
+              <div class="cert-overlay">
+                <span>Click to view</span>
+              </div>
             </div>
             <div class="cert-content">
-              <h3>SQL for Data Science</h3>
+              <h3>Introduction to SQL</h3>
               <p class="cert-issuer">DataCamp</p>
               <p class="cert-description">
                 Expertise en SQL: requêtes complexes, jointures, window functions, optimisation de performances, et database design.
@@ -974,22 +959,24 @@
               </div>
             </div>
             <div class="cert-footer">
-              <span class="cert-date">2023</span>
-              <a href="#" class="cert-verify">Vérifier →</a>
+              <span class="cert-date">Nov 2025</span>
             </div>
           </div>
 
-          <div class="cert-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="cert-card" data-aos="fade-up" data-aos-delay="500" data-cert-image="certif/data_visualization_certificate.jpg">
             <div class="cert-ribbon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
               </svg>
             </div>
-            <div class="cert-logo">
-              <img src="https://cdn.simpleicons.org/plotly/3F4F75" alt="Data Visualization" class="cert-logo-img">
+            <div class="cert-image-preview">
+              <img src="certif/data_visualization_certificate.jpg" alt="Data Visualization Certificate" class="cert-preview-img">
+              <div class="cert-overlay">
+                <span>Click to view</span>
+              </div>
             </div>
             <div class="cert-content">
-              <h3>Data Visualization</h3>
+              <h3>Understanding Data Visualization</h3>
               <p class="cert-issuer">DataCamp</p>
               <p class="cert-description">
                 Création de visualisations impactantes avec Matplotlib, Seaborn, Plotly. Storytelling avec les données et dashboard design.
@@ -1002,8 +989,37 @@
               </div>
             </div>
             <div class="cert-footer">
-              <span class="cert-date">2024</span>
-              <a href="#" class="cert-verify">Vérifier →</a>
+              <span class="cert-date">Nov 2025</span>
+            </div>
+          </div>
+
+          <div class="cert-card" data-aos="fade-up" data-aos-delay="600" data-cert-image="certif/data_engineering_certificate.jpg">
+            <div class="cert-ribbon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+              </svg>
+            </div>
+            <div class="cert-image-preview">
+              <img src="certif/data_engineering_certificate.jpg" alt="Data Engineering Certificate" class="cert-preview-img">
+              <div class="cert-overlay">
+                <span>Click to view</span>
+              </div>
+            </div>
+            <div class="cert-content">
+              <h3>Understanding Data Engineering</h3>
+              <p class="cert-issuer">DataCamp</p>
+              <p class="cert-description">
+                Maîtrise des pipelines de données, ETL, et infrastructure big data. Compétences en data warehousing et optimisation.
+              </p>
+              <div class="cert-skills">
+                <span>ETL</span>
+                <span>Data Pipelines</span>
+                <span>Big Data</span>
+                <span>SQL</span>
+              </div>
+            </div>
+            <div class="cert-footer">
+              <span class="cert-date">Nov 2025</span>
             </div>
           </div>
         </div>
@@ -1014,7 +1030,7 @@
     <section id="projects" class="projects">
       <div class="container">
         <h2 class="section-title">
-          <span class="title-number">07.</span> Projets Sélectionnés
+          <span class="title-number">06.</span> <span data-i18n="section.projects">Projets Sélectionnés</span>
         </h2>
 
         <!-- Featured Project Hero -->
@@ -1068,7 +1084,7 @@
             <div class="project-thumbnail">
               <img src="images/data-analyzer.jpg" alt="DATA ANALYZER">
               <div class="project-hover">
-                <a href="https://lnkd.in/e7WC6Q-6" target="_blank" class="project-preview-btn">
+                <a href="https://data-analyzer-tawny.vercel.app/" target="_blank" class="project-preview-btn">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                     <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
@@ -1089,8 +1105,8 @@
                 <span>Claude AI</span>
               </div>
               <div class="project-links-small">
-                <a href="https://lnkd.in/e7WC6Q-6" target="_blank">Live Demo →</a>
-                <a href="https://lnkd.in/emEBje5E" target="_blank">GitHub →</a>
+                <a href="https://data-analyzer-tawny.vercel.app/" target="_blank">Live Demo →</a>
+                <a href="https://github.com/lkiwan/DATA-ANALYZER" target="_blank">GitHub →</a>
               </div>
             </div>
           </div>
@@ -1122,7 +1138,7 @@
               </div>
               <div class="project-links-small">
                 <a href="https://finanalyses.pages.dev/" target="_blank">Live Demo →</a>
-                <a href="https://lnkd.in/dyiJU_ut" target="_blank">GitHub →</a>
+                <a href="https://github.com/lkiwan/FinAnalyses" target="_blank">GitHub →</a>
               </div>
             </div>
           </div>
@@ -1132,7 +1148,7 @@
             <div class="project-thumbnail">
               <img src="images/MaFinance Pro.jpg" alt="MaFinance Pro">
               <div class="project-hover">
-                <a href="https://lnkd.in/ebjN_idT" target="_blank" class="project-preview-btn">
+                <a href="https://github.com/lkiwan/MaFinance" target="_blank" class="project-preview-btn">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                     <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
@@ -1153,7 +1169,7 @@
                 <span>Chart.js</span>
               </div>
               <div class="project-links-small">
-                <a href="https://lnkd.in/ebjN_idT" target="_blank">GitHub →</a>
+                <a href="https://github.com/lkiwan/MaFinance" target="_blank">GitHub →</a>
               </div>
             </div>
           </div>
@@ -1165,7 +1181,7 @@
     <section id="contact" class="contact">
       <div class="container">
         <h2 class="section-title">
-          <span class="title-number">08.</span> Contact
+          <span class="title-number">07.</span> <span data-i18n="section.contact">Contact</span>
         </h2>
         <div class="contact-wrapper">
           <div class="contact-info-modern">
@@ -1291,6 +1307,19 @@
         </div>
       </div>
     </footer>
+
+    <!-- Certificate Modal -->
+    <div id="cert-modal" class="cert-modal">
+      <div class="cert-modal-background">
+        <canvas id="cert-animation-canvas"></canvas>
+      </div>
+      <div class="cert-modal-content">
+        <button class="cert-modal-close">&times;</button>
+        <div class="cert-modal-image-container">
+          <img id="cert-modal-image" src="" alt="Certificate">
+        </div>
+      </div>
+    </div>
 
     <!-- Particles.js -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
