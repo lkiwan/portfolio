@@ -481,6 +481,8 @@ body {
     line-height: 1.7;
     margin-bottom: 32px;
     max-width: 500px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .hero-buttons {
@@ -964,6 +966,8 @@ section {
     color: var(--text-secondary);
     line-height: 1.8;
     margin-bottom: 24px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .bio-highlights {
@@ -1445,12 +1449,15 @@ section {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .project-meta {
     display: flex;
     gap: 16px;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .project-category,
@@ -1468,6 +1475,8 @@ section {
     line-height: 1.8;
     margin-bottom: 32px;
     font-size: 1.05rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .project-highlights {
@@ -1586,12 +1595,14 @@ section {
 
 .project-info {
     padding: 28px;
+    overflow: hidden;
 }
 
 .project-tags-small {
     display: flex;
     gap: 8px;
     margin-bottom: 16px;
+    flex-wrap: wrap;
 }
 
 .project-tags-small span {
@@ -1607,6 +1618,8 @@ section {
     font-size: 1.4rem;
     margin-bottom: 12px;
     color: var(--text-primary);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .project-info p {
@@ -1614,6 +1627,8 @@ section {
     line-height: 1.6;
     margin-bottom: 16px;
     font-size: 0.95rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .project-stack-small {
@@ -1999,6 +2014,8 @@ section {
     color: var(--text-secondary);
     margin-bottom: 16px;
     line-height: 1.8;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .formation-highlights {
