@@ -3519,10 +3519,10 @@ section {
 
 .cert-modal-close {
     position: absolute;
-    top: 30px;
-    right: 30px;
-    background: rgba(102, 126, 234, 0.9);
-    border: 3px solid rgba(255, 255, 255, 0.8);
+    top: -20px;
+    right: -20px;
+    background: rgba(102, 126, 234, 0.95);
+    border: 3px solid rgba(255, 255, 255, 0.9);
     color: white;
     font-size: 40px;
     width: 60px;
@@ -3559,6 +3559,7 @@ section {
     align-items: center;
     justify-content: center;
     animation: imageFloat 0.7s ease;
+    position: relative;
 }
 
 @keyframes imageFloat {
@@ -3588,8 +3589,8 @@ section {
     }
 
     .cert-modal-close {
-        top: 20px;
-        right: 20px;
+        top: -15px;
+        right: -15px;
         width: 56px;
         height: 56px;
         font-size: 36px;
