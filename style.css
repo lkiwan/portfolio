@@ -1518,7 +1518,7 @@ section {
 /* Projects Grid */
 .projects-grid-modern {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
     gap: 32px;
 }
 
@@ -3708,17 +3708,101 @@ object {
     }
 
     /* Projects */
+    .featured-project {
+        margin-bottom: 60px;
+        gap: 30px;
+    }
+
+    .featured-project-content h3 {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    .project-description {
+        font-size: 0.9rem;
+        margin-bottom: 24px;
+    }
+
     .project-highlights {
         grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    .highlight {
+        padding: 12px;
     }
 
     .highlight-number {
         font-size: 1.5rem;
     }
 
+    .highlight-label {
+        font-size: 0.75rem;
+    }
+
+    .project-tech-stack {
+        gap: 8px;
+    }
+
     .project-tech-stack span {
         font-size: 0.75rem;
         padding: 6px 12px;
+    }
+
+    .project-info {
+        padding: 20px;
+    }
+
+    .project-info h4 {
+        font-size: 1.1rem;
+    }
+
+    .project-info p {
+        font-size: 0.85rem;
+    }
+
+    .project-stack-small {
+        gap: 6px;
+    }
+
+    .project-stack-small span {
+        font-size: 0.7rem;
+        padding: 4px 10px;
+    }
+
+    .project-thumbnail {
+        height: 180px;
+    }
+
+    .project-meta {
+        gap: 8px;
+        font-size: 0.75rem;
+    }
+
+    .project-meta span {
+        padding: 4px 12px;
+    }
+
+    .project-links-small {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .project-links-small a {
+        font-size: 0.85rem;
+        padding: 8px 0;
+        display: block;
+    }
+
+    .project-preview-btn {
+        width: 50px;
+        height: 50px;
+    }
+
+    .project-preview-btn svg {
+        width: 20px;
+        height: 20px;
     }
 
     /* Tech Stack Marquee */
