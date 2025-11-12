@@ -3521,8 +3521,8 @@ section {
     position: absolute;
     top: 30px;
     right: 30px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: rgba(102, 126, 234, 0.9);
+    border: 3px solid rgba(255, 255, 255, 0.8);
     color: white;
     font-size: 40px;
     width: 60px;
@@ -3536,13 +3536,20 @@ section {
     backdrop-filter: blur(10px);
     line-height: 1;
     padding: 0;
-    z-index: 3;
+    z-index: 10001;
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.6), 0 0 40px rgba(102, 126, 234, 0.4);
+    font-weight: 300;
 }
 
 .cert-modal-close:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.4);
-    transform: rotate(90deg);
+    background: rgba(245, 87, 108, 0.9);
+    border-color: rgba(255, 255, 255, 1);
+    transform: rotate(90deg) scale(1.1);
+    box-shadow: 0 6px 30px rgba(245, 87, 108, 0.8), 0 0 50px rgba(245, 87, 108, 0.5);
+}
+
+.cert-modal-close:active {
+    transform: rotate(90deg) scale(0.95);
 }
 
 .cert-modal-image-container {
@@ -3581,15 +3588,28 @@ section {
     }
 
     .cert-modal-close {
-        top: 15px;
-        right: 15px;
-        width: 45px;
-        height: 45px;
-        font-size: 30px;
+        top: 20px;
+        right: 20px;
+        width: 56px;
+        height: 56px;
+        font-size: 36px;
+        background: rgba(102, 126, 234, 1);
+        border: 3px solid rgba(255, 255, 255, 1);
+        box-shadow: 0 6px 25px rgba(102, 126, 234, 0.8), 0 0 50px rgba(102, 126, 234, 0.6);
+        animation: pulseButton 2s ease-in-out infinite;
     }
 
     .cert-modal-image-container {
         max-width: 95%;
+    }
+}
+
+@keyframes pulseButton {
+    0%, 100% {
+        box-shadow: 0 6px 25px rgba(102, 126, 234, 0.8), 0 0 50px rgba(102, 126, 234, 0.6);
+    }
+    50% {
+        box-shadow: 0 8px 35px rgba(102, 126, 234, 1), 0 0 70px rgba(102, 126, 234, 0.8);
     }
 }
 
