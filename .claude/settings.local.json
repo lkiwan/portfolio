@@ -13,7 +13,9 @@
       "Bash(git rm:*)",
       "Bash(python3:*)",
       "Bash(pip install:*)",
-      "WebFetch(domain:portfolio-kharmiz-ouiame.vercel.app)"
+      "WebFetch(domain:portfolio-kharmiz-ouiame.vercel.app)",
+      "Bash(dir \"C:\\Users\\arhou\\OneDrive\\Bureau\\portfolio\\images\")",
+      "Bash(dir:*)"
     ],
     "deny": [],
     "ask": []
