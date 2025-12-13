@@ -5,35 +5,55 @@ I've successfully added your S&P 500 AI Prediction Dashboard to your portfolio w
 ## 📋 Final Steps to Complete:
 
 ### 1. Save Your Screenshot
+
 Save the dashboard screenshot you provided to:
+
 ```
 C:\Users\arhou\OneDrive\Bureau\portfolio\images\sp500-dashboard.jpg
 ```
 
 **How to do this:**
+
 - Take a screenshot of your live dashboard at its best view
 - Save it as `sp500-dashboard.jpg`
 - Place it in the `images` folder
 
 ### 2. Update Your Render URL
+
 Open `index.html` and find these two lines (around line 1168 and 1191):
+
 ```html
 <a href="YOUR_RENDER_URL_HERE" target="_blank" class="project-view-btn">
-...
-<a href="YOUR_RENDER_URL_HERE" target="_blank" class="project-link">Live Demo →</a>
+  ...
+  <a href="YOUR_RENDER_URL_HERE" target="_blank" class="project-link"
+    >Live Demo →</a
+  ></a
+>
 ```
 
 Replace `YOUR_RENDER_URL_HERE` with your actual Render URL.
 
 **Example:**
+
 ```html
-<a href="https://sp500-dashboard.onrender.com" target="_blank" class="project-view-btn">
+<a
+  href="https://sp500-dashboard.onrender.com"
+  target="_blank"
+  class="project-view-btn"
+></a>
 ```
 
 ### 3. Update GitHub URL (Optional)
+
 If your GitHub repo URL is different, update line 1192:
+
 ```html
-<a href="https://github.com/lkiwan/SP500-AI-Dashboard" target="_blank" class="project-link">GitHub →</a>
+<a
+  href="https://github.com/lkiwan/SP500-AI-Dashboard"
+  target="_blank"
+  class="project-link"
+  >GitHub →</a
+>
 ```
 
 ---
@@ -41,14 +61,16 @@ If your GitHub repo URL is different, update line 1192:
 ## 🎨 What Was Added:
 
 ### Project Card with:
+
 ✅ **Title:** S&P 500 AI Prediction
 ✅ **Tags:** Machine Learning, Finance
-✅ **Description:** AI-powered market prediction dashboard with 63.64% accuracy
+✅ **Description:** AI-powered market prediction dashboard with 71.20% accuracy
 ✅ **Tech Stack:** Python, Flask, XGBoost, Docker
 ✅ **Links:** Live Demo + GitHub
 
 ### Features Highlighted:
-- 63.64% prediction accuracy
+
+- 71.20% prediction accuracy
 - XGBoost machine learning
 - Monte Carlo simulations
 - Backtesting capabilities
@@ -59,12 +81,14 @@ If your GitHub repo URL is different, update line 1192:
 ## 🚀 Quick Update Commands:
 
 ### Option 1: Manual Edit
+
 1. Open `index.html` in VS Code
 2. Search for `YOUR_RENDER_URL_HERE`
 3. Replace with your Render URL
 4. Save
 
 ### Option 2: Quick Replace (Command Line)
+
 ```bash
 cd "C:\Users\arhou\OneDrive\Bureau\portfolio"
 
@@ -79,11 +103,13 @@ cd "C:\Users\arhou\OneDrive\Bureau\portfolio"
 For the best portfolio presentation:
 
 1. **Clear the screenshot:**
+
    - Remove any personal data
    - Make sure charts are loaded
    - Show the dashboard at a nice moment (positive prediction looks good!)
 
 2. **Optimal size:**
+
    - Recommended: 1200x675px (16:9 ratio)
    - Or use the full screenshot - the CSS will handle it
 

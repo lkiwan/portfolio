@@ -145,7 +145,7 @@ const navLinks = document.querySelector('.nav-links');
 const navItems = document.querySelectorAll('.nav-links a');
 
 if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', function(e) {
+    menuToggle.addEventListener('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
         menuToggle.classList.toggle('active');
@@ -288,7 +288,7 @@ document.querySelectorAll('.bento-card, .experience-card, .project-card-modern, 
 
 const contactForm = document.querySelector('#contact-form');
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
 
         // Get form data
@@ -324,7 +324,7 @@ const progressObserver = new IntersectionObserver((entries) => {
             entry.target.style.transform = 'scaleX(1)';
         }
     });
-}, {threshold: 0.5});
+}, { threshold: 0.5 });
 
 progressBars.forEach(bar => {
     bar.style.transform = 'scaleX(0)';
@@ -500,7 +500,7 @@ function animate() {
 
 // Open certificate modal
 certPreviews.forEach(preview => {
-    preview.addEventListener('click', function(e) {
+    preview.addEventListener('click', function (e) {
         e.preventDefault();
         const certCard = this.closest('.cert-card');
         const certImage = certCard.getAttribute('data-cert-image');
@@ -528,21 +528,21 @@ function closeModal() {
 
 certModalClose.addEventListener('click', closeModal);
 
-certModal.addEventListener('click', function(e) {
+certModal.addEventListener('click', function (e) {
     if (e.target === certModal || e.target.classList.contains('cert-modal-background')) {
         closeModal();
     }
 });
 
 // Close on ESC key
-document.addEventListener('keydown', function(e) {
+document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && certModal.classList.contains('active')) {
         closeModal();
     }
 });
 
 // Resize canvas on window resize
-window.addEventListener('resize', function() {
+window.addEventListener('resize', function () {
     if (certModal.classList.contains('active') && canvas) {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
@@ -737,7 +737,7 @@ const translations = {
 
         // Hero Section
         'hero.greeting': 'مرحباً، أنا',
-        'hero.name': 'عمر أرحون',
+        'hero.name': 'عمر أرهون',
         'hero.description': 'طالب ماجستير متخصص في المالية وعلوم البيانات. أحول البيانات المعقدة إلى رؤى قابلة للتنفيذ باستخدام التعلم الآلي وبايثون والتحليلات الحديثة.',
         'hero.viewProjects': 'عرض المشاريع',
         'hero.letsTalk': 'لنتحدث',
@@ -903,3 +903,4 @@ document.addEventListener('DOMContentLoaded', () => {
 console.log('%c👋 Welcome to my portfolio!', 'color: #667eea; font-size: 20px; font-weight: bold;');
 console.log('%cBuilt with passion using vanilla HTML, CSS & JavaScript', 'color: #b8c1ec; font-size: 14px;');
 console.log('%cInterested in collaboration? Let\'s connect!', 'color: #667eea; font-size: 14px;');
+

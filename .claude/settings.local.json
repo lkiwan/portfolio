@@ -15,7 +15,10 @@
       "Bash(pip install:*)",
       "WebFetch(domain:portfolio-kharmiz-ouiame.vercel.app)",
       "Bash(dir \"C:\\Users\\arhou\\OneDrive\\Bureau\\portfolio\\images\")",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(python -m http.server:*)",
+      "Bash(timeout:*)",
+      "Bash(python:*)"
     ],
     "deny": [],
     "ask": []
