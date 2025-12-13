@@ -6,6 +6,16 @@
     <title>Omar Arhoune | Finance & Data Science Portfolio</title>
     <link rel="icon" type="image/png" href="images/unnamed .png">
     <link rel="apple-touch-icon" href="images/unnamed .png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SMY3B6P0SN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SMY3B6P0SN');
+    </script>
+
     <link rel="stylesheet" href="style.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
@@ -99,7 +109,7 @@
               </svg>
             </a>
             <a href="#contact" class="btn btn-secondary" data-i18n="hero.letsTalk">Let's Talk</a>
-            <a href="cv/Omar_Arhoune_CV.pdf" download class="btn btn-outline">
+            <a href="cv/Omar_Arhoune_CV.pdf" download class="btn btn-outline" onclick="gtag('event', 'download', {event_category: 'CV', event_label: 'Omar_Arhoune_CV'});">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
