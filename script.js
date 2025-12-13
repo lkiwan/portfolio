@@ -695,7 +695,28 @@ const translations = {
         'section.skills': 'Skills & Technologies',
         'section.certifications': 'Certifications',
         'section.projects': 'Projets Sélectionnés',
-        'section.contact': 'Contact'
+        'section.contact': 'Contact',
+
+        // About Section
+        'about.whoIAm': 'Qui je suis',
+        'about.badge': 'À propos',
+        'about.bio1': 'Je suis étudiant en Master en Finance et Data Science à la Faculté des Sciences Juridiques, Économiques et Sociales de Mohammedia, passionné par l\'utilisation de l\'analyse de données et du machine learning pour résoudre des problèmes financiers complexes. Avec une expérience pratique en détection de fraude, plateformes d\'analyse financière et outils de données intelligents, je transforme les données en insights actionnables.',
+        'about.bio2': 'Mon parcours combine la finance quantitative avec le développement full-stack, me permettant de construire des solutions de bout en bout, des modèles ML aux applications prêtes pour la production. Je m\'épanouis en découvrant des patterns dans les données et en créant des outils qui favorisent la prise de décision éclairée dans le secteur financier.',
+        'about.problemSolver': 'Résolveur de Problèmes',
+        'about.innovativeThinker': 'Penseur Innovant',
+        'about.fastLearner': 'Apprenant Rapide',
+        'about.monthsInternship': 'Mois de Stage',
+        'about.certifications': 'Certifications',
+        'about.liveProjects': 'Projets en Ligne',
+        'about.languagesSpoken': 'Langues',
+        'about.coreSkills': 'Compétences Clés',
+        'about.education': 'Formation',
+        'about.masterDegree': 'Master - Data Science & Finance',
+        'about.bachelorDegree': 'Licence - Économie',
+        'about.languages': 'Langues',
+        'about.french': 'Français',
+        'about.english': 'Anglais',
+        'about.arabic': 'Arabe'
     },
     en: {
         // Navigation
@@ -723,7 +744,28 @@ const translations = {
         'section.skills': 'Skills & Technologies',
         'section.certifications': 'Certifications',
         'section.projects': 'Featured Projects',
-        'section.contact': 'Contact'
+        'section.contact': 'Contact',
+
+        // About Section
+        'about.whoIAm': 'Who I Am',
+        'about.badge': 'About',
+        'about.bio1': 'I\'m a Master\'s student in Finance and Data Science at Faculté des Sciences Juridiques, Economiques et Sociales Mohammedia, passionate about leveraging data analytics and machine learning to solve complex financial problems. With hands-on experience in fraud detection, financial analysis platforms, and intelligent data tools, I transform data into actionable insights.',
+        'about.bio2': 'My journey combines quantitative finance with full-stack development, allowing me to build end-to-end solutions from ML models to production-ready applications. I thrive on uncovering patterns in data and creating tools that drive informed decision-making in the financial sector.',
+        'about.problemSolver': 'Problem Solver',
+        'about.innovativeThinker': 'Innovative Thinker',
+        'about.fastLearner': 'Fast Learner',
+        'about.monthsInternship': 'Months Internship',
+        'about.certifications': 'Certifications',
+        'about.liveProjects': 'Live Projects',
+        'about.languagesSpoken': 'Languages',
+        'about.coreSkills': 'Core Skills',
+        'about.education': 'Education',
+        'about.masterDegree': 'Master\'s - Data Science & Finance',
+        'about.bachelorDegree': 'Bachelor\'s - Economics',
+        'about.languages': 'Languages',
+        'about.french': 'French',
+        'about.english': 'English',
+        'about.arabic': 'Arabic'
     },
     ar: {
         // Navigation
@@ -751,7 +793,28 @@ const translations = {
         'section.skills': 'المهارات والتقنيات',
         'section.certifications': 'الشهادات',
         'section.projects': 'مشاريع مختارة',
-        'section.contact': 'تواصل'
+        'section.contact': 'تواصل',
+
+        // About Section
+        'about.whoIAm': 'من أنا',
+        'about.badge': 'نبذة',
+        'about.bio1': 'أنا طالب ماجستير في المالية وعلوم البيانات بكلية العلوم القانونية والاقتصادية والاجتماعية بالمحمدية، شغوف بتوظيف تحليل البيانات والتعلم الآلي لحل المشكلات المالية المعقدة. مع خبرة عملية في كشف الاحتيال ومنصات التحليل المالي وأدوات البيانات الذكية، أحول البيانات إلى رؤى قابلة للتنفيذ.',
+        'about.bio2': 'رحلتي تجمع بين المالية الكمية والتطوير الشامل، مما يمكنني من بناء حلول متكاملة من نماذج التعلم الآلي إلى التطبيقات الجاهزة للإنتاج. أزدهر في اكتشاف الأنماط في البيانات وإنشاء أدوات تدعم اتخاذ القرارات المستنيرة في القطاع المالي.',
+        'about.problemSolver': 'حلال المشكلات',
+        'about.innovativeThinker': 'مفكر مبتكر',
+        'about.fastLearner': 'سريع التعلم',
+        'about.monthsInternship': 'أشهر تدريب',
+        'about.certifications': 'شهادات',
+        'about.liveProjects': 'مشاريع حية',
+        'about.languagesSpoken': 'لغات',
+        'about.coreSkills': 'المهارات الأساسية',
+        'about.education': 'التعليم',
+        'about.masterDegree': 'ماجستير - علوم البيانات والمالية',
+        'about.bachelorDegree': 'ليسانس - الاقتصاد',
+        'about.languages': 'اللغات',
+        'about.french': 'الفرنسية',
+        'about.english': 'الإنجليزية',
+        'about.arabic': 'العربية'
     }
 };
 
