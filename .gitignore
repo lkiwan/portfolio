@@ -46,6 +46,10 @@ cv/photo.jpg
 # Backup files
 *.backup
 
+# Large local video files (TradeSense demo is hosted on YouTube)
+videos/
+*.mp4
+
 # Windows
 ehthumbs.db
 Desktop.ini

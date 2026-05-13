@@ -64,6 +64,10 @@ const translations = {
         exp2_company: "PEAQOCK",
         exp2_period: "Juillet - Octobre 2025",
         exp2_desc: "Développement d'un système de détection de fraude en temps réel utilisant des modèles d'ensemble ML atteignant 92% de précision. Génération de 581K transactions et création de 103 features intelligentes.",
+        exp3_title: "Stage Data Science - Agent IA de Trading (PFE)",
+        exp3_company: "PEAQOCK",
+        exp3_period: "Février 2026 - Présent",
+        exp3_desc: "Conception et implémentation d'un agent multi-signaux d'aide à la décision d'investissement pour les marchés émergents : application à la Bourse de Casablanca. Combinaison d'indicateurs techniques, d'analyse de sentiment et de signaux quantitatifs.",
 
         // Skills Section
         skills_title: "Compétences & Technologies",
@@ -105,6 +109,10 @@ const translations = {
         project4_title: "MaFinance Pro - Tableau de Bord Boursier du Maroc",
         project4_desc: "Tableau de bord boursier en temps réel suivant 77+ actions de la Bourse de Casablanca. Scraping web automatisé avec actualisation toutes les 60 secondes, recherche avancée avec autocomplétion, filtrage multi-secteurs, listes de surveillance personnalisées, alertes de prix et visualisations interactives Chart.js. Authentification sécurisée et design responsive.",
         project4_link: "GitHub",
+        project5_title: "TradeSense - Plateforme de Prop Trading",
+        project5_desc: "Plateforme complète de prop trading avec challenges multi-phases, trading social, copy-trade, système de points et récompenses, analytique temps réel et intégration MT4/MT5. Architecture moderne avec Flask, React, PostgreSQL, Redis, Celery et Socket.IO.",
+        project5_link1: "Démo en Direct",
+        project5_link2: "Voir la Démo",
 
         // Contact Section
         contact_title: "Contactez-Moi",
@@ -186,6 +194,10 @@ const translations = {
         exp2_company: "PEAQOCK",
         exp2_period: "July - October 2025",
         exp2_desc: "Built a real-time fraud detection system using ML ensemble models achieving 92% precision. Generated 581K transactions and created 103 intelligent features.",
+        exp3_title: "Data Science Intern - AI Trading Agent (PFE)",
+        exp3_company: "PEAQOCK",
+        exp3_period: "February 2026 - Present",
+        exp3_desc: "Designing and implementing a multi-signal AI agent supporting investment decisions on emerging markets, applied to the Casablanca Stock Exchange. Combines technical indicators, sentiment analysis and quantitative signals. Master's final project (PFE).",
 
         // Skills Section
         skills_title: "Skills & Technologies",
@@ -227,6 +239,10 @@ const translations = {
         project4_title: "MaFinance Pro - Morocco Stock Market Dashboard",
         project4_desc: "Real-time stock market dashboard tracking 77+ stocks from Casablanca Stock Exchange. Features automated web scraping with 60-second auto-refresh, advanced search with autocomplete, multi-sector filtering, personalized watchlists, price alerts, and interactive Chart.js visualizations. Secure authentication and responsive design.",
         project4_link: "GitHub",
+        project5_title: "TradeSense - Prop Trading Platform",
+        project5_desc: "Comprehensive prop trading platform with multi-phase challenges, social trading, copy-trade, points & rewards loyalty program, real-time analytics, and MT4/MT5 integration. Modern architecture using Flask, React, PostgreSQL, Redis, Celery and Socket.IO.",
+        project5_link1: "Live Demo",
+        project5_link2: "Watch Demo",
 
         // Contact Section
         contact_title: "Get In Touch",
@@ -308,6 +324,10 @@ const translations = {
         exp2_company: "PEAQOCK",
         exp2_period: "يوليو - أكتوبر 2025",
         exp2_desc: "بناء نظام كشف احتيال في الوقت الفعلي باستخدام نماذج تعلم آلي جماعية بدقة 92%. توليد 581 ألف معاملة وإنشاء 103 ميزة ذكية.",
+        exp3_title: "تدريب علوم البيانات - وكيل ذكاء اصطناعي للتداول (مشروع نهاية الدراسة)",
+        exp3_company: "PEAQOCK",
+        exp3_period: "فبراير 2026 - الحاضر",
+        exp3_desc: "تصميم وتنفيذ وكيل ذكاء اصطناعي متعدد الإشارات للمساعدة في اتخاذ قرارات الاستثمار في الأسواق الناشئة، مع تطبيقه على بورصة الدار البيضاء. يجمع بين المؤشرات التقنية وتحليل المشاعر والإشارات الكمية. مشروع نهاية الدراسة لشهادة الماجستير.",
 
         // Skills Section
         skills_title: "المهارات والتقنيات",
@@ -349,6 +369,10 @@ const translations = {
         project4_title: "MaFinance Pro - لوحة معلومات سوق الأسهم المغربية",
         project4_desc: "لوحة معلومات سوق الأسهم في الوقت الفعلي تتتبع أكثر من 77 سهمًا من بورصة الدار البيضاء. يتميز بالاستخراج التلقائي للبيانات مع التحديث التلقائي كل 60 ثانية، البحث المتقدم مع الإكمال التلقائي، التصفية متعددة القطاعات، قوائم المراقبة الشخصية، تنبيهات الأسعار، والتصورات التفاعلية Chart.js. مصادقة آمنة وتصميم متجاوب.",
         project4_link: "GitHub",
+        project5_title: "TradeSense - منصة Prop Trading",
+        project5_desc: "منصة شاملة لتداول الـ Prop مع تحديات متعددة المراحل، التداول الاجتماعي، نسخ الصفقات، نظام النقاط والمكافآت، التحليلات في الوقت الفعلي، وتكامل MT4/MT5. بُنيت باستخدام Flask و React و PostgreSQL و Redis و Celery و Socket.IO.",
+        project5_link1: "عرض مباشر",
+        project5_link2: "شاهد العرض",
 
         // Contact Section
         contact_title: "تواصل معي",
