@@ -967,3 +967,81 @@ console.log('%c👋 Welcome to my portfolio!', 'color: #667eea; font-size: 20px;
 console.log('%cBuilt with passion using vanilla HTML, CSS & JavaScript', 'color: #b8c1ec; font-size: 14px;');
 console.log('%cInterested in collaboration? Let\'s connect!', 'color: #667eea; font-size: 14px;');
 
+// ============================================
+// PFE IMAGE SLIDER
+// ============================================
+(function () {
+    const slider = document.querySelector('.pfe-slider');
+    if (!slider) return;
+
+    const allSlides = Array.from(slider.querySelectorAll('.pfe-slide'));
+    const dotsContainer = slider.querySelector('.pfe-slider-dots');
+    const prevBtn = slider.querySelector('.pfe-prev');
+    const nextBtn = slider.querySelector('.pfe-next');
+
+    // Filter out images that fail to load
+    let slides = [];
+    let loaded = 0;
+
+    allSlides.forEach((img) => {
+        img.addEventListener('load', () => onReady(img, true));
+        img.addEventListener('error', () => onReady(img, false));
+        // handle cached images
+        if (img.complete) {
+            onReady(img, img.naturalWidth > 0);
+        }
+    });
+
+    function onReady(img, ok) {
+        loaded++;
+        if (ok) slides.push(img);
+        else img.remove();
+
+        if (loaded === allSlides.length) init();
+    }
+
+    function init() {
+        if (slides.length === 0) {
+            slider.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#7886ad;font-size:1.1rem;">Drop screenshots in images/pic dash/ (1.png, 2.png …)</div>';
+            return;
+        }
+
+        // Set first visible slide
+        slides.forEach((s, i) => s.classList.toggle('active', i === 0));
+
+        // Build dots
+        dotsContainer.innerHTML = '';
+        slides.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.className = 'pfe-slider-dot' + (i === 0 ? ' active' : '');
+            dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+            dot.addEventListener('click', () => goTo(i));
+            dotsContainer.appendChild(dot);
+        });
+
+        if (slides.length <= 1) {
+            prevBtn.style.display = 'none';
+            nextBtn.style.display = 'none';
+            dotsContainer.style.display = 'none';
+        }
+
+        let current = 0;
+        let autoPlay = setInterval(next, 4000);
+
+        slider.addEventListener('mouseenter', () => clearInterval(autoPlay));
+        slider.addEventListener('mouseleave', () => { autoPlay = setInterval(next, 4000); });
+
+        prevBtn.addEventListener('click', prev);
+        nextBtn.addEventListener('click', next);
+
+        function goTo(idx) {
+            slides[current].classList.remove('active');
+            dotsContainer.children[current].classList.remove('active');
+            current = (idx + slides.length) % slides.length;
+            slides[current].classList.add('active');
+            dotsContainer.children[current].classList.add('active');
+        }
+        function next() { goTo(current + 1); }
+        function prev() { goTo(current - 1); }
+    }
+})();

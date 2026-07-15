@@ -1,19 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Omar Arhoune | Finance & Data Science Portfolio</title>
-    <link rel="icon" type="image/png" href="images/unnamed .png">
-    <link rel="apple-touch-icon" href="images/unnamed .png">
+    <link rel="icon" type="image/png" href="images/unnamed .png" />
+    <link rel="apple-touch-icon" href="images/unnamed .png" />
 
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SMY3B6P0SN"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-SMY3B6P0SN"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-SMY3B6P0SN');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-SMY3B6P0SN");
     </script>
 
     <link rel="stylesheet" href="style.css" />
@@ -36,8 +41,19 @@
         <div class="lang-dropdown-mobile">
           <button class="lang-dropdown-btn" aria-label="Select language">
             <span class="current-lang">FR</span>
-            <svg class="dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
-              <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <svg
+              class="dropdown-arrow"
+              width="12"
+              height="8"
+              viewBox="0 0 12 8"
+              fill="none"
+            >
+              <path
+                d="M1 1L6 6L11 1"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
             </svg>
           </button>
           <div class="lang-dropdown-menu">
@@ -59,9 +75,15 @@
         <ul class="nav-links">
           <li><a href="#about" data-i18n="nav.about">À propos</a></li>
           <li><a href="#formation" data-i18n="nav.formation">Formation</a></li>
-          <li><a href="#experience" data-i18n="nav.experience">Expérience</a></li>
+          <li>
+            <a href="#experience" data-i18n="nav.experience">Expérience</a>
+          </li>
           <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
-          <li><a href="#certifications" data-i18n="nav.certifications">Certifications</a></li>
+          <li>
+            <a href="#certifications" data-i18n="nav.certifications"
+              >Certifications</a
+            >
+          </li>
           <li><a href="#projects" data-i18n="nav.projects">Projets</a></li>
           <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
@@ -91,45 +113,109 @@
             <span data-i18n="hero.badge">Available for opportunities</span>
           </div>
           <h1 class="hero-title">
-            <span data-i18n="hero.greeting">Hi, I'm</span> <span class="gradient-text" data-i18n="hero.name">Omar Arhoune</span>
+            <span data-i18n="hero.greeting">Hi, I'm</span>
+            <span class="gradient-text" data-i18n="hero.name"
+              >Omar Arhoune</span
+            >
           </h1>
           <div class="hero-typing">
             <span class="typing-text"></span>
             <span class="cursor">|</span>
           </div>
           <p class="hero-description" data-i18n="hero.description">
-            Master's student specializing in Finance & Data Science.
-            I transform complex data into actionable insights using ML, Python, and modern analytics.
+            Master's student specializing in Finance & Data Science. I transform
+            complex data into actionable insights using ML, Python, and modern
+            analytics.
           </p>
           <div class="hero-buttons">
             <a href="#projects" class="btn btn-primary">
               <span data-i18n="hero.viewProjects">View Projects</span>
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path
+                  d="M4 10H16M16 10L10 4M16 10L10 16"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
               </svg>
             </a>
-            <a href="#contact" class="btn btn-secondary" data-i18n="hero.letsTalk">Let's Talk</a>
-            <a href="cv/Omar_Arhoune_CV.pdf" download class="btn btn-outline" onclick="gtag('event', 'download', {event_category: 'CV', event_label: 'Omar_Arhoune_CV'});">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <a
+              href="#contact"
+              class="btn btn-secondary"
+              data-i18n="hero.letsTalk"
+              >Let's Talk</a
+            >
+            <a
+              href="cv/Omar_Arhoune_CV.pdf"
+              download
+              class="btn btn-outline"
+              onclick="
+                gtag('event', 'download', {
+                  event_category: 'CV',
+                  event_label: 'Omar_Arhoune_CV',
+                })
+              "
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path
+                  d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
               </svg>
               <span data-i18n="hero.downloadCV">Download CV</span>
             </a>
           </div>
           <div class="hero-social">
-            <a href="https://www.linkedin.com/in/omar-arhoune-916b0522b/" target="_blank" class="social-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            <a
+              href="https://www.linkedin.com/in/omar-arhoune-916b0522b/"
+              target="_blank"
+              class="social-icon"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                />
               </svg>
             </a>
-            <a href="https://github.com/lkiwan" target="_blank" class="social-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            <a
+              href="https://github.com/lkiwan"
+              target="_blank"
+              class="social-icon"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                />
               </svg>
             </a>
             <a href="mailto:omar.arhoune@gmail.com" class="social-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"
+                />
               </svg>
             </a>
           </div>
@@ -138,27 +224,58 @@
           <div class="hero-visual">
             <div class="floating-card card-1">
               <div class="card-icon">
-                <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" style="width: 32px; height: 32px;">
+                <img
+                  src="https://cdn.simpleicons.org/python/3776AB"
+                  alt="Python"
+                  style="width: 32px; height: 32px"
+                />
               </div>
               <div class="card-label">Python</div>
             </div>
             <div class="floating-card card-2">
               <div class="card-icon">
-                <img src="https://cdn.simpleicons.org/databricks/FF3621" alt="Data Science" style="width: 32px; height: 32px;">
+                <img
+                  src="https://cdn.simpleicons.org/databricks/FF3621"
+                  alt="Data Science"
+                  style="width: 32px; height: 32px"
+                />
               </div>
               <div class="card-label">Data Science</div>
             </div>
             <div class="floating-card card-3">
               <div class="card-icon">
-                <img src="https://cdn.simpleicons.org/tensorflow/FF6F00" alt="Machine Learning" style="width: 32px; height: 32px;">
+                <img
+                  src="https://cdn.simpleicons.org/tensorflow/FF6F00"
+                  alt="Machine Learning"
+                  style="width: 32px; height: 32px"
+                />
               </div>
               <div class="card-label">Machine Learning</div>
             </div>
             <div class="floating-card card-4">
               <div class="card-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="color: #10B981;">
-                  <line x1="12" y1="1" x2="12" y2="23" stroke-width="2" stroke-linecap="round"/>
-                  <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  style="color: #10b981"
+                >
+                  <line
+                    x1="12"
+                    y1="1"
+                    x2="12"
+                    y2="23"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
               </div>
               <div class="card-label">Finance</div>
@@ -166,7 +283,11 @@
             <div class="hero-avatar">
               <div class="avatar-ring"></div>
               <div class="avatar-content">
-                <img src="images/unnamed .png" alt="Omar Arhoune" class="avatar-img">
+                <img
+                  src="images/unnamed .png"
+                  alt="Omar Arhoune"
+                  class="avatar-img"
+                />
               </div>
             </div>
           </div>
@@ -182,7 +303,8 @@
     <section id="about" class="about-bento">
       <div class="container">
         <h2 class="section-title">
-          <span class="title-number">01.</span> <span data-i18n="section.about">About Me</span>
+          <span class="title-number">01.</span>
+          <span data-i18n="section.about">About Me</span>
         </h2>
         <div class="about-grid-new">
           <!-- Row 1: Bio Card (left) + Stats (right stacked) -->
@@ -194,10 +316,20 @@
                 <span class="card-badge" data-i18n="about.badge">About</span>
               </div>
               <p class="bio-text" data-i18n="about.bio1">
-                I'm a Master's student in <strong>Finance and Data Science</strong> at Faculté des Sciences Juridiques, Economiques et Sociales Mohammedia, passionate about leveraging data analytics and machine learning to solve complex financial problems. With hands-on experience in fraud detection, financial analysis platforms, and intelligent data tools, I transform data into actionable insights.
+                I'm a Master's student in
+                <strong>Finance and Data Science</strong> at Faculté des
+                Sciences Juridiques, Economiques et Sociales Mohammedia,
+                passionate about leveraging data analytics and machine learning
+                to solve complex financial problems. With hands-on experience in
+                fraud detection, financial analysis platforms, and intelligent
+                data tools, I transform data into actionable insights.
               </p>
               <p class="bio-text" data-i18n="about.bio2">
-                My journey combines quantitative finance with full-stack development, allowing me to build end-to-end solutions from ML models to production-ready applications. I thrive on uncovering patterns in data and creating tools that drive informed decision-making in the financial sector.
+                My journey combines quantitative finance with full-stack
+                development, allowing me to build end-to-end solutions from ML
+                models to production-ready applications. I thrive on uncovering
+                patterns in data and creating tools that drive informed
+                decision-making in the financial sector.
               </p>
               <div class="bio-highlights">
                 <div class="highlight-item">
@@ -206,7 +338,9 @@
                 </div>
                 <div class="highlight-item">
                   <span class="highlight-icon">💡</span>
-                  <span data-i18n="about.innovativeThinker">Innovative Thinker</span>
+                  <span data-i18n="about.innovativeThinker"
+                    >Innovative Thinker</span
+                  >
                 </div>
                 <div class="highlight-item">
                   <span class="highlight-icon">🚀</span>
@@ -219,19 +353,27 @@
             <div class="about-mini-grid">
               <div class="bento-card bento-mini">
                 <div class="mini-number">3</div>
-                <div class="mini-label" data-i18n="about.monthsInternship">Months Internship</div>
+                <div class="mini-label" data-i18n="about.monthsInternship">
+                  Months Internship
+                </div>
               </div>
               <div class="bento-card bento-mini">
                 <div class="mini-number">7</div>
-                <div class="mini-label" data-i18n="about.certifications">Certifications</div>
+                <div class="mini-label" data-i18n="about.certifications">
+                  Certifications
+                </div>
               </div>
               <div class="bento-card bento-mini">
                 <div class="mini-number">4+</div>
-                <div class="mini-label" data-i18n="about.liveProjects">Live Projects</div>
+                <div class="mini-label" data-i18n="about.liveProjects">
+                  Live Projects
+                </div>
               </div>
               <div class="bento-card bento-mini">
                 <div class="mini-number">3</div>
-                <div class="mini-label" data-i18n="about.languagesSpoken">Languages</div>
+                <div class="mini-label" data-i18n="about.languagesSpoken">
+                  Languages
+                </div>
               </div>
             </div>
           </div>
@@ -253,11 +395,15 @@
             <div class="bento-card bento-edu-compact">
               <h4 data-i18n="about.education">Education</h4>
               <div class="edu-item">
-                <span class="edu-degree" data-i18n="about.masterDegree">Master's - Data Science & Finance</span>
+                <span class="edu-degree" data-i18n="about.masterDegree"
+                  >Master's - Data Science & Finance</span
+                >
                 <span class="edu-year">2024</span>
               </div>
               <div class="edu-item">
-                <span class="edu-degree" data-i18n="about.bachelorDegree">Bachelor's - Economics</span>
+                <span class="edu-degree" data-i18n="about.bachelorDegree"
+                  >Bachelor's - Economics</span
+                >
                 <span class="edu-year">2020-24</span>
               </div>
             </div>
@@ -280,7 +426,8 @@
     <section id="formation" class="formation">
       <div class="container">
         <h2 class="section-title">
-          <span class="title-number">02.</span> <span data-i18n="section.formation">Formation</span>
+          <span class="title-number">02.</span>
+          <span data-i18n="section.formation">Formation</span>
         </h2>
         <div class="formation-timeline-enhanced">
           <div class="timeline-line"></div>
@@ -293,9 +440,25 @@
               <div class="formation-badge current">En cours</div>
               <div class="formation-header">
                 <div class="formation-icon-enhanced">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6 12v5c3 3 9 3 12 0v-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M22 10v6M2 10l10-5 10 5-10 5z"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M6 12v5c3 3 9 3 12 0v-5"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                 </div>
                 <div class="formation-title-group">
@@ -303,10 +466,14 @@
                   <p class="formation-year-inline">2024 - Present</p>
                 </div>
               </div>
-              <p class="formation-school">Faculté des Sciences Juridiques, Économiques et Sociales - Mohammedia</p>
+              <p class="formation-school">
+                Faculté des Sciences Juridiques, Économiques et Sociales -
+                Mohammedia
+              </p>
               <p class="formation-description">
-                Spécialisation en machine learning, analyse de données financières, et modélisation prédictive.
-                Focus sur l'application de l'IA dans la finance et la détection de fraudes.
+                Spécialisation en machine learning, analyse de données
+                financières, et modélisation prédictive. Focus sur l'application
+                de l'IA dans la finance et la détection de fraudes.
               </p>
               <div class="formation-highlights">
                 <span class="highlight-tag">Machine Learning</span>
@@ -315,12 +482,18 @@
                 <span class="highlight-tag">Python</span>
                 <span class="highlight-tag">R</span>
                 <span class="highlight-tag">SQL</span>
-                <a href="#skills" class="highlight-tag-link">+ Plus de compétences →</a>
+                <a href="#skills" class="highlight-tag-link"
+                  >+ Plus de compétences →</a
+                >
               </div>
             </div>
           </div>
 
-          <div class="formation-item-enhanced" data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="formation-item-enhanced"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <div class="formation-dot">
               <div class="dot-inner"></div>
             </div>
@@ -328,9 +501,25 @@
               <div class="formation-badge completed">Complété</div>
               <div class="formation-header">
                 <div class="formation-icon-enhanced">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path d="M12 14l9-5-9-5-9 5 9 5z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M12 14l9-5-9-5-9 5 9 5z"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                 </div>
                 <div class="formation-title-group">
@@ -338,10 +527,13 @@
                   <p class="formation-year-inline">2020 - 2024</p>
                 </div>
               </div>
-              <p class="formation-school">Faculté des Sciences Juridiques, Économiques et Sociales - Fès</p>
+              <p class="formation-school">
+                Faculté des Sciences Juridiques, Économiques et Sociales - Fès
+              </p>
               <p class="formation-description">
-                Formation complète en économie, statistiques, et méthodes quantitatives.
-                Développement de solides bases en analyse financière et économétrie.
+                Formation complète en économie, statistiques, et méthodes
+                quantitatives. Développement de solides bases en analyse
+                financière et économétrie.
               </p>
               <div class="formation-highlights">
                 <span class="highlight-tag">Économétrie</span>
@@ -352,7 +544,11 @@
             </div>
           </div>
 
-          <div class="formation-item-enhanced" data-aos="fade-up" data-aos-delay="200">
+          <div
+            class="formation-item-enhanced"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div class="formation-dot">
               <div class="dot-inner"></div>
             </div>
@@ -360,11 +556,39 @@
               <div class="formation-badge completed">Complété</div>
               <div class="formation-header">
                 <div class="formation-icon-enhanced">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke-width="2"/>
-                    <line x1="16" y1="2" x2="16" y2="6" stroke-width="2" stroke-linecap="round"/>
-                    <line x1="8" y1="2" x2="8" y2="6" stroke-width="2" stroke-linecap="round"/>
-                    <line x1="3" y1="10" x2="21" y2="10" stroke-width="2"/>
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <rect
+                      x="3"
+                      y="4"
+                      width="18"
+                      height="18"
+                      rx="2"
+                      ry="2"
+                      stroke-width="2"
+                    />
+                    <line
+                      x1="16"
+                      y1="2"
+                      x2="16"
+                      y2="6"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <line
+                      x1="8"
+                      y1="2"
+                      x2="8"
+                      y2="6"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <line x1="3" y1="10" x2="21" y2="10" stroke-width="2" />
                   </svg>
                 </div>
                 <div class="formation-title-group">
@@ -374,7 +598,8 @@
               </div>
               <p class="formation-school">Lycée Ibn Rochd Fes, Morocco</p>
               <p class="formation-description">
-                Formation générale en sciences physiques. Solide base en physique, chimie et mathématiques appliquées.
+                Formation générale en sciences physiques. Solide base en
+                physique, chimie et mathématiques appliquées.
               </p>
               <div class="formation-highlights">
                 <span class="highlight-tag">Mathématiques</span>
@@ -391,14 +616,15 @@
     <section id="experience" class="experience">
       <div class="container">
         <h2 class="section-title">
-          <span class="title-number">03.</span> <span data-i18n="section.experience">Expérience Professionnelle</span>
+          <span class="title-number">03.</span>
+          <span data-i18n="section.experience">Expérience Professionnelle</span>
         </h2>
 
         <!-- Featured Experience - Current Internship (PFE) -->
         <div class="featured-experience" data-aos="fade-up">
           <div class="featured-exp-header">
             <div class="exp-logo-large">
-              <img src="images/peaqock_financials_logo.jpg" alt="PEAQOCK">
+              <img src="images/peaqock_financials_logo.jpg" alt="PEAQOCK" />
             </div>
             <div class="exp-title-section">
               <div class="exp-meta">
@@ -412,20 +638,36 @@
 
           <div class="featured-exp-content">
             <p class="exp-description-featured">
-              Designing and implementing a <strong>multi-signal AI agent</strong> for algorithmic trading on the
-              Casablanca Stock Exchange as part of my Master's final project (PFE):
-              <em>« Conception et implémentation d'un agent multi-signaux d'aide à la décision d'investissement
-              pour les marchés émergents : application à la Bourse de Casablanca. »</em>
-              The agent combines technical indicators, sentiment analysis and quantitative signals to support
-              investment decisions in emerging markets.
+              Designing and implementing a
+              <strong>multi-signal AI agent</strong> for algorithmic trading on
+              the Casablanca Stock Exchange as part of my Master's final project
+              (PFE):
+              <em
+                >« Conception et implémentation d'un agent multi-signaux d'aide
+                à la décision d'investissement pour les marchés émergents :
+                application à la Bourse de Casablanca. »</em
+              >
+              The agent combines technical indicators, sentiment analysis and
+              quantitative signals to support investment decisions in emerging
+              markets.
             </p>
 
             <div class="exp-achievements">
               <div class="achievement-item">
                 <div class="achievement-icon">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <circle cx="12" cy="12" r="10" stroke-width="2"/>
-                    <path d="M12 6v6l4 2" stroke-width="2" stroke-linecap="round"/>
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <circle cx="12" cy="12" r="10" stroke-width="2" />
+                    <path
+                      d="M12 6v6l4 2"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
                   </svg>
                 </div>
                 <div class="achievement-content">
@@ -436,9 +678,24 @@
 
               <div class="achievement-item">
                 <div class="achievement-icon">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path d="M3 3v18h18" stroke-width="2" stroke-linecap="round"/>
-                    <path d="M7 14l4-4 4 4 5-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M3 3v18h18"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M7 14l4-4 4 4 5-5"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                 </div>
                 <div class="achievement-content">
@@ -449,9 +706,23 @@
 
               <div class="achievement-item">
                 <div class="achievement-icon">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path d="M12 2L2 7l10 5 10-5-10-5z" stroke-width="2" stroke-linejoin="round"/>
-                    <path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke-width="2" stroke-linejoin="round"/>
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M12 2L2 7l10 5 10-5-10-5z"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M2 17l10 5 10-5M2 12l10 5 10-5"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                 </div>
                 <div class="achievement-content">
@@ -478,10 +749,14 @@
         </div>
 
         <!-- Featured Experience - Previous Internship (Fraud Detection) -->
-        <div class="featured-experience" data-aos="fade-up" data-aos-delay="100">
+        <div
+          class="featured-experience"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           <div class="featured-exp-header">
             <div class="exp-logo-large">
-              <img src="images/peaqock_financials_logo.jpg" alt="PEAQOCK">
+              <img src="images/peaqock_financials_logo.jpg" alt="PEAQOCK" />
             </div>
             <div class="exp-title-section">
               <div class="exp-meta">
@@ -495,17 +770,31 @@
 
           <div class="featured-exp-content">
             <p class="exp-description-featured">
-              Built an <strong>enterprise-grade ML ensemble model</strong> for real-time fraud detection achieving exceptional accuracy.
-              Generated 581K realistic synthetic transactions, engineered 103 intelligent features, and achieved 92% precision
-              using XGBoost and LightGBM. Solved class imbalance with SMOTE and validated the model with independent tests,
-              proving it learns patterns rather than memorizes data.
+              Built an <strong>enterprise-grade ML ensemble model</strong> for
+              real-time fraud detection achieving exceptional accuracy.
+              Generated 581K realistic synthetic transactions, engineered 103
+              intelligent features, and achieved 92% precision using XGBoost and
+              LightGBM. Solved class imbalance with SMOTE and validated the
+              model with independent tests, proving it learns patterns rather
+              than memorizes data.
             </p>
 
             <div class="exp-achievements">
               <div class="achievement-item">
                 <div class="achievement-icon">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M22 12h-4l-3 9L9 3l-3 9H2"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                 </div>
                 <div class="achievement-content">
@@ -516,8 +805,19 @@
 
               <div class="achievement-item">
                 <div class="achievement-icon">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path d="M12 20V10M18 20V4M6 20v-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M12 20V10M18 20V4M6 20v-6"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                 </div>
                 <div class="achievement-content">
@@ -528,9 +828,25 @@
 
               <div class="achievement-item">
                 <div class="achievement-icon">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <polyline points="22 4 12 14.01 9 11.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M22 11.08V12a10 10 0 11-5.93-9.14"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <polyline
+                      points="22 4 12 14.01 9 11.01"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                 </div>
                 <div class="achievement-content">
@@ -562,17 +878,40 @@
     <section id="skills" class="skills-section">
       <div class="container">
         <h2 class="section-title">
-          <span class="title-number">04.</span> <span data-i18n="section.skills">Skills & Technologies</span>
+          <span class="title-number">04.</span>
+          <span data-i18n="section.skills">Skills & Technologies</span>
         </h2>
         <div class="skills-dashboard">
           <!-- Data Science & ML -->
           <div class="skill-dashboard-card" data-aos="fade-up">
             <div class="dashboard-card-header">
               <div class="dashboard-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke-width="2"/>
-                  <polyline points="3.27 6.96 12 12.01 20.73 6.96" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <line x1="12" y1="22.08" x2="12" y2="12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                >
+                  <path
+                    d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"
+                    stroke-width="2"
+                  />
+                  <polyline
+                    points="3.27 6.96 12 12.01 20.73 6.96"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <line
+                    x1="12"
+                    y1="22.08"
+                    x2="12"
+                    y2="12"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
               </div>
               <h3>Data Science & ML</h3>
@@ -587,13 +926,44 @@
           </div>
 
           <!-- Data Analysis -->
-          <div class="skill-dashboard-card" data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="skill-dashboard-card"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <div class="dashboard-card-header">
               <div class="dashboard-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <line x1="18" y1="20" x2="18" y2="10" stroke-width="2" stroke-linecap="round"/>
-                  <line x1="12" y1="20" x2="12" y2="4" stroke-width="2" stroke-linecap="round"/>
-                  <line x1="6" y1="20" x2="6" y2="14" stroke-width="2" stroke-linecap="round"/>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                >
+                  <line
+                    x1="18"
+                    y1="20"
+                    x2="18"
+                    y2="10"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <line
+                    x1="12"
+                    y1="20"
+                    x2="12"
+                    y2="4"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <line
+                    x1="6"
+                    y1="20"
+                    x2="6"
+                    y2="14"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
                 </svg>
               </div>
               <h3>Data Analysis</h3>
@@ -608,12 +978,34 @@
           </div>
 
           <!-- Finance -->
-          <div class="skill-dashboard-card" data-aos="fade-up" data-aos-delay="200">
+          <div
+            class="skill-dashboard-card"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div class="dashboard-card-header">
               <div class="dashboard-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <line x1="12" y1="1" x2="12" y2="23" stroke-width="2" stroke-linecap="round"/>
-                  <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                >
+                  <line
+                    x1="12"
+                    y1="1"
+                    x2="12"
+                    y2="23"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
               </div>
               <h3>Finance</h3>
@@ -628,12 +1020,32 @@
           </div>
 
           <!-- Development & Tools -->
-          <div class="skill-dashboard-card" data-aos="fade-up" data-aos-delay="300">
+          <div
+            class="skill-dashboard-card"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <div class="dashboard-card-header">
               <div class="dashboard-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <polyline points="16 18 22 12 16 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <polyline points="8 6 2 12 8 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                >
+                  <polyline
+                    points="16 18 22 12 16 6"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <polyline
+                    points="8 6 2 12 8 18"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
               </div>
               <h3>Development</h3>
@@ -654,204 +1066,390 @@
           <div class="stack-marquee-wrapper">
             <!-- First Row - Scrolling Left -->
             <div class="marquee-row">
-            <div class="marquee-content marquee-left">
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" class="tech-logo-img">
-                <span class="tech-name">Python</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/tensorflow/FF6F00" alt="TensorFlow" class="tech-logo-img">
-                <span class="tech-name">TensorFlow</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="PyTorch" class="tech-logo-img">
-                <span class="tech-name">PyTorch</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/scikitlearn/F7931E" alt="Scikit-learn" class="tech-logo-img">
-                <span class="tech-name">Scikit-learn</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/pandas/150458" alt="Pandas" class="tech-logo-img">
-                <span class="tech-name">Pandas</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/numpy/013243" alt="NumPy" class="tech-logo-img">
-                <span class="tech-name">NumPy</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/XGBoost_logo.png" alt="XGBoost" class="tech-logo-img">
-                <span class="tech-name">XGBoost</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://lightgbm.readthedocs.io/en/latest/_static/LightGBM_logo_black_text.svg" alt="LightGBM" class="tech-logo-img" style="filter: brightness(1.5) invert(1);">
-                <span class="tech-name">LightGBM</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://matplotlib.org/stable/_static/logo2.svg" alt="Matplotlib" class="tech-logo-img">
-                <span class="tech-name">Matplotlib</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://seaborn.pydata.org/_static/logo-wide-lightbg.svg" alt="Seaborn" class="tech-logo-img">
-                <span class="tech-name">Seaborn</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/plotly/3F4F75" alt="Plotly" class="tech-logo-img">
-                <span class="tech-name">Plotly</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/mysql/4479A1" alt="SQL" class="tech-logo-img">
-                <span class="tech-name">SQL</span>
-              </div>
+              <div class="marquee-content marquee-left">
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/python/3776AB"
+                    alt="Python"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">Python</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/tensorflow/FF6F00"
+                    alt="TensorFlow"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">TensorFlow</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/pytorch/EE4C2C"
+                    alt="PyTorch"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">PyTorch</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/scikitlearn/F7931E"
+                    alt="Scikit-learn"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">Scikit-learn</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/pandas/150458"
+                    alt="Pandas"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">Pandas</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/numpy/013243"
+                    alt="NumPy"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">NumPy</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/6/69/XGBoost_logo.png"
+                    alt="XGBoost"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">XGBoost</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://lightgbm.readthedocs.io/en/latest/_static/LightGBM_logo_black_text.svg"
+                    alt="LightGBM"
+                    class="tech-logo-img"
+                    style="filter: brightness(1.5) invert(1)"
+                  />
+                  <span class="tech-name">LightGBM</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://matplotlib.org/stable/_static/logo2.svg"
+                    alt="Matplotlib"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">Matplotlib</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://seaborn.pydata.org/_static/logo-wide-lightbg.svg"
+                    alt="Seaborn"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">Seaborn</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/plotly/3F4F75"
+                    alt="Plotly"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">Plotly</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/mysql/4479A1"
+                    alt="SQL"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">SQL</span>
+                </div>
 
-              <!-- Duplicate for seamless loop -->
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" class="tech-logo-img">
-                <span class="tech-name">Python</span>
+                <!-- Duplicate for seamless loop -->
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/python/3776AB"
+                    alt="Python"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">Python</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/tensorflow/FF6F00"
+                    alt="TensorFlow"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">TensorFlow</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/pytorch/EE4C2C"
+                    alt="PyTorch"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">PyTorch</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/scikitlearn/F7931E"
+                    alt="Scikit-learn"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">Scikit-learn</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/pandas/150458"
+                    alt="Pandas"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">Pandas</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/numpy/013243"
+                    alt="NumPy"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">NumPy</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/6/69/XGBoost_logo.png"
+                    alt="XGBoost"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">XGBoost</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://lightgbm.readthedocs.io/en/latest/_static/LightGBM_logo_black_text.svg"
+                    alt="LightGBM"
+                    class="tech-logo-img"
+                    style="filter: brightness(1.5) invert(1)"
+                  />
+                  <span class="tech-name">LightGBM</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://matplotlib.org/stable/_static/logo2.svg"
+                    alt="Matplotlib"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">Matplotlib</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://seaborn.pydata.org/_static/logo-wide-lightbg.svg"
+                    alt="Seaborn"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">Seaborn</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/plotly/3F4F75"
+                    alt="Plotly"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">Plotly</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/mysql/4479A1"
+                    alt="SQL"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">SQL</span>
+                </div>
               </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/tensorflow/FF6F00" alt="TensorFlow" class="tech-logo-img">
-                <span class="tech-name">TensorFlow</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="PyTorch" class="tech-logo-img">
-                <span class="tech-name">PyTorch</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/scikitlearn/F7931E" alt="Scikit-learn" class="tech-logo-img">
-                <span class="tech-name">Scikit-learn</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/pandas/150458" alt="Pandas" class="tech-logo-img">
-                <span class="tech-name">Pandas</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/numpy/013243" alt="NumPy" class="tech-logo-img">
-                <span class="tech-name">NumPy</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/XGBoost_logo.png" alt="XGBoost" class="tech-logo-img">
-                <span class="tech-name">XGBoost</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://lightgbm.readthedocs.io/en/latest/_static/LightGBM_logo_black_text.svg" alt="LightGBM" class="tech-logo-img" style="filter: brightness(1.5) invert(1);">
-                <span class="tech-name">LightGBM</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://matplotlib.org/stable/_static/logo2.svg" alt="Matplotlib" class="tech-logo-img">
-                <span class="tech-name">Matplotlib</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://seaborn.pydata.org/_static/logo-wide-lightbg.svg" alt="Seaborn" class="tech-logo-img">
-                <span class="tech-name">Seaborn</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/plotly/3F4F75" alt="Plotly" class="tech-logo-img">
-                <span class="tech-name">Plotly</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/mysql/4479A1" alt="SQL" class="tech-logo-img">
-                <span class="tech-name">SQL</span>
+            </div>
+
+            <!-- Second Row - Scrolling Right -->
+            <div class="marquee-row">
+              <div class="marquee-content marquee-right">
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/react/61DAFB"
+                    alt="React"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">React</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/fastapi/009688"
+                    alt="FastAPI"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">FastAPI</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/flask/FFFFFF"
+                    alt="Flask"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">Flask</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/postgresql/4169E1"
+                    alt="PostgreSQL"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">PostgreSQL</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/mysql/4479A1"
+                    alt="MySQL"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">MySQL</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/mongodb/47A248"
+                    alt="MongoDB"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">MongoDB</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/xampp/FB7A24"
+                    alt="XAMPP"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">XAMPP</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/docker/2496ED"
+                    alt="Docker"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">Docker</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/git/F05032"
+                    alt="Git"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">Git</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/jupyter/F37626"
+                    alt="Jupyter"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">Jupyter</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg"
+                    alt="VS Code"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">VS Code</span>
+                </div>
+
+                <!-- Duplicate for seamless loop -->
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/react/61DAFB"
+                    alt="React"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">React</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/fastapi/009688"
+                    alt="FastAPI"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">FastAPI</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/flask/FFFFFF"
+                    alt="Flask"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">Flask</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/postgresql/4169E1"
+                    alt="PostgreSQL"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">PostgreSQL</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/mysql/4479A1"
+                    alt="MySQL"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">MySQL</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/mongodb/47A248"
+                    alt="MongoDB"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">MongoDB</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/xampp/FB7A24"
+                    alt="XAMPP"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">XAMPP</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/docker/2496ED"
+                    alt="Docker"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">Docker</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/git/F05032"
+                    alt="Git"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">Git</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://cdn.simpleicons.org/jupyter/F37626"
+                    alt="Jupyter"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">Jupyter</span>
+                </div>
+                <div class="tech-badge-logo">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg"
+                    alt="VS Code"
+                    class="tech-logo-img"
+                  />
+                  <span class="tech-name">VS Code</span>
+                </div>
               </div>
             </div>
           </div>
-
-          <!-- Second Row - Scrolling Right -->
-          <div class="marquee-row">
-            <div class="marquee-content marquee-right">
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" class="tech-logo-img">
-                <span class="tech-name">React</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/fastapi/009688" alt="FastAPI" class="tech-logo-img">
-                <span class="tech-name">FastAPI</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/flask/FFFFFF" alt="Flask" class="tech-logo-img">
-                <span class="tech-name">Flask</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="PostgreSQL" class="tech-logo-img">
-                <span class="tech-name">PostgreSQL</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL" class="tech-logo-img">
-                <span class="tech-name">MySQL</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/mongodb/47A248" alt="MongoDB" class="tech-logo-img">
-                <span class="tech-name">MongoDB</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/xampp/FB7A24" alt="XAMPP" class="tech-logo-img">
-                <span class="tech-name">XAMPP</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker" class="tech-logo-img">
-                <span class="tech-name">Docker</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/git/F05032" alt="Git" class="tech-logo-img">
-                <span class="tech-name">Git</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/jupyter/F37626" alt="Jupyter" class="tech-logo-img">
-                <span class="tech-name">Jupyter</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="VS Code" class="tech-logo-img">
-                <span class="tech-name">VS Code</span>
-              </div>
-
-              <!-- Duplicate for seamless loop -->
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" class="tech-logo-img">
-                <span class="tech-name">React</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/fastapi/009688" alt="FastAPI" class="tech-logo-img">
-                <span class="tech-name">FastAPI</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/flask/FFFFFF" alt="Flask" class="tech-logo-img">
-                <span class="tech-name">Flask</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="PostgreSQL" class="tech-logo-img">
-                <span class="tech-name">PostgreSQL</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL" class="tech-logo-img">
-                <span class="tech-name">MySQL</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/mongodb/47A248" alt="MongoDB" class="tech-logo-img">
-                <span class="tech-name">MongoDB</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/xampp/FB7A24" alt="XAMPP" class="tech-logo-img">
-                <span class="tech-name">XAMPP</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker" class="tech-logo-img">
-                <span class="tech-name">Docker</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/git/F05032" alt="Git" class="tech-logo-img">
-                <span class="tech-name">Git</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://cdn.simpleicons.org/jupyter/F37626" alt="Jupyter" class="tech-logo-img">
-                <span class="tech-name">Jupyter</span>
-              </div>
-              <div class="tech-badge-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="VS Code" class="tech-logo-img">
-                <span class="tech-name">VS Code</span>
-              </div>
-            </div>
-          </div>
-        </div>
         </div>
       </div>
     </section>
@@ -860,17 +1458,33 @@
     <section id="certifications" class="certifications">
       <div class="container">
         <h2 class="section-title">
-          <span class="title-number">05.</span> <span data-i18n="section.certifications">Certifications</span>
+          <span class="title-number">05.</span>
+          <span data-i18n="section.certifications">Certifications</span>
         </h2>
         <div class="certifications-grid">
-          <div class="cert-card" data-aos="fade-up" data-cert-image="certif/ai_certificate.jpg">
+          <div
+            class="cert-card"
+            data-aos="fade-up"
+            data-cert-image="certif/ai_certificate.jpg"
+          >
             <div class="cert-ribbon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                />
               </svg>
             </div>
             <div class="cert-image-preview">
-              <img src="certif/ai_certificate.jpg" alt="Data Scientist Professional Certificate" class="cert-preview-img">
+              <img
+                src="certif/ai_certificate.jpg"
+                alt="Data Scientist Professional Certificate"
+                class="cert-preview-img"
+              />
               <div class="cert-overlay">
                 <span>Click to view</span>
               </div>
@@ -879,7 +1493,8 @@
               <h3>Understanding Artificial Intelligence</h3>
               <p class="cert-issuer">DataCamp</p>
               <p class="cert-description">
-                Certification professionnelle couvrant Python, SQL, analyse de données, machine learning, et visualisation.
+                Certification professionnelle couvrant Python, SQL, analyse de
+                données, machine learning, et visualisation.
               </p>
               <div class="cert-skills">
                 <span>Python</span>
@@ -893,14 +1508,30 @@
             </div>
           </div>
 
-          <div class="cert-card" data-aos="fade-up" data-aos-delay="100" data-cert-image="certif/1754934167360_page-0001.jpg">
+          <div
+            class="cert-card"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-cert-image="certif/1754934167360_page-0001.jpg"
+          >
             <div class="cert-ribbon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                />
               </svg>
             </div>
             <div class="cert-image-preview">
-              <img src="certif/1754934167360_page-0001.jpg" alt="Data Analytics Simulation Certificate" class="cert-preview-img">
+              <img
+                src="certif/1754934167360_page-0001.jpg"
+                alt="Data Analytics Simulation Certificate"
+                class="cert-preview-img"
+              />
               <div class="cert-overlay">
                 <span>Click to view</span>
               </div>
@@ -909,7 +1540,8 @@
               <h3>Data Analytics Job Simulation</h3>
               <p class="cert-issuer">Deloitte Australia</p>
               <p class="cert-description">
-                Simulation de projet réel incluant analyse forensique, visualisation Tableau, et reporting client.
+                Simulation de projet réel incluant analyse forensique,
+                visualisation Tableau, et reporting client.
               </p>
               <div class="cert-skills">
                 <span>Forensic Analysis</span>
@@ -922,14 +1554,30 @@
             </div>
           </div>
 
-          <div class="cert-card" data-aos="fade-up" data-aos-delay="200" data-cert-image="certif/machine_learning_certificate.jpg">
+          <div
+            class="cert-card"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-cert-image="certif/machine_learning_certificate.jpg"
+          >
             <div class="cert-ribbon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                />
               </svg>
             </div>
             <div class="cert-image-preview">
-              <img src="certif/machine_learning_certificate.jpg" alt="Machine Learning Specialization Certificate" class="cert-preview-img">
+              <img
+                src="certif/machine_learning_certificate.jpg"
+                alt="Machine Learning Specialization Certificate"
+                class="cert-preview-img"
+              />
               <div class="cert-overlay">
                 <span>Click to view</span>
               </div>
@@ -938,7 +1586,8 @@
               <h3>Understanding Machine Learning</h3>
               <p class="cert-issuer">DataCamp</p>
               <p class="cert-description">
-                Spécialisation approfondie en machine learning: supervised, unsupervised, ensemble methods, et deep learning.
+                Spécialisation approfondie en machine learning: supervised,
+                unsupervised, ensemble methods, et deep learning.
               </p>
               <div class="cert-skills">
                 <span>Supervised Learning</span>
@@ -951,14 +1600,30 @@
             </div>
           </div>
 
-          <div class="cert-card" data-aos="fade-up" data-aos-delay="300" data-cert-image="certif/python_certificate.jpg">
+          <div
+            class="cert-card"
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-cert-image="certif/python_certificate.jpg"
+          >
             <div class="cert-ribbon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                />
               </svg>
             </div>
             <div class="cert-image-preview">
-              <img src="certif/python_certificate.jpg" alt="Python Programming Certificate" class="cert-preview-img">
+              <img
+                src="certif/python_certificate.jpg"
+                alt="Python Programming Certificate"
+                class="cert-preview-img"
+              />
               <div class="cert-overlay">
                 <span>Click to view</span>
               </div>
@@ -967,7 +1632,8 @@
               <h3>Intermediate Python</h3>
               <p class="cert-issuer">DataCamp</p>
               <p class="cert-description">
-                Maîtrise complète de Python pour data science: pandas, numpy, data manipulation, et programmation orientée objet.
+                Maîtrise complète de Python pour data science: pandas, numpy,
+                data manipulation, et programmation orientée objet.
               </p>
               <div class="cert-skills">
                 <span>Python</span>
@@ -981,14 +1647,30 @@
             </div>
           </div>
 
-          <div class="cert-card" data-aos="fade-up" data-aos-delay="400" data-cert-image="certif/sql_certificate.jpg">
+          <div
+            class="cert-card"
+            data-aos="fade-up"
+            data-aos-delay="400"
+            data-cert-image="certif/sql_certificate.jpg"
+          >
             <div class="cert-ribbon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                />
               </svg>
             </div>
             <div class="cert-image-preview">
-              <img src="certif/sql_certificate.jpg" alt="SQL for Data Science Certificate" class="cert-preview-img">
+              <img
+                src="certif/sql_certificate.jpg"
+                alt="SQL for Data Science Certificate"
+                class="cert-preview-img"
+              />
               <div class="cert-overlay">
                 <span>Click to view</span>
               </div>
@@ -997,7 +1679,8 @@
               <h3>Introduction to SQL</h3>
               <p class="cert-issuer">DataCamp</p>
               <p class="cert-description">
-                Expertise en SQL: requêtes complexes, jointures, window functions, optimisation de performances, et database design.
+                Expertise en SQL: requêtes complexes, jointures, window
+                functions, optimisation de performances, et database design.
               </p>
               <div class="cert-skills">
                 <span>SQL</span>
@@ -1010,14 +1693,30 @@
             </div>
           </div>
 
-          <div class="cert-card" data-aos="fade-up" data-aos-delay="500" data-cert-image="certif/data_visualization_certificate.jpg">
+          <div
+            class="cert-card"
+            data-aos="fade-up"
+            data-aos-delay="500"
+            data-cert-image="certif/data_visualization_certificate.jpg"
+          >
             <div class="cert-ribbon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                />
               </svg>
             </div>
             <div class="cert-image-preview">
-              <img src="certif/data_visualization_certificate.jpg" alt="Data Visualization Certificate" class="cert-preview-img">
+              <img
+                src="certif/data_visualization_certificate.jpg"
+                alt="Data Visualization Certificate"
+                class="cert-preview-img"
+              />
               <div class="cert-overlay">
                 <span>Click to view</span>
               </div>
@@ -1026,7 +1725,8 @@
               <h3>Understanding Data Visualization</h3>
               <p class="cert-issuer">DataCamp</p>
               <p class="cert-description">
-                Création de visualisations impactantes avec Matplotlib, Seaborn, Plotly. Storytelling avec les données et dashboard design.
+                Création de visualisations impactantes avec Matplotlib, Seaborn,
+                Plotly. Storytelling avec les données et dashboard design.
               </p>
               <div class="cert-skills">
                 <span>Matplotlib</span>
@@ -1040,14 +1740,30 @@
             </div>
           </div>
 
-          <div class="cert-card" data-aos="fade-up" data-aos-delay="600" data-cert-image="certif/data_engineering_certificate.jpg">
+          <div
+            class="cert-card"
+            data-aos="fade-up"
+            data-aos-delay="600"
+            data-cert-image="certif/data_engineering_certificate.jpg"
+          >
             <div class="cert-ribbon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                />
               </svg>
             </div>
             <div class="cert-image-preview">
-              <img src="certif/data_engineering_certificate.jpg" alt="Data Engineering Certificate" class="cert-preview-img">
+              <img
+                src="certif/data_engineering_certificate.jpg"
+                alt="Data Engineering Certificate"
+                class="cert-preview-img"
+              />
               <div class="cert-overlay">
                 <span>Click to view</span>
               </div>
@@ -1056,7 +1772,8 @@
               <h3>Understanding Data Engineering</h3>
               <p class="cert-issuer">DataCamp</p>
               <p class="cert-description">
-                Maîtrise des pipelines de données, ETL, et infrastructure big data. Compétences en data warehousing et optimisation.
+                Maîtrise des pipelines de données, ETL, et infrastructure big
+                data. Compétences en data warehousing et optimisation.
               </p>
               <div class="cert-skills">
                 <span>ETL</span>
@@ -1077,68 +1794,253 @@
     <section id="projects" class="projects">
       <div class="container">
         <h2 class="section-title">
-          <span class="title-number">06.</span> <span data-i18n="section.projects">Projets Sélectionnés</span>
+          <span class="title-number">06.</span>
+          <span data-i18n="section.projects">Projets Sélectionnés</span>
         </h2>
 
-        <!-- Featured Project Hero -->
+        <!-- Featured Project Hero — PFE Whale -->
         <div class="featured-project">
           <div class="featured-project-visual">
-            <img src="images/fraud-detection.jpg" alt="Fraud Detection Project">
+            <div class="pfe-slider">
+              <div class="pfe-slider-track">
+                <img
+                  src="images/pic dash/1.png"
+                  alt="Whale Dashboard 1"
+                  class="pfe-slide active"
+                />
+                <img
+                  src="images/pic dash/2.png"
+                  alt="Whale Dashboard 2"
+                  class="pfe-slide"
+                />
+                <img
+                  src="images/pic dash/3.png"
+                  alt="Whale Dashboard 3"
+                  class="pfe-slide"
+                />
+                <img
+                  src="images/pic dash/4.png"
+                  alt="Whale Dashboard 4"
+                  class="pfe-slide"
+                />
+                <img
+                  src="images/pic dash/5.png"
+                  alt="Whale Dashboard 5"
+                  class="pfe-slide"
+                />
+                <img
+                  src="images/pic dash/6.png"
+                  alt="Whale Dashboard 6"
+                  class="pfe-slide"
+                />
+                <img
+                  src="images/pic dash/7.png"
+                  alt="Whale Dashboard 7"
+                  class="pfe-slide"
+                />
+                <img
+                  src="images/pic dash/8.png"
+                  alt="Whale Dashboard 8"
+                  class="pfe-slide"
+                />
+                <img
+                  src="images/pic dash/9.png"
+                  alt="Whale Dashboard 9"
+                  class="pfe-slide"
+                />
+                <img
+                  src="images/pic dash/10.png"
+                  alt="Whale Dashboard 10"
+                  class="pfe-slide"
+                />
+                <img
+                  src="images/pic dash/11.png"
+                  alt="Whale Dashboard 11"
+                  class="pfe-slide"
+                />
+                <img
+                  src="images/pic dash/12.png"
+                  alt="Whale Dashboard 12"
+                  class="pfe-slide"
+                />
+                <img
+                  src="images/pic dash/13.png"
+                  alt="Whale Dashboard 13"
+                  class="pfe-slide"
+                />
+              </div>
+              <button class="pfe-slider-btn pfe-prev" aria-label="Previous">
+                ‹
+              </button>
+              <button class="pfe-slider-btn pfe-next" aria-label="Next">
+                ›
+              </button>
+              <div class="pfe-slider-dots"></div>
+            </div>
             <div class="project-overlay">
-              <span class="featured-badge">Featured Project</span>
+              <span class="featured-badge">PFE — Featured Project</span>
             </div>
           </div>
           <div class="featured-project-content">
-            <h3>Fraud Detection for Instant Payments</h3>
+            <h3>Masi/AI — Agent Multi-Signaux (Bourse de Casablanca)</h3>
             <div class="project-meta">
-              <span class="project-category">Machine Learning</span>
-              <span class="project-date">2025</span>
+              <span class="project-category">AI · Finance · Data Science</span>
+              <span class="project-date">2026</span>
             </div>
             <p class="project-description">
-              Enterprise-grade ML ensemble model for real-time fraud detection achieving <strong>92% precision</strong>.
-              Generated 581K realistic transactions, engineered 103 intelligent features, and solved class imbalance
-              using SMOTE. Validated with independent tests proving the model learns patterns, not memorizes.
+              Plateforme <strong>multi-instruments</strong> pour la Bourse de
+              Casablanca qui agrège
+              <strong>4 familles de signaux</strong> (marché, macro-économique,
+              fondamentaux, actualités) et les fusionne via des
+              <strong>agents LLM</strong> pour produire des verdicts
+              d'investissement (ACHETER / CONSERVER / VENDRE). Inclut 5 modèles
+              de valorisation (DCF, DDM, Graham, Relatif, Monte Carlo), un
+              simulateur paper-trading et un dashboard 11 pages déployé en
+              production sur Oracle Cloud.
             </p>
             <div class="project-highlights">
               <div class="highlight">
-                <div class="highlight-number">581K</div>
-                <div class="highlight-label">Transactions</div>
+                <div class="highlight-number">22</div>
+                <div class="highlight-label">Instruments</div>
               </div>
               <div class="highlight">
-                <div class="highlight-number">103</div>
-                <div class="highlight-label">Features</div>
+                <div class="highlight-number">5</div>
+                <div class="highlight-label">Modèles</div>
               </div>
               <div class="highlight">
-                <div class="highlight-number">92%</div>
-                <div class="highlight-label">Precision</div>
+                <div class="highlight-number">3</div>
+                <div class="highlight-label">Agents IA</div>
+              </div>
+              <div class="highlight">
+                <div class="highlight-number">14+</div>
+                <div class="highlight-label">Tables DB</div>
               </div>
             </div>
             <div class="project-tech-stack">
               <span>Python</span>
-              <span>XGBoost</span>
-              <span>LightGBM</span>
-              <span>SMOTE</span>
-              <span>Feature Engineering</span>
-              <span>Pandas</span>
+              <span>Streamlit</span>
+              <span>FastAPI</span>
+              <span>PostgreSQL</span>
+              <span>Docker</span>
+              <span>LLM Agents</span>
+              <span>Groq</span>
+              <span>Plotly</span>
             </div>
           </div>
         </div>
 
         <!-- Other Projects Grid -->
         <div class="projects-grid-modern">
-          <!-- Project 1 -->
+          <!-- Project: Fraud Detection (previously featured) -->
           <div class="project-card-modern" data-aos="fade-up">
             <div class="project-ribbon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                />
               </svg>
             </div>
             <div class="project-image-preview">
-              <img src="images/data-analyzer.jpg" alt="DATA ANALYZER" class="project-preview-img">
+              <img
+                src="images/fraud-detection.jpg"
+                alt="Fraud Detection"
+                class="project-preview-img"
+              />
               <div class="project-overlay">
-                <a href="https://data-analyzer-tawny.vercel.app/" target="_blank" class="project-view-btn">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <a
+                  href="https://github.com/lkiwan"
+                  target="_blank"
+                  class="project-view-btn"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span>View Project</span>
+                </a>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags-small">
+                <span>Machine Learning</span>
+                <span>Finance</span>
+              </div>
+              <h3>Fraud Detection</h3>
+              <p class="project-description-card">
+                Enterprise-grade ML ensemble (XGBoost + LightGBM) for real-time
+                fraud detection. 581K transactions, 103 features, 92% precision.
+              </p>
+              <div class="project-stack-small">
+                <span>Python</span>
+                <span>XGBoost</span>
+                <span>LightGBM</span>
+                <span>SMOTE</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <a
+                href="https://github.com/lkiwan"
+                target="_blank"
+                class="project-link"
+                >GitHub →</a
+              >
+            </div>
+          </div>
+
+          <!-- Project 1 -->
+          <div class="project-card-modern" data-aos="fade-up">
+            <div class="project-ribbon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                />
+              </svg>
+            </div>
+            <div class="project-image-preview">
+              <img
+                src="images/data-analyzer.jpg"
+                alt="DATA ANALYZER"
+                class="project-preview-img"
+              />
+              <div class="project-overlay">
+                <a
+                  href="https://data-analyzer-tawny.vercel.app/"
+                  target="_blank"
+                  class="project-view-btn"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                   <span>View Project</span>
                 </a>
@@ -1150,7 +2052,10 @@
                 <span>AI</span>
               </div>
               <h3>DATA ANALYZER</h3>
-              <p class="project-description-card">Smart data platform with AI-powered analysis. Upload datasets, clean with 8+ strategies, query in plain English.</p>
+              <p class="project-description-card">
+                Smart data platform with AI-powered analysis. Upload datasets,
+                clean with 8+ strategies, query in plain English.
+              </p>
               <div class="project-stack-small">
                 <span>React</span>
                 <span>TypeScript</span>
@@ -1159,24 +2064,64 @@
               </div>
             </div>
             <div class="project-footer">
-              <a href="https://data-analyzer-tawny.vercel.app/" target="_blank" class="project-link">Live Demo →</a>
-              <a href="https://github.com/lkiwan/DATA-ANALYZER" target="_blank" class="project-link">GitHub →</a>
+              <a
+                href="https://data-analyzer-tawny.vercel.app/"
+                target="_blank"
+                class="project-link"
+                >Live Demo →</a
+              >
+              <a
+                href="https://github.com/lkiwan/DATA-ANALYZER"
+                target="_blank"
+                class="project-link"
+                >GitHub →</a
+              >
             </div>
           </div>
 
           <!-- Project 2 -->
-          <div class="project-card-modern" data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="project-card-modern"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <div class="project-ribbon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                />
               </svg>
             </div>
             <div class="project-image-preview">
-              <img src="images/finanalyse.jpg" alt="FinAnalyse" class="project-preview-img">
+              <img
+                src="images/finanalyse.jpg"
+                alt="FinAnalyse"
+                class="project-preview-img"
+              />
               <div class="project-overlay">
-                <a href="https://finanalyses.pages.dev/" target="_blank" class="project-view-btn">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <a
+                  href="https://finanalyses.pages.dev/"
+                  target="_blank"
+                  class="project-view-btn"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                   <span>View Project</span>
                 </a>
@@ -1188,7 +2133,10 @@
                 <span>AI</span>
               </div>
               <h3>FinAnalyse</h3>
-              <p class="project-description-card">AI-powered financial analysis platform with Google Gemini. Real-time market data and intelligent summaries.</p>
+              <p class="project-description-card">
+                AI-powered financial analysis platform with Google Gemini.
+                Real-time market data and intelligent summaries.
+              </p>
               <div class="project-stack-small">
                 <span>Python</span>
                 <span>FastAPI</span>
@@ -1197,24 +2145,64 @@
               </div>
             </div>
             <div class="project-footer">
-              <a href="https://finanalyses.pages.dev/" target="_blank" class="project-link">Live Demo →</a>
-              <a href="https://github.com/lkiwan/FinAnalyses" target="_blank" class="project-link">GitHub →</a>
+              <a
+                href="https://finanalyses.pages.dev/"
+                target="_blank"
+                class="project-link"
+                >Live Demo →</a
+              >
+              <a
+                href="https://github.com/lkiwan/FinAnalyses"
+                target="_blank"
+                class="project-link"
+                >GitHub →</a
+              >
             </div>
           </div>
 
           <!-- Project 3 -->
-          <div class="project-card-modern" data-aos="fade-up" data-aos-delay="200">
+          <div
+            class="project-card-modern"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div class="project-ribbon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                />
               </svg>
             </div>
             <div class="project-image-preview">
-              <img src="images/sp500-dashboard.jpg" alt="S&P 500 AI Prediction" class="project-preview-img">
+              <img
+                src="images/sp500-dashboard.jpg"
+                alt="S&P 500 AI Prediction"
+                class="project-preview-img"
+              />
               <div class="project-overlay">
-                <a href="https://s-p-500-price-prediction.onrender.com" target="_blank" class="project-view-btn">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <a
+                  href="https://s-p-500-price-prediction.onrender.com"
+                  target="_blank"
+                  class="project-view-btn"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                   <span>View Project</span>
                 </a>
@@ -1226,7 +2214,11 @@
                 <span>Finance</span>
               </div>
               <h3>S&P 500 AI Prediction</h3>
-              <p class="project-description-card">AI-powered market prediction dashboard with 63.64% accuracy. Features XGBoost ML, Monte Carlo simulations, backtesting, and comprehensive PDF reports.</p>
+              <p class="project-description-card">
+                AI-powered market prediction dashboard with 63.64% accuracy.
+                Features XGBoost ML, Monte Carlo simulations, backtesting, and
+                comprehensive PDF reports.
+              </p>
               <div class="project-stack-small">
                 <span>Python</span>
                 <span>Flask</span>
@@ -1235,24 +2227,64 @@
               </div>
             </div>
             <div class="project-footer">
-              <a href="https://s-p-500-price-prediction.onrender.com" target="_blank" class="project-link">Live Demo →</a>
-              <a href="https://github.com/lkiwan/S-P-500-Price-Prediction" target="_blank" class="project-link">GitHub →</a>
+              <a
+                href="https://s-p-500-price-prediction.onrender.com"
+                target="_blank"
+                class="project-link"
+                >Live Demo →</a
+              >
+              <a
+                href="https://github.com/lkiwan/S-P-500-Price-Prediction"
+                target="_blank"
+                class="project-link"
+                >GitHub →</a
+              >
             </div>
           </div>
 
           <!-- Project 4 -->
-          <div class="project-card-modern" data-aos="fade-up" data-aos-delay="300">
+          <div
+            class="project-card-modern"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <div class="project-ribbon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                />
               </svg>
             </div>
             <div class="project-image-preview">
-              <img src="images/MaFinance Pro.jpg" alt="MaFinance Pro" class="project-preview-img">
+              <img
+                src="images/MaFinance Pro.jpg"
+                alt="MaFinance Pro"
+                class="project-preview-img"
+              />
               <div class="project-overlay">
-                <a href="https://github.com/lkiwan/MaFinance" target="_blank" class="project-view-btn">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <a
+                  href="https://github.com/lkiwan/MaFinance"
+                  target="_blank"
+                  class="project-view-btn"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                   <span>View Project</span>
                 </a>
@@ -1264,7 +2296,10 @@
                 <span>Real-time</span>
               </div>
               <h3>MaFinance Pro</h3>
-              <p class="project-description-card">Real-time Morocco stock market dashboard tracking 77+ stocks. Automated scraping with 60s refresh.</p>
+              <p class="project-description-card">
+                Real-time Morocco stock market dashboard tracking 77+ stocks.
+                Automated scraping with 60s refresh.
+              </p>
               <div class="project-stack-small">
                 <span>Python</span>
                 <span>Flask</span>
@@ -1273,15 +2308,31 @@
               </div>
             </div>
             <div class="project-footer">
-              <a href="https://github.com/lkiwan/MaFinance" target="_blank" class="project-link">GitHub →</a>
+              <a
+                href="https://github.com/lkiwan/MaFinance"
+                target="_blank"
+                class="project-link"
+                >GitHub →</a
+              >
             </div>
           </div>
 
           <!-- Project 5: TradeSense -->
-          <div class="project-card-modern" data-aos="fade-up" data-aos-delay="400">
+          <div
+            class="project-card-modern"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <div class="project-ribbon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                />
               </svg>
             </div>
             <div class="project-image-preview">
@@ -1292,12 +2343,28 @@
                 frameborder="0"
                 allow="autoplay; encrypted-media; picture-in-picture"
                 allowfullscreen
-                loading="lazy">
+                loading="lazy"
+              >
               </iframe>
               <div class="project-overlay">
-                <a href="https://tradesense-mu.vercel.app/" target="_blank" class="project-view-btn">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <a
+                  href="https://tradesense-mu.vercel.app/"
+                  target="_blank"
+                  class="project-view-btn"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                   <span>View Project</span>
                 </a>
@@ -1309,7 +2376,12 @@
                 <span>Trading</span>
               </div>
               <h3>TradeSense</h3>
-              <p class="project-description-card">Prop trading platform with multi-phase challenges, social trading, copy-trade, points & rewards, real-time analytics and MT4/MT5 integration. Built with Flask, React, PostgreSQL, Redis, Celery and Socket.IO.</p>
+              <p class="project-description-card">
+                Prop trading platform with multi-phase challenges, social
+                trading, copy-trade, points & rewards, real-time analytics and
+                MT4/MT5 integration. Built with Flask, React, PostgreSQL, Redis,
+                Celery and Socket.IO.
+              </p>
               <div class="project-stack-small">
                 <span>React</span>
                 <span>Flask</span>
@@ -1319,8 +2391,18 @@
               </div>
             </div>
             <div class="project-footer">
-              <a href="https://tradesense-mu.vercel.app/" target="_blank" class="project-link">Live Demo →</a>
-              <a href="https://www.youtube.com/watch?v=vl2yC8q1QDw" target="_blank" class="project-link">Watch Demo →</a>
+              <a
+                href="https://tradesense-mu.vercel.app/"
+                target="_blank"
+                class="project-link"
+                >Live Demo →</a
+              >
+              <a
+                href="https://www.youtube.com/watch?v=vl2yC8q1QDw"
+                target="_blank"
+                class="project-link"
+                >Watch Demo →</a
+              >
             </div>
           </div>
         </div>
@@ -1331,21 +2413,32 @@
     <section id="contact" class="contact">
       <div class="container">
         <h2 class="section-title">
-          <span class="title-number">07.</span> <span data-i18n="section.contact">Contact</span>
+          <span class="title-number">07.</span>
+          <span data-i18n="section.contact">Contact</span>
         </h2>
         <div class="contact-wrapper">
           <div class="contact-info-modern">
             <h3>Let's build something amazing together</h3>
             <p>
-              I'm currently looking for internship opportunities, research collaborations,
-              and exciting projects in finance and data science. My inbox is always open!
+              I'm currently looking for internship opportunities, research
+              collaborations, and exciting projects in finance and data science.
+              My inbox is always open!
             </p>
             <div class="contact-methods">
               <a href="mailto:omar.arhoune@gmail.com" class="contact-method">
                 <div class="method-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-width="2"/>
-                    <polyline points="22,6 12,13 2,6" stroke-width="2"/>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                      stroke-width="2"
+                    />
+                    <polyline points="22,6 12,13 2,6" stroke-width="2" />
                   </svg>
                 </div>
                 <div class="method-details">
@@ -1355,8 +2448,17 @@
               </a>
               <a href="tel:+212684010218" class="contact-method">
                 <div class="method-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke-width="2"/>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
                 <div class="method-details">
@@ -1366,9 +2468,18 @@
               </a>
               <div class="contact-method">
                 <div class="method-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke-width="2"/>
-                    <circle cx="12" cy="10" r="3" stroke-width="2"/>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"
+                      stroke-width="2"
+                    />
+                    <circle cx="12" cy="10" r="3" stroke-width="2" />
                   </svg>
                 </div>
                 <div class="method-details">
@@ -1378,15 +2489,37 @@
               </div>
             </div>
             <div class="contact-social-large">
-              <a href="https://www.linkedin.com/in/omar-arhoune-916b0522b/" target="_blank" class="social-btn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              <a
+                href="https://www.linkedin.com/in/omar-arhoune-916b0522b/"
+                target="_blank"
+                class="social-btn"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                  />
                 </svg>
                 LinkedIn
               </a>
-              <a href="https://github.com/lkiwan" target="_blank" class="social-btn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              <a
+                href="https://github.com/lkiwan"
+                target="_blank"
+                class="social-btn"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                  />
                 </svg>
                 GitHub
               </a>
@@ -1410,12 +2543,22 @@
               </div>
               <div class="form-field">
                 <label>Message</label>
-                <textarea rows="5" placeholder="Tell me about your project..." required></textarea>
+                <textarea
+                  rows="5"
+                  placeholder="Tell me about your project..."
+                  required
+                ></textarea>
               </div>
               <button type="submit" class="btn btn-primary btn-full">
                 <span>Send Message</span>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                  <path d="M18 2L9 11M18 2l-7 16-2-7-7-2 16-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path
+                    d="M18 2L9 11M18 2l-7 16-2-7-7-2 16-7z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
               </button>
             </form>
@@ -1446,7 +2589,11 @@
             </div>
             <div class="footer-column">
               <h4>Connect</h4>
-              <a href="https://www.linkedin.com/in/omar-arhoune-916b0522b/" target="_blank">LinkedIn</a>
+              <a
+                href="https://www.linkedin.com/in/omar-arhoune-916b0522b/"
+                target="_blank"
+                >LinkedIn</a
+              >
               <a href="https://github.com/lkiwan" target="_blank">GitHub</a>
               <a href="mailto:omar.arhoune@gmail.com">Email</a>
             </div>
@@ -1466,7 +2613,7 @@
       <div class="cert-modal-content">
         <div class="cert-modal-image-container">
           <button class="cert-modal-close">&times;</button>
-          <img id="cert-modal-image" src="" alt="Certificate">
+          <img id="cert-modal-image" src="" alt="Certificate" />
         </div>
       </div>
     </div>
