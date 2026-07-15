@@ -1043,5 +1043,69 @@ console.log('%cInterested in collaboration? Let\'s connect!', 'color: #667eea; f
         }
         function next() { goTo(current + 1); }
         function prev() { goTo(current - 1); }
+
+        // Lightbox: click a slide to view it full-size
+        setupLightbox(slides);
+    }
+
+    // ============================================
+    // PFE LIGHTBOX (full-size viewer)
+    // ============================================
+    function setupLightbox(slides) {
+        const lightbox = document.getElementById('pfe-lightbox');
+        const lbImage = document.getElementById('pfe-lightbox-image');
+        if (!lightbox || !lbImage || slides.length === 0) return;
+
+        const closeBtn = lightbox.querySelector('.pfe-lightbox-close');
+        const prevBtn = lightbox.querySelector('.pfe-lightbox-prev');
+        const nextBtn = lightbox.querySelector('.pfe-lightbox-next');
+        const counter = lightbox.querySelector('.pfe-lightbox-counter');
+        let index = 0;
+
+        // Hide nav when there's only one image
+        if (slides.length <= 1) {
+            prevBtn.style.display = 'none';
+            nextBtn.style.display = 'none';
+            counter.style.display = 'none';
+        }
+
+        function show(i) {
+            index = (i + slides.length) % slides.length;
+            lbImage.src = slides[index].src;
+            lbImage.alt = slides[index].alt || 'Project screenshot';
+            counter.textContent = (index + 1) + ' / ' + slides.length;
+        }
+
+        function open(i) {
+            show(i);
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function close() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        slides.forEach((img, i) => {
+            img.addEventListener('click', () => open(i));
+        });
+
+        closeBtn.addEventListener('click', close);
+        prevBtn.addEventListener('click', () => show(index - 1));
+        nextBtn.addEventListener('click', () => show(index + 1));
+
+        // Click on the dark backdrop (not the image or buttons) closes it
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) close();
+        });
+
+        // Keyboard: ESC to close, arrows to navigate
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') close();
+            else if (e.key === 'ArrowLeft') show(index - 1);
+            else if (e.key === 'ArrowRight') show(index + 1);
+        });
     }
 })();
